@@ -1,0 +1,30 @@
+# === React 관련 ===
+node_modules/
+build/
+.env
+.DS_Store
+
+# === Django 관련 ===
+*.pyc
+__pycache__/
+db.sqlite3
+/media/
+staticfiles/
+*.log
+
+# === Python 가상환경 ===
+venv/
+.env
+
+# === Docker 관련 ===
+*.pid
+*.sock
+*.log
+
+# === IDE (개발툴) 관련 ===
+.idea/
+.vscode/
+
+# === OS 관련 ===
+.DS_Store
+Thumbs.db
