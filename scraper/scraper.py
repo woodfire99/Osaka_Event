@@ -15,13 +15,20 @@ conn = psycopg2.connect(
     port="5432"
 )
 cur = conn.cursor()
+
+# 테이블 생성 + 컬럼 추가
 cur.execute("""
     CREATE TABLE IF NOT EXISTS myapp_event (
         id SERIAL PRIMARY KEY,
         url TEXT UNIQUE,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        is_scraped BOOLEAN DEFAULT FALSE
     );
 """)
+
+# 기존 데이터 전체 삭제 (덮어쓰기 방식)
+cur.execute("TRUNCATE TABLE myapp_event;")
+conn.commit()
 
 # 크롬 설정
 options = uc.ChromeOptions()
@@ -60,7 +67,11 @@ driver.quit()
 for url in sorted(all_links):
     try:
         cur.execute(
-            "INSERT INTO myapp_event (url, created_at) VALUES (%s, NOW()) ON CONFLICT (url) DO NOTHING;",
+            """
+            INSERT INTO myapp_event (url, created_at, is_scraped)
+            VALUES (%s, NOW(), FALSE)
+            ON CONFLICT (url) DO NOTHING;
+            """,
             (url,)
         )
         print(f"저장됨: {url}")

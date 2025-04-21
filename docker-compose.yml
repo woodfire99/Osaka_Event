@@ -43,6 +43,17 @@ services:
     depends_on:
       - db
 
+  detail_scraper:
+    build:
+      context: ./detail_scraper
+      dockerfile: Dockerfile
+    working_dir: /scraper 
+    volumes:
+      - ./detail_scraper:/scraper
+    depends_on:
+      - db
+    command: sleep infinity   # 직접 실행할 때만 python detail_scraper.py
+
 
 volumes:
   pgdata:
