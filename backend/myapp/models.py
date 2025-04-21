@@ -1,0 +1,12 @@
+from django.db import models
+
+# myapp/models.py
+from django.db import models
+
+class Event(models.Model):
+    url = models.URLField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.url
+

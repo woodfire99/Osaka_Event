@@ -22,11 +22,27 @@ services:
     tty: true
 
   db:
-    image: postgres
-    container_name: postgres-db
+    image: postgres:15
+    restart: always
     environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: osaka_db
+      POSTGRES_USER: osaka_user
+      POSTGRES_PASSWORD: osaka_pw
     ports:
       - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  scraper:
+    build:
+      context: ./scraper
+    volumes:
+      - ./scraper:/scraper     # ✅ 그냥 원래 폴더대로
+    working_dir: /scraper      # ✅ 실행 경로도 맞춰줌
+    command: sleep infinity
+    depends_on:
+      - db
+
+
+volumes:
+  pgdata:
