@@ -35,24 +35,38 @@ services:
 
   scraper:
     build:
-      context: ./scraper
+      context: ./scraper/url
     volumes:
-      - ./scraper:/scraper     # ✅ 그냥 원래 폴더대로
-    working_dir: /scraper      # ✅ 실행 경로도 맞춰줌
+      - ./scraper/url:/scraper
+    working_dir: /scraper
     command: sleep infinity
     depends_on:
       - db
 
   detail_scraper:
     build:
-      context: ./detail_scraper
+      context: ./scraper/detail
       dockerfile: Dockerfile
-    working_dir: /scraper 
     volumes:
-      - ./detail_scraper:/scraper
+      - ./scraper/detail:/scraper
+    working_dir: /scraper
+    command: sleep infinity
     depends_on:
       - db
-    command: sleep infinity   # 직접 실행할 때만 python detail_scraper.py
+      
+  station_scraper:
+    environment:
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+    build:
+      context: ./scraper/station
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./scraper/station:/app
+
+  
 
 
 volumes:
