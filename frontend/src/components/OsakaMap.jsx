@@ -34,6 +34,7 @@ import {
 
 
 const OsakaMap = () => {
+  
   const [isOpen, setIsOpen] = useState(true);
   const [visibleLines, setVisibleLines] = useState({
     jr: false,
@@ -48,10 +49,72 @@ const OsakaMap = () => {
     setVisibleLines((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  useEffect(() => {
+    const groupRoot = document.getElementById('group-name-layer');
+    if (!groupRoot) return;
+  
+    const isStationCode = (text) => /^[A-Z]{1,2}\d{2}$/.test(text || '');
+  
+    const groups = groupRoot.querySelectorAll('g');
+  
+    groups.forEach((group) => {
+      const tspans = group.querySelectorAll('text tspan');
+      let hasVisibleStationCode = false;
+  
+      tspans.forEach((tspan) => {
+        const text = tspan.textContent?.trim();
+        if (!text || !isStationCode(text)) return;
+  
+        const prefix2 = text.slice(0, 2);
+        const prefix1 = text.slice(0, 1);
+        const textElement = tspan.closest('text');
+        const dataLine = textElement?.dataset.line || '';
+
+        const isKTinDataLine = dataLine.includes('KT');
+
+        const match = {
+          kh: prefix2 === 'KH',
+          hs: prefix2 === 'HS',
+          nk: prefix2 === 'NK',
+          jr: ['A', 'Q', 'O', 'G', 'R', 'F', 'H'].includes(prefix1)&& !['HS'].includes(prefix2)&&
+          !isKTinDataLine,
+          metro: ['M', 'T', 'N', 'K', 'C', 'S', 'I', 'Y', 'P'].includes(prefix1) && !['KH', 'HS', 'NK'].includes(prefix2),
+          kt: ['A', 'F'].includes(prefix1)&&isKTinDataLine || prefix1 === 'D',
+          hk: prefix2 === 'HK',
+        };
+        
+  
+        const isVisible = Object.entries(match).some(
+          ([key, matched]) => matched && visibleLines[key]
+        );
+  
+        if (isVisible) {
+          hasVisibleStationCode = true;
+          const parentText = tspan.closest('text');
+          if (parentText) parentText.style.display = 'inline';
+        } else {
+          const parentText = tspan.closest('text');
+          if (parentText) parentText.style.display = 'none';
+        }
+      });
+  
+      // 여기!! 역 이름 text와 path, rect 처리
+      group.querySelectorAll('text, path, rect, circle').forEach((el) => {
+        const tspan = el.querySelector('tspan');
+        const isCode = tspan && isStationCode(tspan.textContent?.trim());
+  
+        if (!isCode) {
+          // 역 이름 text나 path, rect는 해당 그룹 안에 표시할 코드가 있을 때만 표시
+          el.style.display = hasVisibleStationCode ? 'inline' : 'none';
+        }
+      });
+    });
+  }, [visibleLines]);
+  
   return (
     <div className="flex h-screen w-full">
       {/* SVG 영역 */}
-      <div className={`transition-all duration-300 ${isOpen ? "w-[60%]" : "w-full"} bg-gray-100 overflow-auto`}>
+      <div className={`transition-all duration-300 ${isOpen ? "w-[75%]" : "w-full"} bg-gray-100 overflow-auto`}>
         <div
           style={{
             position: 'relative',
@@ -62,81 +125,61 @@ const OsakaMap = () => {
         >
           <Basemap className="absolute top-0 left-0" />
           <Legend className="absolute top-0 left-0" />
-          
 
-          {visibleLines.jr && (
-            <>
-              <JrLine className="absolute top-0 left-0" />
-              <JrName className="absolute top-0 left-0" />
-            </>
-          )}
-          {visibleLines.metro && (
-            <>
-              <MetroLine className="absolute top-0 left-0" />
-              <MetroName className="absolute top-0 left-0" />
-            </>
-          )}
-          {visibleLines.kt && (
-            <>
-              <KtLine className="absolute top-0 left-0" />
-              <KtName className="absolute top-0 left-0" />
-            </>
-          )}
-          {visibleLines.kh && (
-            <>
-              <KhLine className="absolute top-0 left-0" />
-              <KhName className="absolute top-0 left-0" />
-            </>
-          )}
-          {visibleLines.hs && (
-            <>
-              <HsLine className="absolute top-0 left-0" />
-              <HsName className="absolute top-0 left-0" />
-            </>
-          )}
-          {visibleLines.hk && (
-            <>
-              <HkLine className="absolute top-0 left-0" />
-              <HkName className="absolute top-0 left-0" />
-            </>
-          )}
-          {visibleLines.nk && (
-            <>
-              <NkLine className="absolute top-0 left-0" />
-              <NkName className="absolute top-0 left-0" />
-            </>
-          )}
+          {/* 먼저 노선(Line)만 */}
+          {visibleLines.jr && <JrLine className="absolute top-0 left-0" />}
+          {visibleLines.metro && <MetroLine className="absolute top-0 left-0" />}
+          {visibleLines.kt && <KtLine className="absolute top-0 left-0" />}
+          {visibleLines.kh && <KhLine className="absolute top-0 left-0" />}
+          {visibleLines.hs && <HsLine className="absolute top-0 left-0" />}
+          {visibleLines.hk && <HkLine className="absolute top-0 left-0" />}
+          {visibleLines.nk && <NkLine className="absolute top-0 left-0" />}
+
+          {/* 마지막에 이름(Name)만 */}
+          {visibleLines.jr && <JrName className="absolute top-0 left-0" />}
+          {visibleLines.metro && <MetroName className="absolute top-0 left-0" />}
+          {visibleLines.kt && <KtName className="absolute top-0 left-0" />}
+          {visibleLines.kh && <KhName className="absolute top-0 left-0" />}
+          {visibleLines.hs && <HsName className="absolute top-0 left-0" />}
+          {visibleLines.hk && <HkName className="absolute top-0 left-0" />}
+          {visibleLines.nk && <NkName className="absolute top-0 left-0" />}
+
+          {/* 환승역 그룹 (GroupName)는 항상 맨 위 */}
           <GroupName className="absolute top-0 left-0" />
         </div>
       </div>
 
       {/* 사이드바 */}
-      <div className={`transition-all duration-300 ${isOpen ? "w-[40%]" : "w-0"} bg-white shadow-lg overflow-hidden`}>
+      <div className={`transition-all duration-300 ${isOpen ? "w-[25%]" : "w-0"} bg-white shadow-lg overflow-hidden`}>
         <div className="p-4 space-y-2">
           <button onClick={() => setIsOpen(false)} className="text-sm text-blue-500 underline">
             닫기
           </button>
 
           {/* 토글 버튼 */}
-          {[
-            { key: "jr", label: "JR" },
-            { key: "metro", label: "Metro" },
-            { key: "kt", label: "KT" },
-            { key: "kh", label: "KH" },
-            { key: "hs", label: "HS" },
-            { key: "hk", label: "HK" },
-            { key: "nk", label: "NK" },
-          ].map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => toggleLine(key)}
-              className={`px-3 py-1 rounded block ${
-                visibleLines[key] ? "bg-blue-600 text-white" : "bg-gray-200 text-black"
-              }`}
-            >
-              {label} 보기 {visibleLines[key] ? "숨기기" : "보이기"}
-            </button>
-          ))}
+          <div className="p-4">
+          <div className="flex flex-wrap gap-2">
+            {[
+              { key: "jr", label: "JR선" },
+              { key: "metro", label: "오사카메트로" },
+              { key: "kt", label: "킨테츠선" },
+              { key: "kh", label: "케이한선" },
+              { key: "hs", label: "한신선" },
+              { key: "hk", label: "한큐선" },
+              { key: "nk", label: "난카이선" },
+            ].map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => toggleLine(key)}
+                className={`px-3 py-1 rounded ${
+                  visibleLines[key] ? "bg-blue-600 text-white" : "bg-gray-200 text-black"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
 
           <h2 className="text-lg font-bold pt-4">지역 정보</h2>
           <p>스미요시구는 오사카 남부에 위치한...</p>

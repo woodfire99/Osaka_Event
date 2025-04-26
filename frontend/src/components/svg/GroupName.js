@@ -7,7 +7,7 @@ const SvgGroupName = (props) => (
     height={3375}
     {...props}
   >
-    <g
+    <g id="group-name-layer"
       style={{
         fill: "none",
       }}
@@ -1317,6 +1317,7 @@ const SvgGroupName = (props) => (
             </tspan>
           </text>
           <text
+            data-line="Metro"
             xmlSpace="preserve"
             x={3690.148}
             y={-1364.763}
@@ -1456,6 +1457,7 @@ const SvgGroupName = (props) => (
             </text>
           </g>
           <text
+            data-line="Metro"
             xmlSpace="preserve"
             x={3690.5}
             y={-1393.989}
@@ -5427,6 +5429,7 @@ const SvgGroupName = (props) => (
             </tspan>
           </text>
         </g>
+        <g>
         <path
           fill="#fff"
           stroke="#000"
@@ -5550,6 +5553,7 @@ const SvgGroupName = (props) => (
             {"F09"}
           </tspan>
         </text>
+        </g>
         <g
           style={{
             display: "inline",
@@ -6541,6 +6545,7 @@ const SvgGroupName = (props) => (
             }}
           >
             <text
+              data-line="KT"
               xmlSpace="preserve"
               x={3932.431}
               y={-1339.861}
@@ -6952,6 +6957,7 @@ const SvgGroupName = (props) => (
             }}
           >
             <text
+              data-line="KT"
               xmlSpace="preserve"
               x={3453.227}
               y={-2085.389}
@@ -7116,6 +7122,7 @@ const SvgGroupName = (props) => (
             }}
           >
             <text
+              data-line="KT"
               xmlSpace="preserve"
               x={3690.5}
               y={-1406.8}
@@ -7273,6 +7280,7 @@ const SvgGroupName = (props) => (
             </tspan>
           </text>
           <text
+            data-line="KT"
             xmlSpace="preserve"
             x={1158.53}
             y={1068.08}
@@ -7440,6 +7448,7 @@ const SvgGroupName = (props) => (
             }}
           >
             <text
+              data-line="KT"
               xmlSpace="preserve"
               x={4449.679}
               y={-2046.222}
@@ -7618,6 +7627,7 @@ const SvgGroupName = (props) => (
             </tspan>
           </text>
           <text
+            data-line="KT"
             xmlSpace="preserve"
             x={1159.018}
             y={1051.966}
