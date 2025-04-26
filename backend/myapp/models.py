@@ -10,6 +10,9 @@ class EventDetail(models.Model):
     saved_at = models.DateTimeField(auto_now_add=True)
     nearest_station = models.JSONField(null=True, blank=True)  # 여러 개 저장 가능
     district_name = models.CharField(max_length=100, null=True, blank=True)  # 구 이름
+    lat = models.FloatField(null=True, blank=True)   # 추가
+    lng = models.FloatField(null=True, blank=True)   # 추가
+
 
     def __str__(self):
         return self.title
