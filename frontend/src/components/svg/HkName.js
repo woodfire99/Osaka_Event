@@ -7,7 +7,7 @@ const SvgHkName = (props) => (
     height={3375}
     {...props}
   >
-    <g
+    <g id="hk-name-layer"
       style={{
         fill: "none",
       }}
@@ -1951,6 +1951,7 @@ const SvgHkName = (props) => (
         </g>
       </g>
       <path
+        id="hk-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

@@ -2370,6 +2370,7 @@ const SvgLegend = (props) => (
         </g>
       </g>
       <path
+        id="legend-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

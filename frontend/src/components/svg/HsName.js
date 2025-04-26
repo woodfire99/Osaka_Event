@@ -7,7 +7,7 @@ const SvgHsName = (props) => (
     height={3375}
     {...props}
   >
-    <g
+    <g id="hs-name-layer"
       style={{
         fill: "none",
       }}

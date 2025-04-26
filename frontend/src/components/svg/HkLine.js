@@ -107,6 +107,7 @@ const SvgHkLine = (props) => (
         </g>
       </g>
       <path
+        id="hk-line-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

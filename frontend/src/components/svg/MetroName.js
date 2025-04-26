@@ -7,7 +7,7 @@ const SvgMetroName = (props) => (
     height={3375}
     {...props}
   >
-    <g
+    <g id="metro-name-layer"
       style={{
         fill: "none",
       }}
@@ -4593,6 +4593,7 @@ const SvgMetroName = (props) => (
         </g>
       </g>
       <path
+        id="Metro-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

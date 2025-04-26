@@ -51,6 +51,7 @@ const SvgNkLine = (props) => (
         </g>
       </g>
       <path
+        id="nk-line-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

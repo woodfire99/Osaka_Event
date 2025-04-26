@@ -7,7 +7,7 @@ const SvgKtName = (props) => (
     height={3375}
     {...props}
   >
-    <g
+    <g id="kt-name-layer"
       style={{
         fill: "none",
       }}
@@ -1664,6 +1664,7 @@ const SvgKtName = (props) => (
         </g>
       </g>
       <path
+        id="kt-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

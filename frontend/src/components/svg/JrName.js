@@ -7,7 +7,7 @@ const SvgJrName = (props) => (
     height={3375}
     {...props}
   >
-    <g
+    <g id="jr-name-layer"
       style={{
         fill: "none",
       }}
@@ -4219,6 +4219,7 @@ const SvgJrName = (props) => (
         </g>
       </g>
       <path
+        id="jr-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

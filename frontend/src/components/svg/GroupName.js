@@ -7669,6 +7669,7 @@ const SvgGroupName = (props) => (
         </g>
       </g>
       <path
+        id="group-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",
