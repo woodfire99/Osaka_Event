@@ -36,11 +36,11 @@ import {
 
 
 const OsakaMap = () => {
+  const [zoom, setZoom] = useState(0.4);  // 기본 0.4배로 시작
   const [stations, setStations] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [matchedTexts, setMatchedTexts] = useState([]);
   const [selectedStation, setSelectedStation] = useState(null);
-  const [isOpen, setIsOpen] = useState(true);
   const [visibleLines, setVisibleLines] = useState({
     jr: false,
     metro: false,
@@ -51,6 +51,20 @@ const OsakaMap = () => {
     nk: false,
   });
 
+  useEffect(() => {
+    const handleGlobalWheel = (e) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    };
+  
+    window.addEventListener('wheel', handleGlobalWheel, { passive: false });
+  
+    return () => {
+      window.removeEventListener('wheel', handleGlobalWheel);
+    };
+  }, []);
+  
   // CSV
   useEffect(() => {
     fetch(stationsCsv)
@@ -61,6 +75,17 @@ const OsakaMap = () => {
       });
   }, []);
   
+  // 휠
+  const handleWheel = (e) => {
+    if (!e.ctrlKey) return;
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -0.05 : 0.05;  // 휠 내리면 축소, 올리면 확대
+    setZoom((prevZoom) => {
+      let newZoom = prevZoom + delta;
+      newZoom = Math.max(0.2, Math.min(2, newZoom)); // 최소 0.2배, 최대 2배 제한
+      return newZoom;
+    });
+  };
 
   // 🔥 검색 버튼 클릭했을 때 동작하는 함수
   const handleSearch = () => {
@@ -77,22 +102,6 @@ const OsakaMap = () => {
     setMatchedTexts(matched);
   };
   
-  
-  // 🔥 리스트에서 선택했을 때 동작하는 함수
-  const handleSelect = (textEl) => {
-    const parentG = textEl.closest('g');
-    if (!parentG) return;
-
-    const allTexts = parentG.querySelectorAll('text');
-    const names = Array.from(allTexts)
-      .map(t => t.querySelector('tspan')?.textContent.trim() ?? '')
-      .filter(Boolean);
-    console.log(names);
-    setSelectedStation({
-      name: names.join(' / '),
-    });
-  };
-
   const toggleLine = (key) => {
     setVisibleLines((prev) => ({ ...prev, [key]: !prev[key] }));
   };
@@ -163,11 +172,11 @@ const OsakaMap = () => {
   return (
     <div className="flex h-screen w-full">
       {/* SVG 영역 */}
-      <div className={`transition-all duration-300 ${isOpen ? "w-[75%]" : "w-full"} bg-gray-100 overflow-auto`}>
+      <div className="w-[75%] bg-gray-100 overflow-auto"onWheelCapture={handleWheel}>
         <div
           style={{
             position: 'relative',
-            transform: 'scale(0.4)',
+            transform: `scale(${zoom})`,
             transformOrigin: 'top left',
             width: 'fit-content',
           }}
@@ -201,11 +210,8 @@ const OsakaMap = () => {
       </div>
 
       {/* 사이드바 */}
-      <div className={`transition-all duration-300 ${isOpen ? "w-[25%]" : "w-0"} bg-white shadow-lg overflow-hidden`}>
+      <div className="w-[25%] bg-white shadow-lg overflow-hidden">
         <div className="p-4 space-y-2">
-          <button onClick={() => setIsOpen(false)} className="text-sm text-blue-500 underline">
-            닫기
-          </button>
 
           {/* 토글 버튼 */}
           <div className="p-4">
@@ -281,16 +287,6 @@ const OsakaMap = () => {
          </div>   
         </div>
       </div>
-
-      {/* 열기 버튼 */}
-      {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-l"
-        >
-          열기
-        </button>
-      )}
     </div>
   );
 };

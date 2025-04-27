@@ -35,36 +35,44 @@ services:
 
   scraper:
     build:
-      context: ./scraper/url
+      context: ./api/url
     volumes:
-      - ./scraper/url:/scraper
-    working_dir: /scraper
-    command: sleep infinity
+      - ./api/url:/scraper
+    working_dir: /api
     depends_on:
       - db
 
   detail_scraper:
     build:
-      context: ./scraper/detail
+      context: ./api/detail
       dockerfile: Dockerfile
     volumes:
-      - ./scraper/detail:/scraper
-    working_dir: /scraper
-    command: sleep infinity
+      - ./api/detail:/scraper
+    working_dir: /api
     depends_on:
       - db
-      
+
+  update-event:
+    build: 
+      context: ./api/update_event
+    env_file:
+      - .env
+    volumes:
+      - ./api/update_event:/app
+    depends_on:
+      - db
+
   station_scraper:
     environment:
       - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
     build:
-      context: ./scraper/station
+      context: ./api/station
     env_file:
       - .env
     depends_on:
       - db
     volumes:
-      - ./scraper/station:/app
+      - ./api/station:/app
 
   
 

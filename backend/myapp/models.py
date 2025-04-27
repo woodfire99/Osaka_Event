@@ -12,7 +12,7 @@ class EventDetail(models.Model):
     district_name = models.CharField(max_length=100, null=True, blank=True)  # 구 이름
     lat = models.FloatField(null=True, blank=True)   # 추가
     lng = models.FloatField(null=True, blank=True)   # 추가
-
+    ai_summary =  models.TextField(null=True)
 
     def __str__(self):
         return self.title
@@ -20,3 +20,14 @@ class EventDetail(models.Model):
     class Meta:
         db_table = 'event_details' 
         managed = False  
+
+class StationInfo(models.Model):
+    number = models.IntegerField()
+    japanese = models.CharField(max_length=255)
+    english = models.CharField(max_length=255)
+    korean = models.CharField(max_length=255)
+    station_code = models.CharField(max_length=50, null=True, blank=True)
+    ai_summary = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.japanese
