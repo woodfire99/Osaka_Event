@@ -51,6 +51,31 @@ const OsakaMap = () => {
     nk: false,
   });
 
+// 백엔드 연결
+const sendIdxToServer = async (idx) => {
+  try {
+    const response = await fetch('http://localhost:8000/api/send-idx/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ idx: idx })  // 반드시 객체로 포장해서 보내야 해!!
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('서버 응답:', data);
+    } else {
+      console.error('서버 응답 오류');
+    }
+  } catch (error) {
+    console.error('에러 발생:', error);
+  }
+};
+
+
+  
+// 휠 고정
   useEffect(() => {
     const handleGlobalWheel = (e) => {
       if (e.ctrlKey) {
@@ -262,7 +287,10 @@ const OsakaMap = () => {
             {matchedTexts.map((station, idx) => (
               <div
                 key={idx}
-                onClick={() => setSelectedStation(station)}
+                onClick={() => {
+                  setSelectedStation(station);
+                  sendIdxToServer(station.Number);
+                }}
                 className="cursor-pointer hover:bg-blue-100 p-1 rounded"
               >
                 {station.Japanese} / {station.English} / {station.Korean}
