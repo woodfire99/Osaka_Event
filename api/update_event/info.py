@@ -24,11 +24,14 @@ cur = conn.cursor()
 cur.execute("""
     SELECT id, japanese, english, korean, station_code
     FROM myapp_stationinfo
+    WHERE ai_summary IS NULL
+    ORDER BY id
 """)
 stations = cur.fetchall()
 
 # ChatGPT 호출 + ai_summary 생성
-# for id, japanese, english, korean, station_code in stations[:50]:
+for id, japanese, english, korean, station_code in stations:
+    print(id, korean)
 #     # 한국어 역 이름
 #     station_name_with_eki = f"{korean}역"
 
@@ -86,22 +89,22 @@ stations = cur.fetchall()
 #     )
 
 
-with open("ex-data.csv", newline='', encoding="utf-8-sig") as f:
-    reader = csv.DictReader(f)  # 'Number', 'Data' 컬럼 읽기
-    for row in reader:
-        station_id = int(row['Number'])    # Number를 id로 사용
-        ai_summary = row['Data'].strip()   # Data 내용을 가져옴
+# with open("ex-data.csv", newline='', encoding="utf-8-sig") as f:
+#     reader = csv.DictReader(f)  # 'Number', 'Data' 컬럼 읽기
+#     for row in reader:
+#         station_id = int(row['Number'])    # Number를 id로 사용
+#         ai_summary = row['Data'].strip()   # Data 내용을 가져옴
 
-        # DB 업데이트
-        cur.execute(
-            """
-            UPDATE myapp_stationinfo
-            SET ai_summary = %s
-            WHERE id = %s
-            """,
-            (ai_summary, station_id)
-        )
-        print(f"id={station_id} 업데이트 완료.")
+#         # DB 업데이트
+#         cur.execute(
+#             """
+#             UPDATE myapp_stationinfo
+#             SET ai_summary = %s
+#             WHERE id = %s
+#             """,
+#             (ai_summary, station_id)
+#         )
+#         print(f"id={station_id} 업데이트 완료.")
 
 
 

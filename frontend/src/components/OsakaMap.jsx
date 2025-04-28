@@ -61,6 +61,8 @@ const OsakaMap = () => {
     hk: false,
     nk: false,
   });
+  const [facilityClickEnabled, setFacilityClickEnabled] = useState(false); // 시설 클릭 메소드 활성화 선택
+
   // 버튼 색깔(크게 나눠서)
   const lineColors = {
     metro: "border-[#3399FF]",   // 파랑
@@ -384,10 +386,15 @@ const OsakaMap = () => {
 
     if (facilitiesPart) {
       facilitiesList = facilitiesPart
-        .split('\n')
-        .map(line => line.trim())
-        .filter(line => line && !line.includes('주변의 주요 시설은'));  // 🔥 안내문구 제거
+        .split('\n')                 // 일단 줄마다 쪼개고
+        .map(line => line.trim())     // 앞뒤 공백 제거
+        .filter(line => line.startsWith('1.') || line.startsWith('2.') || line.startsWith('3.') || line.startsWith('4.') || line.startsWith('5.') || line.startsWith('6.') || line.startsWith('7.') || line.startsWith('8.') || line.startsWith('9.'))
+        // 🔥 번호로 시작하는 진짜 리스트만 남김
+        .filter(line => line.includes('**')); 
+        // 🔥 그리고 **(별표)가 포함된 것만 => 설명글은 걸러짐
     }
+    
+    
     
   }
 
@@ -588,48 +595,48 @@ const OsakaMap = () => {
             <div className="p-4 border rounded-lg shadow-md bg-white space-y-4">
               <h2 className="text-xl font-bold">지역 설명</h2>
               {selectedStationRentData.length > 0 ? (
-  <div className="mt-6">
-    <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
+                <div className="mt-6">
+                  <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
 
-    {(() => {
-      const grouped = {};
-      selectedStationRentData.forEach((r) => {
-        const type = r.room_type;
-        const price = parseFloat(r.rent_price.replace('万円', ''));
-        if (!grouped[type]) {
-          grouped[type] = [];
-        }
-        grouped[type].push(price);
-      });
+                  {(() => {
+                    const grouped = {};
+                    selectedStationRentData.forEach((r) => {
+                      const type = r.room_type;
+                      const price = parseFloat(r.rent_price.replace('万円', ''));
+                      if (!grouped[type]) {
+                        grouped[type] = [];
+                      }
+                      grouped[type].push(price);
+                    });
 
-      const averaged = Object.entries(grouped).map(([type, prices]) => {
-        const sum = prices.reduce((acc, curr) => acc + curr, 0);
-        const avg = sum / prices.length;
-        return { room_type: type, average: avg };
-      });
+                    const averaged = Object.entries(grouped).map(([type, prices]) => {
+                      const sum = prices.reduce((acc, curr) => acc + curr, 0);
+                      const avg = sum / prices.length;
+                      return { room_type: type, average: avg };
+                    });
 
-      return (
-        <Bar
-          data={{
-            labels: averaged.map(item => item.room_type),
-            datasets: [
-              {
-                label: '월세 (만엔)',
-                data: averaged.map(item => item.average),
-                backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
-              },
-            ],
-          }}
-        />
-      );
-    })()}
-  </div>
-) : (
-  <div className="mt-6">
-    <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
-    <p className="text-center text-gray-500 mt-4">월세 데이터 없음</p> 
-  </div>
-)}
+                    return (
+                      <Bar
+                        data={{
+                          labels: averaged.map(item => item.room_type),
+                          datasets: [
+                            {
+                              label: '월세 (만엔)',
+                              data: averaged.map(item => item.average),
+                              backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+                            },
+                          ],
+                        }}
+                      />
+                    );
+                  })()}
+                </div>
+              ) : (
+                <div className="mt-6">
+                  <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
+                  <p className="text-center text-gray-500 mt-4">월세 데이터 없음</p> 
+                </div>
+              )}
 
 
 
@@ -639,55 +646,53 @@ const OsakaMap = () => {
                   <p className="leading-relaxed whitespace-pre-wrap">{moodPart}</p>
                 </>
               )}
+              <div>
+              <h3 className="text-lg font-bold mt-6">[주변 주요 시설]</h3>
+                <ul className="list-none space-y-6">
+                  {facilitiesList.map((item, idx) => {
+                    const [name, ...descParts] = item.split(' - ');
+                    const description = descParts.join(' - ').trim();
+                    const cleanName = name.replace(/^\d+\.\s*/, '').replace(/\*\*/g, '').trim(); // 🔥 여기가 중요
+                    const facilityData = (facilityDetailData && openedFacilityName === cleanName) ? facilityDetailData : null;
 
-              {facilitiesList.length > 0 && (
-                <div>
-                  <h3 className="text-lg font-bold mt-6">[주변 주요 시설]</h3>
-                  <ul className="list-none space-y-6">
-                    {facilitiesList.map((item, idx) => {
-                      const [name, ...descParts] = item.split(' - ');
-                      const description = descParts.join(' - ').trim();
-                      const facilityData = (facilityDetailData && openedFacilityName === name) ? facilityDetailData : null;
+                    return (
+                      <li key={idx} className="border-b pb-4">
+                        <div
+                          className="cursor-pointer hover:underline"
+                          onClick={async () => {
+                            if (!facilityClickEnabled) return;  // 🔥 클릭 막기
+                            setOpenedFacilityName(cleanName);
+                            const facilityData = await fetchFacilityInfo(cleanName);
+                            if (facilityData) {
+                              setFacilityDetailData(facilityData);
+                            }
+                          }}
+                        >
+                          <div className="font-bold">{idx + 1}. {cleanName}</div>
 
-                      return (
-                        <li key={idx} className="border-b pb-4">
-                          <div
-                            className="cursor-pointer hover:underline"
-                            onClick={async () => {
-                              setOpenedFacilityName(name);  // 클릭한 시설 이름 기억
-                              const facilityData = await fetchFacilityInfo(name);
-                              if (facilityData) {
-                                setFacilityDetailData(facilityData);
-                              }
-                            }}
-                          >
-                            <div className="font-bold">{idx + 1}. {name}</div>
+                          {/* 지도, 평점, 주소 */}
+                          {facilityData && (
+                            <div className="mt-2 space-y-2">
+                              {facilityData.photo_reference && (
+                                <img
+                                  src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${facilityData.photo_reference}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
+                                  alt={`${facilityData.name} 사진`}
+                                  className="rounded shadow"
+                                />
+                              )}
+                              <p><strong>평점:</strong> {facilityData.rating}</p>
+                              <p><strong>주소:</strong> {facilityData.address}</p>
+                            </div>
+                          )}
+                        </div>
 
-                            {/* 🔥 이 위치에 지도, 평점, 주소 삽입 */}
-                            {facilityData && (
-                              <div className="mt-2 space-y-2">
-                                {facilityData.photo_reference && (
-                                  <img
-                                    src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${facilityData.photo_reference}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
-                                    alt={`${facilityData.name} 사진`}
-                                    className="rounded shadow"
-                                  />
-                                )}
-                                <p><strong>평점:</strong> {facilityData.rating}</p>
-                                <p><strong>주소:</strong> {facilityData.address}</p>
-                              </div>
-                            )}
-                          </div>
-
-                          {/* 🔥 그리고 나서 설명 문구 */}
-                          <div className="text-gray-600 mt-2 pl-1">{description}</div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
-
+                        {/* 설명 */}
+                        <div className="text-gray-600 mt-2 pl-1">{description}</div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
 
 
               {rentInfo && (

@@ -49,9 +49,21 @@ def fetch_facility_info(request):
     logger.debug("▶ fetch_facility_info 호출됨")
     if request.method == 'POST':
         body = json.loads(request.body)
-        facility_name = re.sub(r'\d+\.', '', body.get('facility_name'))
-        if not facility_name:
+        logger.debug(body)
+
+        raw_facility_name = re.sub(r'\d+\.', '', body.get('facility_name', ''))
+
+        if not raw_facility_name:
             return JsonResponse({'error': 'No facility name provided.'}, status=400)
+
+        # 🔥 1. 콜론(:) 앞부분만 추출
+        facility_name = raw_facility_name.split(':')[0].strip()
+
+        # 🔥 2. '오사카'라는 단어가 없으면 앞에 붙인다
+        if '오사카' not in facility_name:
+            facility_name = f'오사카 {facility_name}'
+
+        logger.debug(f"최종 처리된 facility_name: {facility_name}")
 
         # 1. DB에서 먼저 찾아본다
         facility = FacilityInfo.objects.filter(name=facility_name).first()
