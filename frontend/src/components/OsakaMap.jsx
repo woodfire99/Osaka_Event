@@ -14,29 +14,10 @@ import {
   GroupName,
 } from './svg';
 
-// import './OsakaMap.css'; // 스타일 분리 (선택사항)
-  // useEffect(() => {
-   //   fetch("http://localhost:8000/api/events/")
-   //     .then(res => res.json())
-   //     .then(data => setEvents(data));
-   // }, []);
-//    <div>
-//    <h2>이벤트 목록</h2>
-//    {events.map(event => (
-//      <div key={event.id} style={{ marginBottom: '2rem' }}>
-//        <h3>{event.title}</h3>
-//        <img src={event.image} alt={event.title} style={{ width: '300px' }} />
-//        <p><strong>날짜:</strong> {event.date}</p>
-//        <p><strong>장소:</strong> {event.location}</p>
-//        <p>{event.content}</p>
-//        <a href={event.url} target="_blank" rel="noreferrer">자세히 보기</a>
-//      </div>
-//    ))}
-//  </div>
-
-
 const OsakaMap = () => {
+  
   const [zoom, setZoom] = useState(0.4);  // 기본 0.4배로 시작
+  const [serverResponse, setServerResponse] = useState(null);  // 서버 응답 저장할 상태
   const [stations, setStations] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [matchedTexts, setMatchedTexts] = useState([]);
@@ -51,6 +32,19 @@ const OsakaMap = () => {
     nk: false,
   });
 
+
+  // 버튼 색깔
+  const lineColors = {
+    metro: "border-[#3399FF]",   // 파랑
+    jr: "border-[#FF6600]",      // 오렌지
+    kt: "border-[#00CC66]",      // 연두 (킨테츠)
+    nk: "border-[#006633]",      // 짙은 초록 (난카이)
+    hs: "border-[#FFCC00]",      // 노랑 (한신)
+    kh: "border-[#003366]",      // 짙은 파랑 (케이한)
+    hk: "border-[#996633]",      // 갈색 (한큐)
+  };
+
+
 // 백엔드 연결
 const sendIdxToServer = async (idx) => {
   try {
@@ -64,7 +58,7 @@ const sendIdxToServer = async (idx) => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log('서버 응답:', data);
+      setServerResponse(data); 
     } else {
       console.error('서버 응답 오류');
     }
@@ -72,8 +66,6 @@ const sendIdxToServer = async (idx) => {
     console.error('에러 발생:', error);
   }
 };
-
-
   
 // 휠 고정
   useEffect(() => {
@@ -112,7 +104,7 @@ const sendIdxToServer = async (idx) => {
     });
   };
 
-  // 🔥 검색 버튼 클릭했을 때 동작하는 함수
+  //  검색 버튼 클릭했을 때 동작하는 함수
   const handleSearch = () => {
     if (!searchTerm.trim()) {
       setMatchedTexts([]);
@@ -194,10 +186,36 @@ const sendIdxToServer = async (idx) => {
     });
   }, [visibleLines]);
 
+  let moodPart = "";
+let facilitiesPart = "";
+let facilitiesList = [];
+let rentInfo = "";
+
+if (serverResponse && serverResponse.ai_summary) {
+  const mainParts = serverResponse.ai_summary.split('[지난 3년 월세 평균]');
+  const facilityAndMood = mainParts[0];
+  rentInfo = mainParts[1]?.trim() || "";
+  const aiSummaryParts = facilityAndMood.split('[주변 주요 시설]');
+  moodPart = aiSummaryParts[0]
+  ?.replace('[주변 분위기]', '')
+  .replace(/\n/g, ' ')
+  .trim();
+  facilitiesPart = aiSummaryParts[1]?.trim();
+
+  if (facilitiesPart) {
+    facilitiesList = facilitiesPart
+      .split('\n')
+      .map(line => line.trim())
+      .filter(line => line);
+  }
+}
+
+  
+
   return (
     <div className="flex h-screen w-full">
       {/* SVG 영역 */}
-      <div className="w-[75%] bg-gray-100 overflow-auto"onWheelCapture={handleWheel}>
+      <div className="w-[70%] bg-gray-100 overflow-auto"onWheelCapture={handleWheel}>
         <div
           style={{
             position: 'relative',
@@ -235,7 +253,7 @@ const sendIdxToServer = async (idx) => {
       </div>
 
       {/* 사이드바 */}
-      <div className="w-[25%] bg-white shadow-lg overflow-hidden">
+      <div className="w-[30%] bg-white shadow-lg overflow-y-auto">
         <div className="p-4 space-y-2">
 
           {/* 토글 버튼 */}
@@ -253,8 +271,10 @@ const sendIdxToServer = async (idx) => {
               <button
                 key={key}
                 onClick={() => toggleLine(key)}
-                className={`px-3 py-1 rounded ${
-                  visibleLines[key] ? "bg-blue-600 text-white" : "bg-gray-200 text-black"
+                className={`px-3 py-1 rounded border-2 ${
+                  visibleLines[key]
+                    ? `${lineColors[key]} bg-opacity-20 bg-white text-black`
+                    : "border-gray-300 bg-gray-200 text-black"
                 }`}
               >
                 {label}
@@ -264,7 +284,7 @@ const sendIdxToServer = async (idx) => {
         </div>
         <div className="p-4 space-y-2">
 
-          {/* 🔥 검색창 + 버튼 */}
+          {/*  검색창 + 버튼 */}
           <div className="p-4 space-y-2">
             <input
               type="text"
@@ -281,7 +301,7 @@ const sendIdxToServer = async (idx) => {
             </button>
           </div>
 
-          {/* 🔥 검색 결과 리스트 */}
+          {/*  검색 결과 리스트 */}
           {matchedTexts.length > 0 && (
           <div className="mt-2 space-y-1 max-h-64 overflow-y-auto">
             {matchedTexts.map((station, idx) => (
@@ -298,19 +318,45 @@ const sendIdxToServer = async (idx) => {
             ))}
           </div>
         )}
+          
+            {/*  지역 정보 */}
+            {serverResponse && (
+            <div className="p-4 border rounded-lg shadow-md bg-white space-y-4">
+              <h2 className="text-xl font-bold">지역 설명</h2>
 
+              {moodPart && (
+                <>
+                  <h3 className="text-lg font-bold mt-4">주변 분위기</h3>
+                  <p className="leading-relaxed whitespace-pre-wrap">{moodPart}</p>
+                </>
+              )}
 
-          {/* 🔥 지역 정보 */}
-          <h2 className="text-lg font-bold pt-4">지역 정보</h2>
-          {selectedStation ? (
-            <div className="mb-4 space-y-2">
-              <p><strong>일본어:</strong> {selectedStation.Japanese}</p>
-              <p><strong>영어:</strong> {selectedStation.English}</p>
-              <p><strong>한국어:</strong> {selectedStation.Korean}</p>
-              <p><strong>Station 코드:</strong> {selectedStation.Station}</p>
+              {facilitiesList.length > 0 && (
+                <>
+                  <h3 className="text-lg font-bold mt-6">주변 주요 시설</h3>
+                  <ul className="list-none space-y-4 leading-relaxed text-gray-800">
+                    {facilitiesList.map((item, idx) => {
+                      const [name, ...descParts] = item.split(' - ');
+                      const description = descParts.join(' - ').trim(); // 이름 외 나머지를 다시 합치기
+                      return (
+                        <li key={idx}>
+                          <strong>{name}</strong><br />
+                          {description}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              )}
+
+              {rentInfo && (
+                <>
+                  <h3 className="text-lg font-bold mt-6">지난 3년 월세 평균</h3>
+                  <p className="leading-relaxed whitespace-pre-wrap">{rentInfo}</p>
+                </>
+              )}
+
             </div>
-          ) : (
-            <p>검색하여 역을 선택해주세요.</p>
           )}
          </div>   
         </div>
