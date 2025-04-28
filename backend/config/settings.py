@@ -106,6 +106,24 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# settings.py
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {'class': 'logging.StreamHandler'},
+    },
+    'loggers': {
+        # 뷰에서 logger = logging.getLogger(__name__) 사용 시
+        'myapp': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    }
+}
+
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/

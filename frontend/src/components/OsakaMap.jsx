@@ -15,13 +15,16 @@ import {
 } from './svg';
 
 const OsakaMap = () => {
-  
+  const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+  const [openedFacilityName, setOpenedFacilityName] = useState(null);
+  const [facilityDetailData, setFacilityDetailData] = useState(null);
+  const [selectedFacility, setSelectedFacility] = useState(null);
+  const [selectedStation, setSelectedStation] = useState(null);
   const [zoom, setZoom] = useState(0.4);  // 기본 0.4배로 시작
   const [serverResponse, setServerResponse] = useState(null);  // 서버 응답 저장할 상태
   const [stations, setStations] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [matchedTexts, setMatchedTexts] = useState([]);
-  const [selectedStation, setSelectedStation] = useState(null);
   const [visibleLines, setVisibleLines] = useState({
     jr: false,
     metro: false,
@@ -44,28 +47,62 @@ const OsakaMap = () => {
     hk: "border-[#996633]",      // 갈색 (한큐)
   };
 
-
-// 백엔드 연결
-const sendIdxToServer = async (idx) => {
-  try {
-    const response = await fetch('http://localhost:8000/api/send-idx/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ idx: idx })  // 반드시 객체로 포장해서 보내야 해!!
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      setServerResponse(data); 
-    } else {
-      console.error('서버 응답 오류');
+  // 백엔드 연결(주요 시설 데이터)
+  const fetchFacilityInfo = async (facilityName) => {
+    try {
+      const response = await fetch('http://localhost:8000/api/fetch-facility-info/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ facility_name: facilityName })
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        console.log('서버에서 받은 시설 데이터:', data);
+        return data;
+      } else {
+        console.error('서버 응답 오류');
+        return null;
+      }
+    } catch (error) {
+      console.error('에러 발생:', error);
+      return null;
     }
-  } catch (error) {
-    console.error('에러 발생:', error);
-  }
-};
+  };
+
+  // 주요시설 클릭시
+  const handleFacilityClick = async (facilityName) => {
+    const facilityData = await fetchFacilityInfo(facilityName);
+    if (facilityData) {
+      setSelectedFacility(facilityData);
+    }
+  };
+  
+
+  
+  // 백엔드 연결(리스트 선택)
+  const sendIdxToServer = async (idx) => {
+    try {
+      const response = await fetch('http://localhost:8000/api/send-idx/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ idx: idx })  // 반드시 객체로 포장해서 보내야 해!!
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setServerResponse(data); 
+      } else {
+        console.error('서버 응답 오류');
+      }
+    } catch (error) {
+      console.error('에러 발생:', error);
+    }
+  };
   
 // 휠 고정
   useEffect(() => {
@@ -187,28 +224,29 @@ const sendIdxToServer = async (idx) => {
   }, [visibleLines]);
 
   let moodPart = "";
-let facilitiesPart = "";
-let facilitiesList = [];
-let rentInfo = "";
+  let facilitiesPart = "";
+  let facilitiesList = [];
+  let rentInfo = "";
 
-if (serverResponse && serverResponse.ai_summary) {
-  const mainParts = serverResponse.ai_summary.split('[지난 3년 월세 평균]');
-  const facilityAndMood = mainParts[0];
-  rentInfo = mainParts[1]?.trim() || "";
-  const aiSummaryParts = facilityAndMood.split('[주변 주요 시설]');
-  moodPart = aiSummaryParts[0]
-  ?.replace('[주변 분위기]', '')
-  .replace(/\n/g, ' ')
-  .trim();
-  facilitiesPart = aiSummaryParts[1]?.trim();
+  if (serverResponse && serverResponse.ai_summary) {
+    const mainParts = serverResponse.ai_summary.split('[지난 3년 월세 평균]');
+    const facilityAndMood = mainParts[0];
+    rentInfo = mainParts[1]?.trim() || "";
+    const aiSummaryParts = facilityAndMood.split('[주변 주요 시설]');
+    moodPart = aiSummaryParts[0]
+    ?.replace('[주변 분위기]', '')
+    .replace(/\n/g, ' ')
+    .trim();
+    facilitiesPart = aiSummaryParts[1]?.trim();
 
-  if (facilitiesPart) {
-    facilitiesList = facilitiesPart
-      .split('\n')
-      .map(line => line.trim())
-      .filter(line => line);
+    if (facilitiesPart) {
+      facilitiesList = facilitiesPart
+        .split('\n')
+        .map(line => line.trim())
+        .filter(line => line && !line.includes('주변의 주요 시설은'));  // 🔥 안내문구 제거
+    }
+    
   }
-}
 
   
 
@@ -332,22 +370,54 @@ if (serverResponse && serverResponse.ai_summary) {
               )}
 
               {facilitiesList.length > 0 && (
-                <>
-                  <h3 className="text-lg font-bold mt-6">주변 주요 시설</h3>
-                  <ul className="list-none space-y-4 leading-relaxed text-gray-800">
+                <div>
+                  <h3 className="text-lg font-bold mt-6">[주변 주요 시설]</h3>
+                  <ul className="list-none space-y-6">
                     {facilitiesList.map((item, idx) => {
                       const [name, ...descParts] = item.split(' - ');
-                      const description = descParts.join(' - ').trim(); // 이름 외 나머지를 다시 합치기
+                      const description = descParts.join(' - ').trim();
+                      const facilityData = (facilityDetailData && openedFacilityName === name) ? facilityDetailData : null;
+
                       return (
-                        <li key={idx}>
-                          <strong>{name}</strong><br />
-                          {description}
+                        <li key={idx} className="border-b pb-4">
+                          <div
+                            className="cursor-pointer hover:underline"
+                            onClick={async () => {
+                              setOpenedFacilityName(name);  // 클릭한 시설 이름 기억
+                              const facilityData = await fetchFacilityInfo(name);
+                              if (facilityData) {
+                                setFacilityDetailData(facilityData);
+                              }
+                            }}
+                          >
+                            <div className="font-bold">{idx + 1}. {name}</div>
+
+                            {/* 🔥 이 위치에 지도, 평점, 주소 삽입 */}
+                            {facilityData && (
+                              <div className="mt-2 space-y-2">
+                                {facilityData.photo_reference && (
+                                  <img
+                                    src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${facilityData.photo_reference}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
+                                    alt={`${facilityData.name} 사진`}
+                                    className="rounded shadow"
+                                  />
+                                )}
+                                <p><strong>평점:</strong> {facilityData.rating}</p>
+                                <p><strong>주소:</strong> {facilityData.address}</p>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* 🔥 그리고 나서 설명 문구 */}
+                          <div className="text-gray-600 mt-2 pl-1">{description}</div>
                         </li>
                       );
                     })}
                   </ul>
-                </>
+                </div>
               )}
+
+
 
               {rentInfo && (
                 <>

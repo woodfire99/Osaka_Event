@@ -31,3 +31,16 @@ class StationInfo(models.Model):
 
     def __str__(self):
         return self.japanese
+
+class FacilityInfo(models.Model):
+    name = models.CharField(max_length=255, unique=True)  # 시설 이름
+    address = models.CharField(max_length=500, blank=True, null=True)
+    rating = models.FloatField(blank=True, null=True)
+    photo_reference = models.TextField(blank=True, null=True)
+    lat = models.FloatField(blank=True, null=True)
+    lng = models.FloatField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)  # 처음 등록 시간
+    updated_at = models.DateTimeField(auto_now=True)      # 업데이트 시간
+
+    def __str__(self):
+        return self.name
