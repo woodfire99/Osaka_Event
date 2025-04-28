@@ -1,9 +1,23 @@
+// ⬇️ 1. 라이브러리 import
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
+import { Bar } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+
+// ⬇️ 2. 내부 파일 import
+import rentDataCsv from '../data/rent_data.csv';
 import stationsCsv from '../data/osaka_station_names.csv'; // 경로 주의
 import {
   Basemap,
-  Legend,
+  Legend as SvgLegend,
   JrLine, JrName,
   MetroLine, MetroName,
   KtLine, KtName,
@@ -14,7 +28,20 @@ import {
   GroupName,
 } from './svg';
 
+// ⬇️ 3. ChartJS 설정 (이건 import랑 별개. 함수 호출이니까 그 다음에 위치)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+
 const OsakaMap = () => {
+  const [rentData, setRentData] = useState([]);
+  const [selectedStationRentData, setSelectedStationRentData] = useState([]);
   const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   const [openedFacilityName, setOpenedFacilityName] = useState(null);
   const [facilityDetailData, setFacilityDetailData] = useState(null);
@@ -34,9 +61,7 @@ const OsakaMap = () => {
     hk: false,
     nk: false,
   });
-
-
-  // 버튼 색깔
+  // 버튼 색깔(크게 나눠서)
   const lineColors = {
     metro: "border-[#3399FF]",   // 파랑
     jr: "border-[#FF6600]",      // 오렌지
@@ -46,6 +71,116 @@ const OsakaMap = () => {
     kh: "border-[#003366]",      // 짙은 파랑 (케이한)
     hk: "border-[#996633]",      // 갈색 (한큐)
   };
+
+  // 라인 색깔
+  const lineColorByCode = {
+    M: "ff0000ff",   // 미도스지선 (빨강)
+    T: "7f007fff",   // 타니마치선 (보라)
+    Y: "0000ffff",   // 요츠바시선 (파랑)
+    C: "008000ff",   // 츄오선 (초록)
+    S: "ff00ffff",   // 센니치마에선 (핑크)
+    K: "7f0000ff",   // 사카이스지선 (갈색)
+    N: "7fff00ff",   // 나가호리선 (연두)
+    I: "ff7f00ff",   // 이마자토스지선 (오렌지)
+    P: "007fffff",   // 뉴트램 (하늘색)
+  
+    O: "d86060ff",   // 오사카 순환선 (초록)
+    H: "ec2c8cff",   // 토자이선 (보라)
+    R: "f59e0bff",   // 한와선 (오렌지)
+    G: "facc15ff",   // 후쿠치야마선 (남색)
+    Q: "00a86bff",   // 야마토지선 (초록)
+    F: "2f6f97ff",   // 오사카히가시선 (남색)
+    A: "0076c0ff",   // 교토선/고베선 (파랑)
+  
+    NK: "0e7c3aff",  // 난카이선 (짙은 초록)
+    KH: "00008bff",  // 케이한선 (짙은 파랑)
+    HS: "ffff00ff",  // 한신선 (노랑)
+    HK: "b72036ff",  // 한큐선 (갈색)
+    D: "0072bcff",   // 킨테츠 오사카선 (파랑)
+  };
+  
+
+  // getLineName 함수 (OsakaMap 밖)
+  const getLineName = (stationCode) => {
+    if (!stationCode) return "";
+  
+    // KT- 계열은 킨테츠
+    if (stationCode.startsWith('KT-F') || stationCode.startsWith('KT-A')) {
+      const realCode = stationCode.replace('KT-', '');
+      return `${realCode}(Kintetsu)`;
+    }
+  
+    // JR-P 계열은 JR
+    if (stationCode.startsWith('JR-P')) {
+      return `${stationCode.slice(3)}(JR)`;
+    }
+  
+    const displayCode = stationCode
+      .replace('KT-', '')
+      .replace('JR-', '');
+  
+    const prefix2 = displayCode.slice(0, 2); // 2글자
+    const prefix1 = displayCode.slice(0, 1); // 1글자
+  
+    // 2글자 우선 매칭
+    if (['KH', 'NK', 'HK', 'HS'].includes(prefix2)) {
+      return `${displayCode}`;
+    }
+  
+    // Metro 계열
+    if (['M', 'T', 'Y', 'C', 'S', 'N', 'I', 'P'].includes(prefix1)) {
+      return `${displayCode}(Metro)`;
+    }
+  
+    // JR 계열
+    if (['O', 'Q', 'R', 'A', 'G', 'F', 'H'].includes(prefix1)) {
+      return `${displayCode}(JR)`;
+    }
+  
+    return displayCode; // 매칭 안 되면 그냥 코드만
+  };
+  
+
+  // 역코드 나누기
+  const getLineType = (stationCode) => {
+    if (!stationCode) return "";
+
+    if (stationCode.startsWith('KT-F') || stationCode.startsWith('KT-A')) {
+      return 'kt'; // Kintetsu
+    }
+    if (stationCode.startsWith('JR-P')) {
+      return 'jr';
+    }
+    if (
+      stationCode.startsWith('M') || stationCode.startsWith('T') || stationCode.startsWith('N') ||
+      stationCode.startsWith('K') || stationCode.startsWith('C') || stationCode.startsWith('S') ||
+      (stationCode.startsWith('P') && !stationCode.startsWith('JR-P')) ||
+      stationCode.startsWith('I') || stationCode.startsWith('Y')
+    ) {
+      return 'metro';
+    }
+    if (
+      stationCode.startsWith('O') || stationCode.startsWith('Q') || stationCode.startsWith('R') ||
+      stationCode.startsWith('A') || stationCode.startsWith('G') || stationCode.startsWith('F') ||
+      stationCode.startsWith('H')
+    ) {
+      return 'jr';
+    }
+    if (stationCode.startsWith('KH')) {
+      return 'kh';
+    }
+    if (stationCode.startsWith('HS')) {
+      return 'hs';
+    }
+    if (stationCode.startsWith('HK')) {
+      return 'hk';
+    }
+    if (stationCode.startsWith('NK')) {
+      return 'nk';
+    }
+    return '';
+  };
+  
 
   // 백엔드 연결(주요 시설 데이터)
   const fetchFacilityInfo = async (facilityName) => {
@@ -80,7 +215,15 @@ const OsakaMap = () => {
     }
   };
   
-
+  // 월세 CSV
+  useEffect(() => {
+    fetch(rentDataCsv)
+      .then(res => res.text())
+      .then(text => {
+        const result = Papa.parse(text, { header: true });
+        setRentData(result.data);
+      });
+  }, []);
   
   // 백엔드 연결(리스트 선택)
   const sendIdxToServer = async (idx) => {
@@ -263,7 +406,7 @@ const OsakaMap = () => {
           }}
         >
           <Basemap className="absolute top-0 left-0" />
-          <Legend className="absolute top-0 left-0" />
+          <SvgLegend className="absolute top-0 left-0" />
 
           {/* 먼저 노선(Line)만 */}
           {visibleLines.jr && <JrLine className="absolute top-0 left-0" />}
@@ -348,19 +491,147 @@ const OsakaMap = () => {
                 onClick={() => {
                   setSelectedStation(station);
                   sendIdxToServer(station.Number);
+                  // rent 데이터 매칭
+                  const matchedRents = rentData.filter(
+                    (item) => item.station === station.Japanese
+                  );
+                  setSelectedStationRentData(matchedRents);
                 }}
                 className="cursor-pointer hover:bg-blue-100 p-1 rounded"
               >
-                {station.Japanese} / {station.English} / {station.Korean}
+              {station.Japanese}/{station.English}/{station.Korean}
               </div>
             ))}
           </div>
         )}
-          
+            {selectedStation && (
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg shadow-md text-center">
+              <div className="text-xl font-semibold text-gray-800">
+                {selectedStation.Japanese}
+              </div>
+              <div className="text-sm text-gray-500">
+                {selectedStation.English}
+              </div>
+              <div className="text-sm text-gray-500 mb-2">
+                {selectedStation.Korean}
+              </div>
+              {selectedStation?.Station && (
+                <div className="text-xs flex flex-wrap gap-2 mt-2">
+                  {selectedStation.Station.split(',').map((code, idx) => {
+                    const trimmedCode = code.trim();
+
+                    let isKintetsuA = false;
+                    let isKintetsuF = false;
+                    let isJR = false;
+                    let displayCode = trimmedCode;
+
+                    if (trimmedCode.startsWith('KT-A')) {
+                      isKintetsuA = true;
+                      displayCode = trimmedCode.replace('KT-', '');
+                    } else if (trimmedCode.startsWith('KT-F')) {
+                      isKintetsuF = true;
+                      displayCode = trimmedCode.replace('KT-', '');
+                    } else if (trimmedCode.startsWith('JR-')) {
+                      isJR = true;
+                      displayCode = trimmedCode.replace('JR-', '');
+                    }
+
+                    const prefix2 = displayCode.slice(0, 2);
+                    const prefix1 = displayCode.slice(0, 1);
+
+                    let codeKey = "";
+                    if (["NK", "KH", "HS", "HK"].includes(prefix2)) {
+                      codeKey = prefix2;
+                    } else {
+                      codeKey = prefix1;
+                    }
+
+                    let color = "ccccccff"; // 기본 회색
+
+                    if (isKintetsuA) {
+                      color = "d1003fff"; // 킨테츠 나라선용 색 (파랑 느낌)
+                    } else if (isKintetsuF) {
+                      color = "0d8737ff"; // 킨테츠 오사카선용 색 (연두)
+                    } else if (isJR && codeKey === 'P') {
+                      color = "121b4cff"; // JR-P 오렌지
+                    } else {
+                      color = lineColorByCode[codeKey] || "ccccccff";
+                    }
+
+                    let textColor = "text-white"; // 기본은 흰색
+
+                    if (codeKey === 'HS') {
+                      textColor = "text-black"; // 한신선(HS)은 검정 글자
+                    }
+
+                    return (
+                      <span
+                        key={idx}
+                        className={`px-3 py-1 rounded-full text-xs font-semibold ${textColor}`}
+                        style={{ backgroundColor: `#${color}` }}
+                      >
+                        {getLineName(trimmedCode)}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+
+
+
+
+            </div>
+            
+            )}
             {/*  지역 정보 */}
             {serverResponse && (
             <div className="p-4 border rounded-lg shadow-md bg-white space-y-4">
               <h2 className="text-xl font-bold">지역 설명</h2>
+              {selectedStationRentData.length > 0 ? (
+  <div className="mt-6">
+    <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
+
+    {(() => {
+      const grouped = {};
+      selectedStationRentData.forEach((r) => {
+        const type = r.room_type;
+        const price = parseFloat(r.rent_price.replace('万円', ''));
+        if (!grouped[type]) {
+          grouped[type] = [];
+        }
+        grouped[type].push(price);
+      });
+
+      const averaged = Object.entries(grouped).map(([type, prices]) => {
+        const sum = prices.reduce((acc, curr) => acc + curr, 0);
+        const avg = sum / prices.length;
+        return { room_type: type, average: avg };
+      });
+
+      return (
+        <Bar
+          data={{
+            labels: averaged.map(item => item.room_type),
+            datasets: [
+              {
+                label: '월세 (만엔)',
+                data: averaged.map(item => item.average),
+                backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+              },
+            ],
+          }}
+        />
+      );
+    })()}
+  </div>
+) : (
+  <div className="mt-6">
+    <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
+    <p className="text-center text-gray-500 mt-4">월세 데이터 없음</p> 
+  </div>
+)}
+
+
 
               {moodPart && (
                 <>
