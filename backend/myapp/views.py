@@ -77,7 +77,8 @@ def receive_idx(request):
 def fetch_facilities(request):
     if request.method == 'POST':
         body = json.loads(request.body)
-        station_name = body.get('station_name')
+        station_name_raw = body.get('station_name')
+        station_name = f"大阪府 {station_name_raw}"
 
         try:
             station = StationInfo.objects.get(japanese=station_name)

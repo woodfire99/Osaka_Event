@@ -450,11 +450,12 @@ const OsakaMap = () => {
       </div>
 
       {/* 사이드바 */}
-      <div className="w-[30%] bg-white shadow-lg overflow-y-auto">
-        <div className="p-4 space-y-2">
+      <div className="w-[30%] bg-white shadow-lg overflow-y-auto"
+        style={{ paddingTop: '40px' }}>
+        <div className="p-4 space-y-4">
 
           {/* 토글 버튼 */}
-          <div className="p-4">
+
           <div className="flex flex-wrap gap-2">
             {[
               { key: "jr", label: "JR선" },
@@ -478,11 +479,10 @@ const OsakaMap = () => {
               </button>
             ))}
           </div>
-        </div>
-        <div className="p-4 space-y-2">
+        
 
           {/*  검색창 + 버튼 */}
-          <div className="p-4 space-y-2">
+          <div className="space-y-2">
             <input
               type="text"
               value={searchTerm}
@@ -827,8 +827,7 @@ const OsakaMap = () => {
 
             </div>
           )}
-         </div>   
-        </div>
+        </div>   
       </div>
     </div>
   );
