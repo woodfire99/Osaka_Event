@@ -2550,7 +2550,7 @@ const SvgJrName = (props) => (
                   strokeDasharray: "none",
                 }}
               >
-                {"\u585A\u53E3"}
+                {"JR\u585A\u53E3"}
               </tspan>
               <tspan
                 x={1181.18}
@@ -2568,7 +2568,7 @@ const SvgJrName = (props) => (
                   strokeDasharray: "none",
                 }}
               >
-                {"Tsukaguchi"}
+                {"JR-Tsukaguchi"}
               </tspan>
             </text>
           </g>
@@ -2930,7 +2930,7 @@ const SvgJrName = (props) => (
                   strokeDasharray: "none",
                 }}
               >
-                {"\u5439\u7530"}
+                {"JR\u5439\u7530"}
               </tspan>
               <tspan
                 x={1181.18}
@@ -2948,7 +2948,7 @@ const SvgJrName = (props) => (
                   strokeDasharray: "none",
                 }}
               >
-                {"Suita"}
+                {"JR-Suita"}
               </tspan>
             </text>
           </g>
@@ -3920,7 +3920,7 @@ const SvgJrName = (props) => (
                   strokeDasharray: "none",
                 }}
               >
-                {"\u9577\u5C45"}
+                {"JR\u9577\u5C45"}
               </tspan>
               <tspan
                 x={1134.554}
@@ -3940,7 +3940,7 @@ const SvgJrName = (props) => (
                   strokeDasharray: "none",
                 }}
               >
-                {"Nagai"}
+                {"JR-Nagai"}
               </tspan>
             </text>
           </g>

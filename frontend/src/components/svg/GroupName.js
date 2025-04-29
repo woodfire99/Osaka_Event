@@ -5039,7 +5039,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             >
-              {"\u5C3C\u5D0E"}
+              {"JR\u5C3C\u5D0E"}
             </tspan>
             <tspan
               x={1584.824}
@@ -5057,7 +5057,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             >
-              {"Amagasaki"}
+              {"JR-Amagasaki"}
             </tspan>
           </text>
           <text

@@ -54,7 +54,7 @@ for event_id, location in events:
     for station_type in station_types:
         nearby_url = (
             f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
-            f"location={lat},{lng}&radius=3000&type={station_type}&key={GOOGLE_API_KEY}&language=ja"
+            f"location={lat},{lng}&radius=1000&type={station_type}&key={GOOGLE_API_KEY}&language=ja"
         )
         station_res = requests.get(nearby_url).json()
        

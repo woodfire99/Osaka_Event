@@ -22,16 +22,18 @@ cur = conn.cursor()
 
 # 역 데이터 불러오기
 cur.execute("""
-    SELECT id, japanese, english, korean, station_code
+    SELECT id, japanese, english, korean, station_code, ai_summary
     FROM myapp_stationinfo
-    WHERE ai_summary IS NULL
+    WHERE ai_summary IS NOT NULL
     ORDER BY id
 """)
 stations = cur.fetchall()
 
 # ChatGPT 호출 + ai_summary 생성
-for id, japanese, english, korean, station_code in stations:
-    print(id, korean)
+
+# for id, japanese, english, korean, station_code, ai_summary in stations:
+
+
 #     # 한국어 역 이름
 #     station_name_with_eki = f"{korean}역"
 
@@ -49,33 +51,10 @@ for id, japanese, english, korean, station_code in stations:
 #     )
 #     mood_summary = response_mood.choices[0].message.content.strip()
 #     time.sleep(20)
-#     # 주변 주요 시설 리스트업 요청
-#     response_facilities = client.chat.completions.create(
-#         model="gpt-4o",
-#         messages=[
-#             {
-#                 "role": "user",
-#                 "content": f"""
-# 오사카시에 위치한 {station_name_with_eki}({japanese}駅) 주변의 주요 시설, 학교, 병원, 쇼핑시설 등을 5개 정도 한국어로 리스트업 해줘.
-# 답변에서도 역 이름은 반드시 {station_name_with_eki}로 표현해줘.
-# """
-#             }
-#         ]
-#     )
-#     facility_summary = response_facilities.choices[0].message.content.strip()
-#     time.sleep(20)
 #     # 최종 ai_summary 조립
 #     final_summary = f"""[주변 분위기]
 
 # {mood_summary}
-
-# [주변 주요 시설]
-
-# {facility_summary}
-
-# [지난 3년 월세 평균]
-
-# (데이터 준비 중입니다.)
 # """
 
 #     print(id, final_summary)

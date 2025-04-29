@@ -13,7 +13,7 @@
 12,庄内,Shonai,쇼나이,HK42
 13,三国,Mikuni,미쿠니,HK41
 14,塚口,Tsukaguchi,쓰카구치,HK06
-15,塚口,Tsukaguchi,쓰카구치,G50
+15,JR塚口,JR-Tsukaguchi,쓰카구치,G50
 16,園田,Sonoda,소노다,HK05
 17,神崎川,Kanzakigawa,칸자키가와,HK04
 18,十三,Juso,주소,HK03
@@ -48,7 +48,7 @@
 48,JR野江,JR-Noe,JR노에,F06
 49,岸辺,Kishibe,기시베,A43
 50,東淀川,Higashi-Yodogawa,히가시요도가와,A45
-51,吹田,Suita,스이타,A44
+51,JR吹田,JR-Suita,스이타,A44
 52,加美,Kami,카미,Q23
 53,平野,Hirano,히라노,Q22
 54,東部市場前,Tobushijo-mae,도부시장앞,Q21
@@ -56,7 +56,7 @@
 56,杉本町,Sugimotocho,스기모토초,R26
 57,我孫子町,Abikocho,아비코초,R25
 58,鶴ケ丘,Tsurugaoka,쓰루가오카,R23
-59,長居,Nagai,나가이,R24
+59,JR長居,JR-Nagai,나가이,R24
 60,南田辺,Minamitanabe,미나미타나베,R22
 61,美章園,Bishōen,비쇼엔,R21
 62,守口市,Moriguchi-shi,모리구치시,KH11
@@ -190,3 +190,4 @@
 190,JR河内永和,JR-Kawachi-Eiwa,JR카와치에이와,"F10,KT-A07"
 191,鶴橋,Tsuruhashi,츠루하시,"S19,O04,KT-A04"
 192,布施,Fuse,후세,"KT-A06,D06"
+193,JR尼崎,JR-Amagasaki,JR아마가사키,"G49,A49,H49"

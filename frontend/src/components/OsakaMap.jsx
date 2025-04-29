@@ -1,5 +1,5 @@
 // ⬇️ 1. 라이브러리 import
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import Papa from 'papaparse';
 import { Bar } from 'react-chartjs-2';
 import {
@@ -40,12 +40,16 @@ ChartJS.register(
 
 
 const OsakaMap = () => {
+  const svgContainerRef = useRef(null);
+  const [eventList, setEventList] = useState([]);
+  const [stationInfo, setStationInfo] = useState(null);         // 역 기본 정보 저장
+  const [facilitiesList, setFacilitiesList] = useState([]);     // 주변 시설 리스트 저장
+  const [loading, setLoading] = useState(false);                // 로딩 상태
   const [rentData, setRentData] = useState([]);
   const [selectedStationRentData, setSelectedStationRentData] = useState([]);
   const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-  const [openedFacilityName, setOpenedFacilityName] = useState(null);
-  const [facilityDetailData, setFacilityDetailData] = useState(null);
-  const [selectedFacility, setSelectedFacility] = useState(null);
+  const [openedStation, setOpenedStation] = useState('');
+  const [places, setPlaces] = useState([]);  
   const [selectedStation, setSelectedStation] = useState(null);
   const [zoom, setZoom] = useState(0.4);  // 기본 0.4배로 시작
   const [serverResponse, setServerResponse] = useState(null);  // 서버 응답 저장할 상태
@@ -61,7 +65,30 @@ const OsakaMap = () => {
     hk: false,
     nk: false,
   });
-  const [facilityClickEnabled, setFacilityClickEnabled] = useState(false); // 시설 클릭 메소드 활성화 선택
+  
+
+
+  // 역 - 이벤트 연결
+  const fetchEventsByStation = async (stationNameJapanese) => {
+    try {
+      const fullName = `${stationNameJapanese}駅`;  // 예: なんば駅
+      const response = await fetch('http://localhost:8000/api/events-by-station/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ station_name: fullName })
+      });
+      if (response.ok) {
+        const data = await response.json();
+        return data.events;
+      } else {
+        console.error('이벤트 요청 실패');
+        return [];
+      }
+    } catch (err) {
+      console.error('에러 발생:', err);
+      return [];
+    }
+  };  
 
   // 버튼 색깔(크게 나눠서)
   const lineColors = {
@@ -101,7 +128,6 @@ const OsakaMap = () => {
     D: "0072bcff",   // 킨테츠 오사카선 (파랑)
   };
   
-
   // getLineName 함수 (OsakaMap 밖)
   const getLineName = (stationCode) => {
     if (!stationCode) return "";
@@ -142,7 +168,6 @@ const OsakaMap = () => {
     return displayCode; // 매칭 안 되면 그냥 코드만
   };
   
-
   // 역코드 나누기
   const getLineType = (stationCode) => {
     if (!stationCode) return "";
@@ -183,40 +208,6 @@ const OsakaMap = () => {
     return '';
   };
   
-
-  // 백엔드 연결(주요 시설 데이터)
-  const fetchFacilityInfo = async (facilityName) => {
-    try {
-      const response = await fetch('http://localhost:8000/api/fetch-facility-info/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ facility_name: facilityName })
-      });
-  
-      if (response.ok) {
-        const data = await response.json();
-        console.log('서버에서 받은 시설 데이터:', data);
-        return data;
-      } else {
-        console.error('서버 응답 오류');
-        return null;
-      }
-    } catch (error) {
-      console.error('에러 발생:', error);
-      return null;
-    }
-  };
-
-  // 주요시설 클릭시
-  const handleFacilityClick = async (facilityName) => {
-    const facilityData = await fetchFacilityInfo(facilityName);
-    if (facilityData) {
-      setSelectedFacility(facilityData);
-    }
-  };
-  
   // 월세 CSV
   useEffect(() => {
     fetch(rentDataCsv)
@@ -235,12 +226,20 @@ const OsakaMap = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ idx: idx })  // 반드시 객체로 포장해서 보내야 해!!
+        body: JSON.stringify({ idx: idx })
       });
-
+  
       if (response.ok) {
         const data = await response.json();
-        setServerResponse(data); 
+        setServerResponse(data);  // 서버에서 받은 역 기본 정보 저장
+  
+        // 🔥 추가: send-idx 끝난 후 facilities 요청
+        if (data.japanese) {
+          const facilities = await fetchNearbyFacilities(data.japanese);
+          const events = await fetchEventsByStation(data.japanese);
+          setEventList(events); 
+          setFacilitiesList(facilities); // 주변 시설 리스트 저장
+        }
       } else {
         console.error('서버 응답 오류');
       }
@@ -248,6 +247,32 @@ const OsakaMap = () => {
       console.error('에러 발생:', error);
     }
   };
+  
+   // 백엔드 연결(주요 시설 데이터)
+  const fetchNearbyFacilities = async (stationNameJapanese) => {
+
+    try {
+      const response = await fetch('http://localhost:8000/api/facilities/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ station_name: stationNameJapanese }),
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        return data.facilities;  // 시설 리스트 반환
+      } else {
+        console.error('시설 정보 요청 실패');
+        return [];
+      }
+    } catch (error) {
+      console.error('에러 발생:', error);
+      return [];
+    }
+  };
+  
   
 // 휠 고정
   useEffect(() => {
@@ -369,42 +394,26 @@ const OsakaMap = () => {
   }, [visibleLines]);
 
   let moodPart = "";
-  let facilitiesPart = "";
-  let facilitiesList = [];
-  let rentInfo = "";
-
   if (serverResponse && serverResponse.ai_summary) {
     const mainParts = serverResponse.ai_summary.split('[지난 3년 월세 평균]');
     const facilityAndMood = mainParts[0];
-    rentInfo = mainParts[1]?.trim() || "";
+  
     const aiSummaryParts = facilityAndMood.split('[주변 주요 시설]');
     moodPart = aiSummaryParts[0]
-    ?.replace('[주변 분위기]', '')
-    .replace(/\n/g, ' ')
-    .trim();
-    facilitiesPart = aiSummaryParts[1]?.trim();
-
-    if (facilitiesPart) {
-      facilitiesList = facilitiesPart
-        .split('\n')                 // 일단 줄마다 쪼개고
-        .map(line => line.trim())     // 앞뒤 공백 제거
-        .filter(line => line.startsWith('1.') || line.startsWith('2.') || line.startsWith('3.') || line.startsWith('4.') || line.startsWith('5.') || line.startsWith('6.') || line.startsWith('7.') || line.startsWith('8.') || line.startsWith('9.'))
-        // 🔥 번호로 시작하는 진짜 리스트만 남김
-        .filter(line => line.includes('**')); 
-        // 🔥 그리고 **(별표)가 포함된 것만 => 설명글은 걸러짐
-    }
-    
-    
-    
+      ?.replace('[주변 분위기]', '')
+      .replace(/\n/g, ' ')
+      .trim();
   }
-
-  
 
   return (
     <div className="flex h-screen w-full">
       {/* SVG 영역 */}
-      <div className="w-[70%] bg-gray-100 overflow-auto"onWheelCapture={handleWheel}>
-        <div
+      <div
+        ref={svgContainerRef}
+        className="w-[70%] h-full relative bg-gray-100 overflow-auto"
+        onWheelCapture={handleWheel}
+      >
+      <div
           style={{
             position: 'relative',
             transform: `scale(${zoom})`,
@@ -483,7 +492,7 @@ const OsakaMap = () => {
             />
             <button
               onClick={handleSearch}
-              className="w-full bg-blue-500 text-white py-1 rounded hover:bg-blue-600"
+              className="w-full bg-blue-500 text-white text-lg font-semibold py-2 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-blue-600 hover:shadow-lg active:scale-95"
             >
               검색
             </button>
@@ -496,14 +505,94 @@ const OsakaMap = () => {
               <div
                 key={idx}
                 onClick={() => {
+                  const clickedStation = station;  // 👈 이걸 따로 저장
                   setSelectedStation(station);
                   sendIdxToServer(station.Number);
-                  // rent 데이터 매칭
-                  const matchedRents = rentData.filter(
-                    (item) => item.station === station.Japanese
+                  setZoom(1.0); // 확대
+                
+                  // 🔥 1. 역 코드에서 노선 자동 표시
+                  const stationCodes = station.Station.split(',').map(code => code.trim());
+                  const updatedLines = {
+                    jr: false,
+                    metro: false,
+                    kt: false,
+                    kh: false,
+                    hs: false,
+                    hk: false,
+                    nk: false,
+                  };
+                  
+                
+                  stationCodes.forEach(code => {
+                    if (code.startsWith('JR-')) {
+                      updatedLines.jr = true;
+                    } else if (code.startsWith('KT-')) {
+                      updatedLines.kt = true;
+                    } else {
+                      const prefix2 = code.slice(0, 2);
+                      const prefix1 = code.slice(0, 1);
+                  
+                      if (prefix2 === 'KH') updatedLines.kh = true;
+                      else if (prefix2 === 'NK') updatedLines.nk = true;
+                      else if (prefix2 === 'HK') updatedLines.hk = true;
+                      else if (prefix2 === 'HS') updatedLines.hs = true;
+                      else {
+                        const metroPrefixes = ['M', 'S', 'Y', 'C', 'T', 'N', 'I', 'P', 'K'];
+                        if (metroPrefixes.includes(prefix1)) {
+                          updatedLines.metro = true;
+                        } else {
+                          // JR 계열 (Q, F, O, etc.)
+                          const jrPrefixes = ['Q', 'F', 'O', 'A', 'R', 'G', 'H'];
+                          if (jrPrefixes.includes(prefix1)) {
+                            updatedLines.jr = true;
+                          }
+                        }
+                      }
+                    }
+                  });
+                  
+                  
+                  setVisibleLines(updatedLines);
+                  // 🔥 2. SVG 이동 (딜레이 줘야 getBBox 작동함)
+                  setTimeout(() => {
+                    const svgRoot = document.querySelector('svg');
+                    if (!svgRoot) return;
+                  
+                    const targetTspan = Array.from(document.querySelectorAll('tspan')).find(t =>
+                      t.textContent?.trim() === clickedStation.Japanese  // 정확히 같은 텍스트만!
+                    );
+
+                    const targetText = targetTspan?.closest('text');      
+
+                    if (targetText && svgContainerRef.current) {
+                      const clientRect = targetText.getBoundingClientRect();
+                      const containerRect = svgContainerRef.current.getBoundingClientRect();
+                    
+                      const offsetX = clientRect.left - containerRect.left + svgContainerRef.current.scrollLeft;
+                      const offsetY = clientRect.top - containerRect.top + svgContainerRef.current.scrollTop;
+                    
+                      svgContainerRef.current.scrollTo({
+                        left: offsetX-750,
+                        top: offsetY-400,
+                        behavior: 'smooth',
+                      });
+                    }
+                    
+                  }, 600);
+                  
+                  
+                  
+                
+                  // 🔥 3. 월세 데이터
+                  const matchedRents = rentData.filter(item =>
+                    item.station === station.Japanese
                   );
                   setSelectedStationRentData(matchedRents);
                 }}
+                
+                
+                
+                
                 className="cursor-pointer hover:bg-blue-100 p-1 rounded"
               >
               {station.Japanese}/{station.English}/{station.Korean}
@@ -511,6 +600,7 @@ const OsakaMap = () => {
             ))}
           </div>
         )}
+            {/* 역정보 데이터 */}
             {selectedStation && (
               <div className="mt-6 p-4 bg-gray-50 rounded-lg shadow-md text-center">
               <div className="text-xl font-semibold text-gray-800">
@@ -531,6 +621,7 @@ const OsakaMap = () => {
                     let isKintetsuF = false;
                     let isJR = false;
                     let displayCode = trimmedCode;
+                    let textColor = "text-white"; // 기본은 흰색
 
                     if (trimmedCode.startsWith('KT-A')) {
                       isKintetsuA = true;
@@ -565,8 +656,10 @@ const OsakaMap = () => {
                       color = lineColorByCode[codeKey] || "ccccccff";
                     }
 
-                    let textColor = "text-white"; // 기본은 흰색
-
+                    
+                    if (/^N\d{2}$/.test(displayCode)) {
+                      textColor = "text-black";
+                    }
                     if (codeKey === 'HS') {
                       textColor = "text-black"; // 한신선(HS)은 검정 글자
                     }
@@ -590,13 +683,21 @@ const OsakaMap = () => {
             </div>
             
             )}
+
+
+
+
+
+
             {/*  지역 정보 */}
             {serverResponse && (
             <div className="p-4 border rounded-lg shadow-md bg-white space-y-4">
               <h2 className="text-xl font-bold">지역 설명</h2>
+              
+              {/* 월세 데이터 */}
               {selectedStationRentData.length > 0 ? (
                 <div className="mt-6">
-                  <h3 className="text-lg font-bold">1R / 1K 월세 비교</h3>
+                  <h3 className="text-lg font-bold">[1R / 1K 평균 월세 비교]</h3>
 
                   {(() => {
                     const grouped = {};
@@ -638,69 +739,91 @@ const OsakaMap = () => {
                 </div>
               )}
 
-
-
+              {/* 현재 이벤트 정보 */}
+              {eventList.length > 0 && (
+                <div className="p-4 mt-6 border-t">
+                  <h3 className="text-lg font-bold">[예정된 이벤트]</h3>
+                  <ul className="space-y-4">
+                    {eventList.map((event, idx) => (
+                      <li key={idx} className="border-b pb-2">
+                        <a href={event.url} target="_blank" rel="noreferrer" className="text-blue-600 font-semibold hover:underline">
+                          {event.title}
+                        </a>
+                        <p className="text-sm text-gray-500">{event.date} | {event.location}</p>
+                        {event.image && (
+                          <img src={event.image} alt={event.title} className="mt-2 rounded-xl w-full max-w-md" />
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              
+              {/* 지역 분위기 */}
               {moodPart && (
                 <>
-                  <h3 className="text-lg font-bold mt-4">주변 분위기</h3>
+                  <h3 className="text-lg font-bold mt-4">[주변 분위기]</h3>
                   <p className="leading-relaxed whitespace-pre-wrap">{moodPart}</p>
                 </>
               )}
               <div>
-              <h3 className="text-lg font-bold mt-6">[주변 주요 시설]</h3>
-                <ul className="list-none space-y-6">
-                  {facilitiesList.map((item, idx) => {
-                    const [name, ...descParts] = item.split(' - ');
-                    const description = descParts.join(' - ').trim();
-                    const cleanName = name.replace(/^\d+\.\s*/, '').replace(/\*\*/g, '').trim(); // 🔥 여기가 중요
-                    const facilityData = (facilityDetailData && openedFacilityName === cleanName) ? facilityDetailData : null;
+                    <h3 className="text-lg font-bold mt-6">[주변 주요시설]</h3>
+                    <ul className="list-none space-y-10">
+                      {facilitiesList.slice(0, 5).map((place, idx) => (
+                        <li key={idx} className="border-b pb-6">
+                          {/* 이름 + 구글 지도 링크 */}
+                          <div className="font-bold text-lg mb-2">
+                            {idx + 1}.{" "}
+                            <a
+                              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.name)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline"
+                            >
+                              {place.name}
+                            </a>
+                          </div>
 
-                    return (
-                      <li key={idx} className="border-b pb-4">
-                        <div
-                          className="cursor-pointer hover:underline"
-                          onClick={async () => {
-                            if (!facilityClickEnabled) return;  // 🔥 클릭 막기
-                            setOpenedFacilityName(cleanName);
-                            const facilityData = await fetchFacilityInfo(cleanName);
-                            if (facilityData) {
-                              setFacilityDetailData(facilityData);
-                            }
-                          }}
-                        >
-                          <div className="font-bold">{idx + 1}. {cleanName}</div>
+                    {/* 이미지 */}
+                    {place.photo_reference && (
+                      <img
+                        src={`http://localhost:8000/api/photo-proxy?photo_reference=${place.photo_reference}`}
+                        alt={`${place.name} 사진`}
+                        className="rounded-2xl shadow-md w-full max-w-md h-auto object-cover"
+                      />
+                    )}
 
-                          {/* 지도, 평점, 주소 */}
-                          {facilityData && (
-                            <div className="mt-2 space-y-2">
-                              {facilityData.photo_reference && (
-                                <img
-                                  src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${facilityData.photo_reference}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
-                                  alt={`${facilityData.name} 사진`}
-                                  className="rounded shadow"
-                                />
-                              )}
-                              <p><strong>평점:</strong> {facilityData.rating}</p>
-                              <p><strong>주소:</strong> {facilityData.address}</p>
-                            </div>
-                          )}
-                        </div>
+                    {/* 평점 */}
 
-                        {/* 설명 */}
-                        <div className="text-gray-600 mt-2 pl-1">{description}</div>
-                      </li>
-                    );
-                  })}
-                </ul>
+                    <div className="flex items-center mt-2">
+                      {place.rating ? (
+                        <>
+                          {/* 별 아이콘 채우기 */}
+                          {Array.from({ length: 5 }).map((_, idx) => (
+                            <svg
+                              key={idx}
+                              xmlns="http://www.w3.org/2000/svg"
+                              className={`h-5 w-5 ${idx < Math.round(place.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.18 3.64a1 1 0 00.95.69h3.826c.969 0 1.371 1.24.588 1.81l-3.1 2.252a1 1 0 00-.364 1.118l1.18 3.64c.3.921-.755 1.688-1.54 1.118l-3.1-2.252a1 1 0 00-1.175 0l-3.1 2.252c-.784.57-1.838-.197-1.539-1.118l1.18-3.64a1 1 0 00-.364-1.118l-3.1-2.252c-.783-.57-.38-1.81.588-1.81h3.826a1 1 0 00.95-.69l1.18-3.64z" />
+                            </svg>
+                          ))}
+                          {/* 평점 숫자도 작게 표시 */}
+                          <span className="text-gray-500 text-sm ml-2">({place.rating})</span>
+                        </>
+                      ) : (
+                        <span className="text-gray-400">평점 정보 없음</span>
+                      )}
+                    </div>
+
+                  </li>
+                ))}
+              </ul>
               </div>
 
 
-              {rentInfo && (
-                <>
-                  <h3 className="text-lg font-bold mt-6">지난 3년 월세 평균</h3>
-                  <p className="leading-relaxed whitespace-pre-wrap">{rentInfo}</p>
-                </>
-              )}
 
             </div>
           )}

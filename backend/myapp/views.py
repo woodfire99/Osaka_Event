@@ -8,12 +8,43 @@ import os
 import requests
 import re
 import logging
+from django.http import HttpResponse
 from dotenv import load_dotenv
-
+from .models import NearbyFacility
 load_dotenv()  
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 
 logger = logging.getLogger(__name__)
+
+
+@csrf_exempt
+def photo_proxy(request):
+    photo_reference = request.GET.get('photo_reference')
+
+    if not photo_reference:
+        return JsonResponse({'error': 'photo_reference missing'}, status=400)
+
+    GOOGLE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
+    url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={photo_reference}&key={GOOGLE_API_KEY}"
+
+    try:
+        response = requests.get(url, allow_redirects=True)  # 🔥 302 리다이렉트도 따라감
+        return HttpResponse(response.content, content_type=response.headers.get('Content-Type', 'image/jpeg'))
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+# 위도 경도 구해서 넣기(있으면 발동안함)
+def get_lat_lng_from_station_name(station_name):
+    GOOGLE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
+    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={station_name}&region=jp&key={GOOGLE_API_KEY}"
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        results = response.json().get('results')
+        if results:
+            location = results[0]['geometry']['location']
+            return location['lat'], location['lng']
+    return None, None
 
 # 리스트클릭시 -> db 연결 -> 프론트
 @csrf_exempt
@@ -41,82 +72,101 @@ def receive_idx(request):
         return JsonResponse({'error': 'POST 요청만 지원합니다.'}, status=400)
 
 
-
-
 # 주요 시설 api 연동
 @csrf_exempt
-def fetch_facility_info(request):
-    logger.debug("▶ fetch_facility_info 호출됨")
+def fetch_facilities(request):
     if request.method == 'POST':
         body = json.loads(request.body)
-        logger.debug(body)
+        station_name = body.get('station_name')
 
-        raw_facility_name = re.sub(r'\d+\.', '', body.get('facility_name', ''))
+        try:
+            station = StationInfo.objects.get(japanese=station_name)
+        except StationInfo.DoesNotExist:
+            return JsonResponse({'error': 'Station not found'}, status=404)
 
-        if not raw_facility_name:
-            return JsonResponse({'error': 'No facility name provided.'}, status=400)
+        # lat/lng이 없으면 구글에서 받아오기
+        if station.lat is None or station.lng is None:
+            lat, lng = get_lat_lng_from_station_name(station.japanese)
+            if lat is None or lng is None:
+                return JsonResponse({'error': '위치 정보를 찾을 수 없습니다'}, status=404)
+            station.lat = lat
+            station.lng = lng
+            station.save()
 
-        # 🔥 1. 콜론(:) 앞부분만 추출
-        facility_name = raw_facility_name.split(':')[0].strip()
+        lat, lng = station.lat, station.lng
 
-        # 🔥 2. '오사카'라는 단어가 없으면 앞에 붙인다
-        if '오사카' not in facility_name:
-            facility_name = f'오사카 {facility_name}'
+        # 🔥 먼저 NearbyFacility에서 찾는다
+        facilities = NearbyFacility.objects.filter(station=station)
+        if facilities.exists():
+            facilities_data = [
+                {
+                    'name': f.name,
+                    'address': f.address,
+                    'rating': f.rating,
+                    'photo_reference': f.photo_reference,  # 🔥 추가
+                }
+                for f in facilities
+            ]
+            return JsonResponse({'facilities': facilities_data})
 
-        logger.debug(f"최종 처리된 facility_name: {facility_name}")
+        # 🔥 NearbyFacility 없으면 새로 구글 Places API 요청
+        GOOGLE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
+        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&radius=1000&type=tourist_attraction&key={GOOGLE_API_KEY}"
+        response = requests.get(url)
+        places = response.json().get('results', [])
 
-        # 1. DB에서 먼저 찾아본다
-        facility = FacilityInfo.objects.filter(name=facility_name).first()
-        if facility:
-            return JsonResponse({
-                'name': facility.name,
-                'address': facility.address,
-                'rating': facility.rating,
-                'photo_reference': facility.photo_reference,
-                'lat': facility.lat,
-                'lng': facility.lng,
-            })
+        # 새로 받아온 데이터 DB 저장
+        for place in places:
+            photo_ref = None
+            if place.get('photos'):
+                photo_ref = place['photos'][0].get('photo_reference')
 
-        # 2. 없으면 Places API로 요청
-        endpoint = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json"
-        params = {
-            "input": facility_name,
-            "inputtype": "textquery",
-            "fields": "photos,formatted_address,name,rating,geometry",
-            "key": GOOGLE_PLACES_API_KEY,
-        }
-        res = requests.get(endpoint, params=params)
-        data = res.json()
-        if data.get('status') != 'OK' or not data.get('candidates'):
-            return JsonResponse({'error': 'No data found from Google Places API.'}, status=404)
+            NearbyFacility.objects.create(
+                station=station,
+                name=place.get('name'),
+                address=place.get('vicinity'),
+                rating=place.get('rating'),
+                photo_reference=photo_ref
+            )
 
-        candidate = data['candidates'][0]
-        photo_reference = candidate.get('photos', [{}])[0].get('photo_reference')
-
-        # 3. DB에 저장 (get_or_create로 변경)
-        facility_obj, created = FacilityInfo.objects.get_or_create(
-            name=candidate['name'],
-            defaults={
-                'address': candidate.get('formatted_address'),
-                'rating': candidate.get('rating'),
-                'photo_reference': photo_reference,
-                'lat': candidate['geometry']['location']['lat'],
-                'lng': candidate['geometry']['location']['lng'],
+        # 프론트로 보낼 데이터 준비
+        facilities_data = [
+            {
+                'name': p.get('name'),
+                'address': p.get('vicinity'),
+                'rating': p.get('rating'),
+                'photo_reference': p['photos'][0]['photo_reference'] if p.get('photos') else None,
             }
-        )
+            for p in places
+        ]
+        return JsonResponse({'facilities': facilities_data})
 
-        # 4. JSON 응답
-        return JsonResponse({
-            'name': facility_obj.name,
-            'address': facility_obj.address,
-            'rating': facility_obj.rating,
-            'photo_reference': facility_obj.photo_reference,
-            'lat': facility_obj.lat,
-            'lng': facility_obj.lng,
-        })
+# 이벤트 - 역 연동
+@csrf_exempt
+def fetch_events_by_station(request):
+    if request.method == 'POST':
+        body = json.loads(request.body)
+        station_name = body.get('station_name')  # 예: "なんば駅"
+        logger.info(station_name)
+        if not station_name:
+            return JsonResponse({'error': '역 이름이 필요합니다'}, status=400)
 
-    return JsonResponse({'error': 'Invalid request method.'}, status=405)
+        events = EventDetail.objects.filter(nearest_station__contains=[station_name]).order_by('-saved_at')[:10]
 
+        event_list = [
+            {
+                'title': e.title,
+                'location': e.location,
+                'date': e.date,
+                'image': e.image,
+                'url': e.url,
+            }
+            for e in events
+        ]
+
+        return JsonResponse({'events': event_list})
+    else:
+        return JsonResponse({'error': 'POST 요청만 지원됩니다'}, status=400)
 
 class EventDetailListView(ListAPIView):
     queryset = EventDetail.objects.all().order_by('-saved_at')
