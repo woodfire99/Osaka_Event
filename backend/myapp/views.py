@@ -62,8 +62,9 @@ def photo_proxy(request):
 # 위도 경도 구해서 넣기(있으면 발동안함)
 def get_lat_lng_from_station_name(station_name):
     GOOGLE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
-    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={station_name}&region=jp&key={GOOGLE_API_KEY}"
-    
+    query = f"{station_name}駅"
+    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={query}&region=jp&key={GOOGLE_API_KEY}"
+
     response = requests.get(url)
     if response.status_code == 200:
         results = response.json().get('results')
@@ -104,9 +105,10 @@ def fetch_facilities(request):
     if request.method == 'POST':
         body = json.loads(request.body)
         station_name = body.get('station_name') # 찾는건 기본 역 이름으로
-        
+        logger.info(f"[역 이름 확인] 요청 받은 이름: {station_name}")
         try:
             station = StationInfo.objects.get(japanese=station_name)
+            logger.info(station)
         except StationInfo.DoesNotExist:
             return JsonResponse({'error': 'Station not found'}, status=404)
         # lat/lng이 없으면 구글에서 받아오기
@@ -117,7 +119,7 @@ def fetch_facilities(request):
             station.lat = lat
             station.lng = lng
             station.save()
-
+        
         lat, lng = station.lat, station.lng
 
         # 🔥 먼저 NearbyFacility에서 찾는다

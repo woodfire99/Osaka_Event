@@ -541,16 +541,23 @@ const OsakaMap = () => {
                         const metroPrefixes = ['M', 'S', 'Y', 'C', 'T', 'N', 'I', 'P', 'K'];
                         if (metroPrefixes.includes(prefix1)) {
                           updatedLines.metro = true;
-                        } else {
-                          // JR 계열 (Q, F, O, etc.)
-                          const jrPrefixes = ['Q', 'F', 'O', 'A', 'R', 'G', 'H'];
-                          if (jrPrefixes.includes(prefix1)) {
-                            updatedLines.jr = true;
+                        } 
+                        else {
+                          // 🔧 여기서 D도 KT 계열로 분류
+                          if (prefix1 === 'D') {
+                            updatedLines.kt = true;
+                          }
+                          else {
+                            const jrPrefixes = ['Q', 'F', 'O', 'A', 'R', 'G', 'H'];
+                            if (jrPrefixes.includes(prefix1)) {
+                              updatedLines.jr = true;
+                            }
                           }
                         }
                       }
                     }
                   });
+                  
                   
                   
                   setVisibleLines(updatedLines);
