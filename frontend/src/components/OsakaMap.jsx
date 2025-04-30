@@ -264,6 +264,7 @@ const OsakaMap = () => {
         const data = await response.json();
         return data.facilities;  // 시설 리스트 반환
       } else {
+        console.log(response.json());
         console.error('시설 정보 요청 실패');
         return [];
       }
@@ -450,8 +451,8 @@ const OsakaMap = () => {
       </div>
 
       {/* 사이드바 */}
-      <div className="w-[30%] bg-white shadow-lg overflow-y-auto"
-        style={{ paddingTop: '40px' }}>
+      <div className="w-[30%] bg-white shadow-lg overflow-y-auto">
+
         <div className="p-4 space-y-4">
 
           {/* 토글 버튼 */}

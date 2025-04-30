@@ -21,52 +21,53 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # 역 데이터 불러오기
-cur.execute("""
-    SELECT id, japanese, english, korean, station_code, ai_summary
-    FROM myapp_stationinfo
-    WHERE ai_summary IS NULL
-    ORDER BY id
-""")
-stations = cur.fetchall()
+# cur.execute("""
+#     SELECT id, japanese, english, korean, station_code, ai_summary
+#     FROM myapp_stationinfo
+#     WHERE ai_summary IS NULL
+#     ORDER BY id
+# """)
+# stations = cur.fetchall()
 
 # ChatGPT 호출 + ai_summary 생성
 
-for id, japanese, english, korean, station_code, ai_summary in stations[:30]:
+# for id, japanese, english, korean, station_code, ai_summary in stations[:30]:
 
-    # 한국어 역 이름
-    station_name_with_eki = f"{korean}역"
+#     # 한국어 역 이름
+#     station_name_with_eki = f"{korean}역"
 
-    # 주변 분위기 설명 요청
-    response_mood = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {
-                "role": "user",
-                "content": f"""
-오사카시에 있는 {station_name_with_eki}({japanese}駅) 주변 지역의 분위기를 500자 정도 한국어로 자연스럽게 설명해줘.
-"""
-            }
-        ]
-    )
-    mood_summary = response_mood.choices[0].message.content.strip()
-    time.sleep(20)
-    # 최종 ai_summary 조립
-    final_summary = f"""[주변 분위기]
+#     # 주변 분위기 설명 요청
+#     response_mood = client.chat.completions.create(
+#         model="gpt-4o",
+#         messages=[
+#             {
+#                 "role": "user",
+#                 "content": f"""
+# 오사카시에 있는 {station_name_with_eki}({japanese}駅) 주변 지역의 분위기를 500자 정도 한국어로 자연스럽게 설명해줘.
+# """
+#             }
+#         ]
+#     )
+#     mood_summary = response_mood.choices[0].message.content.strip()
+#     time.sleep(20)
+#     # 최종 ai_summary 조립
+#     final_summary = f"""[주변 분위기]
 
-{mood_summary}
-"""
+# {mood_summary}
+# """
 
-    print(id, final_summary)
-    cur.execute(
-        """
-        UPDATE myapp_stationinfo
-        SET ai_summary = %s
-        WHERE id = %s
-        """,
-        (final_summary, id)
-    )
+#     print(id, final_summary)
+#     cur.execute(
+#         """
+#         UPDATE myapp_stationinfo
+#         SET ai_summary = %s
+#         WHERE id = %s
+#         """,
+#         (final_summary, id)
+#     )
 
 
+# CSV로 직접 넣기
 # with open("ex-data.csv", newline='', encoding="utf-8-sig") as f:
 #     reader = csv.DictReader(f)  # 'Number', 'Data' 컬럼 읽기
 #     for row in reader:

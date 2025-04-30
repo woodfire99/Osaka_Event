@@ -17,6 +17,32 @@ GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 logger = logging.getLogger(__name__)
 
 
+
+@csrf_exempt
+def recommend_stations(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+
+        # 🔍 조건 데이터 접근 예시
+        mood = data.get('mood')
+        room_size = data.get('room_size')
+        rent_limit = data.get('rent_limit')
+        features = data.get('features', [])
+        routes = data.get('routes', [])
+
+        # 🎯 추천 로직 처리 후 결과 리턴
+        return JsonResponse({
+            'results': [
+                {
+                    'japanese': 'なんば',
+                    'english': 'Namba',
+                    'ai_summary': '교통이 편리하고 활기찬 상업지구입니다.',
+                    'rent': 6.2,
+                    'tags': ['상점가', '지하철 근처'],
+                }
+            ]
+        })
+
 @csrf_exempt
 def photo_proxy(request):
     photo_reference = request.GET.get('photo_reference')
@@ -77,14 +103,12 @@ def receive_idx(request):
 def fetch_facilities(request):
     if request.method == 'POST':
         body = json.loads(request.body)
-        station_name_raw = body.get('station_name')
-        station_name = f"大阪府 {station_name_raw}"
-
+        station_name = body.get('station_name') # 찾는건 기본 역 이름으로
+        
         try:
             station = StationInfo.objects.get(japanese=station_name)
         except StationInfo.DoesNotExist:
             return JsonResponse({'error': 'Station not found'}, status=404)
-
         # lat/lng이 없으면 구글에서 받아오기
         if station.lat is None or station.lng is None:
             lat, lng = get_lat_lng_from_station_name(station.japanese)
@@ -127,7 +151,7 @@ def fetch_facilities(request):
                 name=place.get('name'),
                 address=place.get('vicinity'),
                 rating=place.get('rating'),
-                photo_reference=photo_ref
+                photo_reference=photo_ref or ""
             )
 
         # 프론트로 보낼 데이터 준비
@@ -148,7 +172,6 @@ def fetch_events_by_station(request):
     if request.method == 'POST':
         body = json.loads(request.body)
         station_name = body.get('station_name')  # 예: "なんば駅"
-        logger.info(station_name)
         if not station_name:
             return JsonResponse({'error': '역 이름이 필요합니다'}, status=400)
 
