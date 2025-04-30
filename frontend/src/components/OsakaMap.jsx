@@ -708,7 +708,7 @@ const OsakaMap = () => {
               {/* 월세 데이터 */}
               {selectedStationRentData.length > 0 ? (
                 <div className="mt-6">
-                  <h3 className="text-lg font-bold">[1R / 1K 평균 월세 비교]</h3>
+                  <h3 className="text-lg font-bold">[1R / 1K,1DK / 1DK,2K,2DK 평균 월세 비교]</h3>
 
                   {(() => {
                     const grouped = {};
