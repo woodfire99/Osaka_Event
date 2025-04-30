@@ -708,7 +708,7 @@ const OsakaMap = () => {
               {/* 월세 데이터 */}
               {selectedStationRentData.length > 0 ? (
                 <div className="mt-6">
-                  <h3 className="text-lg font-bold">[1R / 1K,1DK / 1DK,2K,2DK 평균 월세 비교]</h3>
+                  <h3 className="text-lg font-bold">[1R / 1K / 1LDK 평균 월세 비교]</h3>
 
                   {(() => {
                     const grouped = {};
@@ -735,7 +735,11 @@ const OsakaMap = () => {
                             {
                               label: '월세 (만엔)',
                               data: averaged.map(item => item.average),
-                              backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+                              backgroundColor: [
+                                'rgba(255, 159, 64, 0.6)',    // 주황 (1R)
+                                'rgba(54, 162, 235, 0.6)',    // 파랑 (1K)
+                                'rgba(255, 99, 132, 0.6)'     // 핑크 (1LDK)
+                              ],                              
                             },
                           ],
                         }}

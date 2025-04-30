@@ -22,10 +22,17 @@ from .models import RentInfo
 from .serializers import RentInfoSerializer
 import json
 from rest_framework.views import APIView
+from django.core.files.base import ContentFile
 from rest_framework.response import Response
 from .models import StationInfo
 from .serializers import StationInfoSerializer
 from django.db.models import Q
+from django.http import FileResponse, JsonResponse, HttpResponse
+from django.core.files.base import ContentFile
+from .models import NearbyFacility
+import requests
+import os
+
 load_dotenv()  
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 logger = logging.getLogger(__name__)
@@ -120,7 +127,6 @@ def generate_prompt(mood, room_size, rent_limit, features, routes):
     return ' '.join(prompt_parts)
 
 
-@csrf_exempt
 def photo_proxy(request):
     photo_reference = request.GET.get('photo_reference')
 
@@ -131,10 +137,35 @@ def photo_proxy(request):
     url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={photo_reference}&key={GOOGLE_API_KEY}"
 
     try:
-        response = requests.get(url, allow_redirects=True)  # 🔥 302 리다이렉트도 따라감
-        return HttpResponse(response.content, content_type=response.headers.get('Content-Type', 'image/jpeg'))
+        facility = NearbyFacility.objects.filter(photo_reference=photo_reference).first()
+
+        # ✅ 1. DB에 해당 facility가 없는 경우 방어
+        if not facility:
+            return JsonResponse({'error': 'No facility with given photo_reference'}, status=404)
+
+        # ✅ 2. 이미지가 이미 저장돼 있으면 바로 반환
+        if facility.photo:
+            logger.info("📸 로컬 이미지 있음")
+            return FileResponse(facility.photo.open('rb'), content_type='image/jpeg')
+        else:
+            logger.info("🌐 Google API 재요청 중...")
+
+
+        # ✅ 3. Google에서 새로 가져오기
+        response = requests.get(url, allow_redirects=True)
+
+        if response.status_code == 200:
+            filename = f"{facility.name[:30].replace(' ', '_')}.jpg"  # 이름 너무 길면 자르기
+            facility.photo.save(filename, ContentFile(response.content), save=True)
+            return FileResponse(facility.photo.open('rb'), content_type='image/jpeg')
+        else:
+            return JsonResponse({'error': f'Google API status {response.status_code}'}, status=502)
+
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return JsonResponse({'error': str(e)}, status=500)
+
 
 # 위도 경도 구해서 넣기(있으면 발동안함)
 def get_lat_lng_from_station_name(station_name):
@@ -181,12 +212,12 @@ def receive_idx(request):
 def fetch_facilities(request):
     if request.method == 'POST':
         body = json.loads(request.body)
-        station_name = body.get('station_name') # 찾는건 기본 역 이름으로
+        station_name = body.get('station_name')
         try:
             station = StationInfo.objects.get(japanese=station_name)
         except StationInfo.DoesNotExist:
             return JsonResponse({'error': 'Station not found'}, status=404)
-        # lat/lng이 없으면 구글에서 받아오기
+
         if station.lat is None or station.lng is None:
             lat, lng = get_lat_lng_from_station_name(station.japanese)
             if lat is None or lng is None:
@@ -194,54 +225,70 @@ def fetch_facilities(request):
             station.lat = lat
             station.lng = lng
             station.save()
-        
+
         lat, lng = station.lat, station.lng
 
-        # 🔥 먼저 NearbyFacility에서 찾는다
-        facilities = NearbyFacility.objects.filter(station=station)
+        facilities = NearbyFacility.objects.filter(station=station).order_by('-rating')[:5]
         if facilities.exists():
             facilities_data = [
                 {
                     'name': f.name,
                     'address': f.address,
                     'rating': f.rating,
-                    'photo_reference': f.photo_reference,  # 🔥 추가
+                    'photo_reference': f.photo_reference,
                 }
-                for f in facilities
+                for f in facilities[:5]
             ]
             return JsonResponse({'facilities': facilities_data})
-
-        # 🔥 NearbyFacility 없으면 새로 구글 Places API 요청
+        
+        logger.info("데이터가 없으면 여기로옴")
+        # Places API 호출
         GOOGLE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
         url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&radius=1000&type=tourist_attraction&key={GOOGLE_API_KEY}"
         response = requests.get(url)
         places = response.json().get('results', [])
 
-        # 새로 받아온 데이터 DB 저장
+        # DB 저장 + 이미지 저장
+        saved_facilities = []
         for place in places:
+            name = place.get('name')
+            address = place.get('vicinity')
+            rating = place.get('rating')
             photo_ref = None
+            photo_file = None
+
             if place.get('photos'):
                 photo_ref = place['photos'][0].get('photo_reference')
+                logger.info(photo_ref)
+                # 🔥 이미지도 다운로드
+                if photo_ref:
+                    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={photo_ref}&key={GOOGLE_API_KEY}"
+                    img_response = requests.get(photo_url)
+                    if img_response.status_code == 200:
+                        filename = f"{name[:30].replace(' ', '_')}.jpg"
+                        photo_file = ContentFile(img_response.content, name=filename)
 
-            NearbyFacility.objects.create(
+            facility = NearbyFacility(
                 station=station,
-                name=place.get('name'),
-                address=place.get('vicinity'),
-                rating=place.get('rating'),
-                photo_reference=photo_ref or ""
+                name=name,
+                address=address,
+                rating=rating,
+                photo_reference=photo_ref or "",
             )
 
-        # 프론트로 보낼 데이터 준비
-        facilities_data = [
-            {
-                'name': p.get('name'),
-                'address': p.get('vicinity'),
-                'rating': p.get('rating'),
-                'photo_reference': p['photos'][0]['photo_reference'] if p.get('photos') else None,
-            }
-            for p in places
-        ]
-        return JsonResponse({'facilities': facilities_data})
+            if photo_file:
+                facility.photo.save(photo_file.name, photo_file, save=True)
+            else:
+                facility.save()
+
+            saved_facilities.append({
+                'name': name,
+                'address': address,
+                'rating': rating,
+                'photo_reference': photo_ref,
+            })
+
+        return JsonResponse({'facilities': saved_facilities})
 
 # 이벤트 - 역 연동
 @csrf_exempt

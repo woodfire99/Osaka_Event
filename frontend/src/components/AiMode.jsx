@@ -156,7 +156,7 @@ const AiMode = () => {
             >
               <option value="">선택</option>
               <option value="1R">1R</option>
-              <option value="1K">1K/1DK</option>
+              <option value="1K">1K</option>
               <option value="1LDK">1LDK</option>
             </select>
             {roomSize && (
