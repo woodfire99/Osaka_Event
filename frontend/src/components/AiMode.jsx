@@ -198,54 +198,76 @@ const AiMode = () => {
 
           {/* 번화가 조건 (최대 3개) */}
           {routes.map((route, index) => (
-            <div key={index} className="flex flex-col md:flex-row gap-2 mt-2">
-              <select
-                className="border p-2 rounded w-full md:w-1/3"
-                value={route.destination}
-                onChange={(e) => {
-                  const newRoutes = [...routes];
-                  newRoutes[index].destination = e.target.value;
+          <div
+            key={index}
+            className="flex flex-col md:flex-row items-center gap-2 mt-2 p-2 border rounded-md bg-gray-50"
+          >
+            {/* 목적지 */}
+            <select
+              className="border p-2 rounded w-full md:w-1/3"
+              value={route.destination}
+              onChange={(e) => {
+                const newRoutes = [...routes];
+                newRoutes[index].destination = e.target.value;
+                setRoutes(newRoutes);
+              }}
+            >
+              <option value="">목적지 선택</option>
+              <option value="Umeda">우메다（梅田）</option>
+              <option value="Namba">난바（難波）</option>
+              <option value="Tennoji">덴노지（天王寺）</option>
+              <option value="Kyobashi">쿄바시（京橋）</option>
+              <option value="Hommachi">혼마치（本町）</option>
+            </select>
+
+            {/* 이동수단 */}
+            <select
+              className="border p-2 rounded w-full md:w-1/3"
+              value={route.transport}
+              onChange={(e) => {
+                const newRoutes = [...routes];
+                newRoutes[index].transport = e.target.value;
+                setRoutes(newRoutes);
+              }}
+            >
+              <option value="">이동수단</option>
+              <option value="walk">도보</option>
+              <option value="subway">지하철</option>
+              <option value="bike">자전거</option>
+            </select>
+
+            {/* 거리 */}
+            <select
+              className="border p-2 rounded w-full md:w-1/3"
+              value={route.distance}
+              onChange={(e) => {
+                const newRoutes = [...routes];
+                newRoutes[index].distance = e.target.value;
+                setRoutes(newRoutes);
+              }}
+            >
+              <option value="">거리</option>
+              <option value="5">5분</option>
+              <option value="10">10분</option>
+              <option value="15">15분</option>
+              <option value="20">20분</option>
+              <option value="25">25분</option>
+            </select>
+
+            {/* 삭제 버튼 (맨 오른쪽 정렬) */}
+            {routes.length > 1 && (
+              <button
+                onClick={() => {
+                  const newRoutes = routes.filter((_, i) => i !== index);
                   setRoutes(newRoutes);
                 }}
+                className="ml-auto md:ml-1 mt-1 md:mt-0 px-3 py-2 text-xs bg-red-500 text-white rounded hover:bg-red-600"
               >
-                <option value="">목적지 선택</option>
-                <option value="Umeda">우메다（梅田）</option>
-                <option value="Namba">난바（難波）</option>
-                <option value="Tennoji">덴노지（天王寺）</option>
-                <option value="Kyobashi">쿄바시（京橋）</option>
-                <option value="Hommachi">혼마치（本町）</option>
-              </select>
-              <select
-                className="border p-2 rounded w-full md:w-1/3"
-                value={route.transport}
-                onChange={(e) => {
-                  const newRoutes = [...routes];
-                  newRoutes[index].transport = e.target.value;
-                  setRoutes(newRoutes);
-                }}
-              >
-                <option value="">이동수단</option>
-                <option value="walk">도보</option>
-                <option value="subway">지하철</option>
-                <option value="bike">자전거</option>
-              </select>
-              <select
-                className="border p-2 rounded w-full md:w-1/3"
-                value={route.distance}
-                onChange={(e) => {
-                  const newRoutes = [...routes];
-                  newRoutes[index].distance = e.target.value;
-                  setRoutes(newRoutes);
-                }}
-              >
-                <option value="">거리</option>
-                <option value="10">10분</option>
-                <option value="15">15분</option>
-                <option value="20">20분</option>
-                <option value="25">25분</option>
-              </select>
-            </div>
-          ))}
+                삭제
+              </button>
+            )}
+          </div>
+        ))}
 
           <button
             className="text-sm text-blue-600 underline mt-2"

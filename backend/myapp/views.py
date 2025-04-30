@@ -8,40 +8,117 @@ import os
 import requests
 import re
 import logging
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import RentInfo
+from .serializers import RentInfoSerializer
 from django.http import HttpResponse
 from dotenv import load_dotenv
 from .models import NearbyFacility
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import RentInfo
+from .serializers import RentInfoSerializer
+import json
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import StationInfo
+from .serializers import StationInfoSerializer
+from django.db.models import Q
 load_dotenv()  
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
-
 logger = logging.getLogger(__name__)
 
+class StationSearchView(APIView):
+    def post(self, request):
+        keyword = request.data.get('keyword', '')
+        if not keyword:
+            return Response([])
 
+        stations = StationInfo.objects.filter(
+            Q(japanese__icontains=keyword) |
+            Q(english__icontains=keyword) |
+            Q(korean__icontains=keyword)
+        )
+        serializer = StationInfoSerializer(stations, many=True)
+        return Response(serializer.data)
+
+class RentInfoByStationView(APIView):
+    def post(self, request):
+        try:
+            body = json.loads(request.body)
+            station_name = body.get('station')
+
+            if not station_name:
+                return Response({'error': 'No station name provided'}, status=status.HTTP_400_BAD_REQUEST)
+
+            rents = RentInfo.objects.filter(station=station_name)
+            serializer = RentInfoSerializer(rents, many=True)
+            return Response(serializer.data)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @csrf_exempt
 def recommend_stations(request):
     if request.method == 'POST':
         data = json.loads(request.body)
 
-        # 🔍 조건 데이터 접근 예시
+        # 🔍 조건 데이터
         mood = data.get('mood')
         room_size = data.get('room_size')
         rent_limit = data.get('rent_limit')
         features = data.get('features', [])
         routes = data.get('routes', [])
 
-        # 🎯 추천 로직 처리 후 결과 리턴
-        return JsonResponse({
-            'results': [
-                {
-                    'japanese': 'なんば',
-                    'english': 'Namba',
-                    'ai_summary': '교통이 편리하고 활기찬 상업지구입니다.',
-                    'rent': 6.2,
-                    'tags': ['상점가', '지하철 근처'],
-                }
-            ]
-        })
+        # 🎯 mood 기준 필터링 (추가적으로 room_size, rent_limit도 적용 가능)
+        stations = StationInfo.objects.filter(mood__contains=[mood])
+
+        # TODO: room_size, rent_limit 등 추가 필터링 로직 작성
+
+        # 🔁 결과 포맷 샘플
+        result = []
+        for s in stations:
+            result.append({
+                'japanese': s.japanese,
+                'english': s.english,
+                'ai_summary': s.ai_summary,
+                'rent': 5.5,  # TODO: 실제 임대 정보 있으면 연결
+                'tags': s.mood,  # mood 그대로 표시
+            })
+
+        return JsonResponse({'results': result})
+
+
+def generate_prompt(mood, room_size, rent_limit, features, routes):
+    prompt_parts = []
+
+    # 분위기
+    if mood:
+        prompt_parts.append(f"지역 분위기는 '{mood}'입니다.")
+
+    # 방 크기 + 월세
+    if room_size and rent_limit:
+        prompt_parts.append(f"방 크기는 '{room_size}'이고, 월세는 {rent_limit}만엔 이하입니다.")
+
+    # 특징
+    if features:
+        feature_str = ', '.join(features)
+        prompt_parts.append(f"다음과 같은 특징을 원합니다: {feature_str}.")
+
+    # 이동 조건
+    if routes:
+        route_descriptions = []
+        for route in routes:
+            if route.get('destination') and route.get('transport') and route.get('distance'):
+                desc = f"{route['destination']}까지 {route['transport']}로 {route['distance']}분 이내"
+                route_descriptions.append(desc)
+        if route_descriptions:
+            joined = ' / '.join(route_descriptions)
+            prompt_parts.append(f"이동 조건: {joined}.")
+
+    return ' '.join(prompt_parts)
+
 
 @csrf_exempt
 def photo_proxy(request):
@@ -105,10 +182,8 @@ def fetch_facilities(request):
     if request.method == 'POST':
         body = json.loads(request.body)
         station_name = body.get('station_name') # 찾는건 기본 역 이름으로
-        logger.info(f"[역 이름 확인] 요청 받은 이름: {station_name}")
         try:
             station = StationInfo.objects.get(japanese=station_name)
-            logger.info(station)
         except StationInfo.DoesNotExist:
             return JsonResponse({'error': 'Station not found'}, status=404)
         # lat/lng이 없으면 구글에서 받아오기

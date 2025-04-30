@@ -73,7 +73,7 @@
 73,今里,Imazato,이마자토,KT-A05
 74,今里,Imazato,이마자토,"I21,S20"
 75,大阪上本町,Osaka-Uehommachi,오사카우에혼마치,KT-A03
-76,西梅田,Nishi-Umeda,니시우메다,Y11
+76,西梅田,Nishi-Umeda,니시우메다,"A47,G47,O11,F01,M16,HK01,HS01,Y11,T20"
 77,肥後橋,Higobashi,히고바시,Y12
 78,四ツ橋,Yotsubashi,요츠바시,Y14
 79,花園町,Hanazonochō,하나조노초,Y17
@@ -87,7 +87,7 @@
 87,野江内代,Noe-Uchindai,노에우치인다이,T16
 88,都島,Miyakojima,미야코지마,T17
 89,中崎町,Nakazakicho,나카자키초,T19
-90,東梅田,Higashi-Umeda,히가시우메다,T20
+90,東梅田,Higashi-Umeda,히가시우메다,"A47,G47,O11,F01,M16,HK01,HS01,Y11,T20"
 91,四天王寺前夕陽丘,Shitennoji-mae Yuhigaoka,시텐노지마에유히가오카,T26
 92,阿倍野,Abeno,아베노,T28
 93,文の里,Fuminosato,후미노사토,T29
@@ -102,8 +102,8 @@
 102,東三国,Higashi-Mikuni,히가시미쿠니,M12
 103,西中島南方,Nishinakajima-Minamigata,니시나카지마미나미가타,M14
 104,中津,Nakatsu,나카츠,M15
-105,大阪,Osaka,오사카,"A47,G47,O11,F01,M16,HK01,HS01"
-106,梅田,Umeda,우메다,"A47,G47,O11,F01,M16,HK01,HS01"
+105,大阪,Osaka,오사카,"A47,G47,O11,F01,M16,HK01,HS01,Y11,T20"
+106,梅田,Umeda,우메다,"A47,G47,O11,F01,M16,HK01,HS01,Y11,T20"
 107,昭和町,Showacho,쇼와초,M24
 108,西田辺,Nishitanabe,니시타나베,M25
 109,あびこ,Abiko,아비코,M27

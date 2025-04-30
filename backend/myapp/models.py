@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 class EventDetail(models.Model):
     url = models.TextField(unique=True)
@@ -31,6 +32,7 @@ class StationInfo(models.Model):
     lat = models.FloatField(null=True, blank=True)  # 🔥 추가
     lng = models.FloatField(null=True, blank=True)  # 🔥 추가
     photo_reference = models.CharField(max_length=255, null=True, blank=True)
+    mood = ArrayField(models.CharField(max_length=30), null=True, blank=True)
 
     def __str__(self):
         return self.japanese
@@ -60,3 +62,10 @@ class NearbyFacility(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.station.japanese})"
+    
+class RentInfo(models.Model):
+    line = models.CharField(max_length=50)
+    room_type = models.CharField(max_length=20)
+    station = models.CharField(max_length=50)
+    rent_price = models.FloatField(null=True, blank=True)
+

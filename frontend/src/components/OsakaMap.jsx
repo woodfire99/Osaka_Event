@@ -13,8 +13,6 @@ import {
 } from 'chart.js';
 
 // ⬇️ 2. 내부 파일 import
-import rentDataCsv from '../data/rent_data.csv';
-import stationsCsv from '../data/osaka_station_names.csv'; // 경로 주의
 import {
   Basemap,
   Legend as SvgLegend,
@@ -210,13 +208,16 @@ const OsakaMap = () => {
   
   // 월세 CSV
   useEffect(() => {
-    fetch(rentDataCsv)
-      .then(res => res.text())
-      .then(text => {
-        const result = Papa.parse(text, { header: true });
-        setRentData(result.data);
+    fetch('http://localhost:8000/api/rents/')
+      .then((res) => res.json())
+      .then((data) => {
+        setRentData(data);
+      })
+      .catch((err) => {
+        console.error('월세 데이터 불러오기 실패:', err);
       });
   }, []);
+  
   
   // 백엔드 연결(리스트 선택)
   const sendIdxToServer = async (idx) => {
@@ -290,16 +291,6 @@ const OsakaMap = () => {
     };
   }, []);
   
-  // CSV
-  useEffect(() => {
-    fetch(stationsCsv)
-      .then(res => res.text())
-      .then(text => {
-        const result = Papa.parse(text, { header: true });
-        setStations(result.data);
-      });
-  }, []);
-  
   // 휠
   const handleWheel = (e) => {
     if (!e.ctrlKey) return;
@@ -318,13 +309,21 @@ const OsakaMap = () => {
       setMatchedTexts([]);
       return;
     }
-    const lower = searchTerm.toLowerCase();
-    const matched = stations.filter(station =>
-      station.Japanese?.includes(searchTerm) ||
-      station.English?.toLowerCase().includes(lower) ||
-      station.Korean?.includes(searchTerm)
-    );
-    setMatchedTexts(matched);
+  
+    fetch('http://localhost:8000/api/search-stations/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ keyword: searchTerm })
+    })
+      .then(res => res.json())
+      .then(data => {
+        setMatchedTexts(data);
+      })
+      .catch(err => {
+        console.error('검색 실패:', err);
+      });
   };
   
   const toggleLine = (key) => {
@@ -508,11 +507,12 @@ const OsakaMap = () => {
                 onClick={() => {
                   const clickedStation = station;  // 👈 이걸 따로 저장
                   setSelectedStation(station);
-                  sendIdxToServer(station.Number);
+                  sendIdxToServer(station.number);
                   setZoom(1.0); // 확대
                 
                   // 🔥 1. 역 코드에서 노선 자동 표시
-                  const stationCodes = station.Station.split(',').map(code => code.trim());
+                  const stationCodes = station.station_code.split(',').map(code => code.trim());
+                  console.log(stationCodes);
                   const updatedLines = {
                     jr: false,
                     metro: false,
@@ -567,7 +567,7 @@ const OsakaMap = () => {
                     if (!svgRoot) return;
                   
                     const targetTspan = Array.from(document.querySelectorAll('tspan')).find(t =>
-                      t.textContent?.trim() === clickedStation.Japanese  // 정확히 같은 텍스트만!
+                      t.textContent?.trim() === clickedStation.japanese  // 정확히 같은 텍스트만!
                     );
 
                     const targetText = targetTspan?.closest('text');      
@@ -590,12 +590,20 @@ const OsakaMap = () => {
                   
                   
                   
-                
-                  // 🔥 3. 월세 데이터
-                  const matchedRents = rentData.filter(item =>
-                    item.station === station.Japanese
-                  );
-                  setSelectedStationRentData(matchedRents);
+                  // 🔥 3. 월세 데이터 → API 호출로 대체
+                  fetch('http://localhost:8000/api/rent-by-station/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ station: station.japanese })
+                  })
+                    .then(res => res.json())
+                    .then(data => {
+                      setSelectedStationRentData(data);
+                    })
+                    .catch(err => {
+                      console.error('월세 API 요청 실패:', err);
+                    });
+
                 }}
                 
                 
@@ -603,7 +611,7 @@ const OsakaMap = () => {
                 
                 className="cursor-pointer hover:bg-blue-100 p-1 rounded"
               >
-              {station.Japanese}/{station.English}/{station.Korean}
+              {station.japanese}/{station.english}/{station.korean}
               </div>
             ))}
           </div>
@@ -612,19 +620,19 @@ const OsakaMap = () => {
             {selectedStation && (
               <div className="mt-6 p-4 bg-gray-50 rounded-lg shadow-md text-center">
               <div className="text-xl font-semibold text-gray-800">
-                {selectedStation.Japanese}
+                {selectedStation.japanese}
               </div>
               <div className="text-sm text-gray-500">
-                {selectedStation.English}
+                {selectedStation.english}
               </div>
               <div className="text-sm text-gray-500 mb-2">
-                {selectedStation.Korean}
+                {selectedStation.korean}
               </div>
-              {selectedStation?.Station && (
+              {selectedStation?.station_code && (
                 <div className="text-xs flex flex-wrap gap-2 mt-2">
-                  {selectedStation.Station.split(',').map((code, idx) => {
+                  {selectedStation.station_code.split(',').map((code, idx) => {
                     const trimmedCode = code.trim();
-
+                    console.log(trimmedCode);
                     let isKintetsuA = false;
                     let isKintetsuF = false;
                     let isJR = false;
@@ -692,11 +700,6 @@ const OsakaMap = () => {
             
             )}
 
-
-
-
-
-
             {/*  지역 정보 */}
             {serverResponse && (
             <div className="p-4 border rounded-lg shadow-md bg-white space-y-4">
@@ -711,7 +714,7 @@ const OsakaMap = () => {
                     const grouped = {};
                     selectedStationRentData.forEach((r) => {
                       const type = r.room_type;
-                      const price = parseFloat(r.rent_price.replace('万円', ''));
+                      const price = r.rent_price;
                       if (!grouped[type]) {
                         grouped[type] = [];
                       }
