@@ -33,6 +33,10 @@ class StationInfo(models.Model):
     lng = models.FloatField(null=True, blank=True)  # 🔥 추가
     photo_reference = models.CharField(max_length=255, null=True, blank=True)
     mood = ArrayField(models.CharField(max_length=30), null=True, blank=True)
+    near_park = models.BooleanField(default=False)           # 공원 근처
+    shopping_street = models.BooleanField(default=False)     # 상점가 있음
+    supermarket_dense = models.BooleanField(default=False)   # 마트 밀집
+    safe = models.BooleanField(default=False)                # 치안 좋음
 
     def __str__(self):
         return self.japanese
@@ -70,3 +74,30 @@ class RentInfo(models.Model):
     station = models.CharField(max_length=50)
     rent_price = models.FloatField(null=True, blank=True)
 
+class BikeDuration(models.Model):
+    station = models.CharField("Station Name", max_length=100)
+    hub = models.CharField("Destination Hub", max_length=100)
+    distance_m = models.IntegerField("Straight-line Distance (m)")
+    duration_min = models.IntegerField("Bicycle Duration (min)", null=True, blank=True)
+
+    class Meta:
+        unique_together = ("station", "hub")
+        verbose_name = "Bicycle Travel Time"
+        verbose_name_plural = "Bicycle Travel Times"
+
+    def __str__(self):
+        return f"{self.station} → {self.hub}: {self.duration_min or 'N/A'} min"
+    
+class TransitDuration(models.Model):
+    station = models.CharField("Station Name", max_length=100)
+    hub = models.CharField("Destination Hub", max_length=100)
+    distance_m = models.IntegerField("Straight-line Distance (m)")
+    duration_min = models.IntegerField("Transit Duration (min)", null=True, blank=True)
+
+    class Meta:
+        unique_together = ("station", "hub")
+        verbose_name = "Transit Travel Time"
+        verbose_name_plural = "Transit Travel Times"
+
+    def __str__(self):
+        return f"{self.station} → {self.hub}: {self.duration_min or 'N/A'} min"

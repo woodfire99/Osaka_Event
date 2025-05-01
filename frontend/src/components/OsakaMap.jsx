@@ -1,6 +1,5 @@
 // ⬇️ 1. 라이브러리 import
 import React, { useEffect, useState, useRef} from 'react';
-import Papa from 'papaparse';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -40,18 +39,12 @@ ChartJS.register(
 const OsakaMap = () => {
   const svgContainerRef = useRef(null);
   const [eventList, setEventList] = useState([]);
-  const [stationInfo, setStationInfo] = useState(null);         // 역 기본 정보 저장
   const [facilitiesList, setFacilitiesList] = useState([]);     // 주변 시설 리스트 저장
-  const [loading, setLoading] = useState(false);                // 로딩 상태
   const [rentData, setRentData] = useState([]);
   const [selectedStationRentData, setSelectedStationRentData] = useState([]);
-  const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-  const [openedStation, setOpenedStation] = useState('');
-  const [places, setPlaces] = useState([]);  
   const [selectedStation, setSelectedStation] = useState(null);
   const [zoom, setZoom] = useState(0.4);  // 기본 0.4배로 시작
   const [serverResponse, setServerResponse] = useState(null);  // 서버 응답 저장할 상태
-  const [stations, setStations] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [matchedTexts, setMatchedTexts] = useState([]);
   const [visibleLines, setVisibleLines] = useState({
@@ -63,8 +56,6 @@ const OsakaMap = () => {
     hk: false,
     nk: false,
   });
-  
-
 
   // 역 - 이벤트 연결
   const fetchEventsByStation = async (stationNameJapanese) => {
@@ -166,45 +157,6 @@ const OsakaMap = () => {
     return displayCode; // 매칭 안 되면 그냥 코드만
   };
   
-  // 역코드 나누기
-  const getLineType = (stationCode) => {
-    if (!stationCode) return "";
-
-    if (stationCode.startsWith('KT-F') || stationCode.startsWith('KT-A')) {
-      return 'kt'; // Kintetsu
-    }
-    if (stationCode.startsWith('JR-P')) {
-      return 'jr';
-    }
-    if (
-      stationCode.startsWith('M') || stationCode.startsWith('T') || stationCode.startsWith('N') ||
-      stationCode.startsWith('K') || stationCode.startsWith('C') || stationCode.startsWith('S') ||
-      (stationCode.startsWith('P') && !stationCode.startsWith('JR-P')) ||
-      stationCode.startsWith('I') || stationCode.startsWith('Y')
-    ) {
-      return 'metro';
-    }
-    if (
-      stationCode.startsWith('O') || stationCode.startsWith('Q') || stationCode.startsWith('R') ||
-      stationCode.startsWith('A') || stationCode.startsWith('G') || stationCode.startsWith('F') ||
-      stationCode.startsWith('H')
-    ) {
-      return 'jr';
-    }
-    if (stationCode.startsWith('KH')) {
-      return 'kh';
-    }
-    if (stationCode.startsWith('HS')) {
-      return 'hs';
-    }
-    if (stationCode.startsWith('HK')) {
-      return 'hk';
-    }
-    if (stationCode.startsWith('NK')) {
-      return 'nk';
-    }
-    return '';
-  };
   
   // 월세 CSV
   useEffect(() => {
@@ -265,7 +217,6 @@ const OsakaMap = () => {
         const data = await response.json();
         return data.facilities;  // 시설 리스트 반환
       } else {
-        console.log(response.json());
         console.error('시설 정보 요청 실패');
         return [];
       }
@@ -361,7 +312,7 @@ const OsakaMap = () => {
           jr: ['A', 'Q', 'O', 'G', 'R', 'F', 'H'].includes(prefix1)&& !['HS'].includes(prefix2)&&
           !isKTinDataLine,
           metro: ['M', 'T', 'N', 'K', 'C', 'S', 'I', 'Y', 'P'].includes(prefix1) && !['KH', 'HS', 'NK'].includes(prefix2),
-          kt: ['A', 'F'].includes(prefix1)&&isKTinDataLine || prefix1 === 'D',
+          kt: (['A', 'F'].includes(prefix1)&&isKTinDataLine) || prefix1 === 'D',
           hk: prefix2 === 'HK',
         };
         
@@ -512,7 +463,6 @@ const OsakaMap = () => {
                 
                   // 🔥 1. 역 코드에서 노선 자동 표시
                   const stationCodes = station.station_code.split(',').map(code => code.trim());
-                  console.log(stationCodes);
                   const updatedLines = {
                     jr: false,
                     metro: false,
@@ -522,8 +472,7 @@ const OsakaMap = () => {
                     hk: false,
                     nk: false,
                   };
-                  
-                
+                                  
                   stationCodes.forEach(code => {
                     if (code.startsWith('JR-')) {
                       updatedLines.jr = true;
@@ -557,9 +506,7 @@ const OsakaMap = () => {
                       }
                     }
                   });
-                  
-                  
-                  
+                                    
                   setVisibleLines(updatedLines);
                   // 🔥 2. SVG 이동 (딜레이 줘야 getBBox 작동함)
                   setTimeout(() => {
@@ -587,9 +534,7 @@ const OsakaMap = () => {
                     }
                     
                   }, 600);
-                  
-                  
-                  
+                                                 
                   // 🔥 3. 월세 데이터 → API 호출로 대체
                   fetch('http://localhost:8000/api/rent-by-station/', {
                     method: 'POST',
@@ -605,10 +550,7 @@ const OsakaMap = () => {
                     });
 
                 }}
-                
-                
-                
-                
+       
                 className="cursor-pointer hover:bg-blue-100 p-1 rounded"
               >
               {station.japanese}/{station.english}/{station.korean}
@@ -632,7 +574,6 @@ const OsakaMap = () => {
                 <div className="text-xs flex flex-wrap gap-2 mt-2">
                   {selectedStation.station_code.split(',').map((code, idx) => {
                     const trimmedCode = code.trim();
-                    console.log(trimmedCode);
                     let isKintetsuA = false;
                     let isKintetsuF = false;
                     let isJR = false;
@@ -692,9 +633,6 @@ const OsakaMap = () => {
                   })}
                 </div>
               )}
-
-
-
 
             </div>
             
@@ -837,8 +775,6 @@ const OsakaMap = () => {
                 ))}
               </ul>
               </div>
-
-
 
             </div>
           )}

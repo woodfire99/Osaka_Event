@@ -6,9 +6,7 @@ const AiMode = () => {
   const [roomSize, setRoomSize] = useState('');
   const [rentLimit, setRentLimit] = useState('');
   const [selectedFeatures, setSelectedFeatures] = useState([]);
-  const [routes, setRoutes] = useState([
-    { destination: '', transport: '', distance: '10' },
-  ]);
+  const [routes, setRoutes] = useState([]); 
   const [results, setResults] = useState([]);
 
   // 📌 방 크기별 최소 월세 상한 (단위: 만엔)
@@ -30,7 +28,8 @@ const AiMode = () => {
 
   // ✅ 필수 입력 유효성 검사
   const isFormValid =
-    mood && selectedFeatures.length > 0 && roomSize && rentLimit !== '';
+    mood && selectedFeatures.length > 0 && roomSize && rentLimit !== ''&&
+    routes.every(r => r.destination && r.transport && r.distance);
 
   // 🟦 특징 토글 (최대 2개)
   const toggleFeature = (feature) => {
@@ -46,12 +45,12 @@ const AiMode = () => {
   // ➕ 조건 추가 (최대 3개)
   const handleAddRoute = () => {
     if (routes.length < 3) {
-      setRoutes([...routes, { destination: '', transport: '', distance: '10' }]);
+      setRoutes([...routes, { destination: '', transport: '', distance: '' }]);
     } else {
       alert('최대 3개까지 추가 가능합니다.');
     }
   };
-
+  
   // ✅ 제출 버튼 클릭 시 결과 샘플 처리
   const handleSubmit = async () => {
     if (!isFormValid) {
@@ -199,26 +198,44 @@ const AiMode = () => {
           {/* 번화가 조건 (최대 3개) */}
           {routes.map((route, index) => (
           <div
-            key={index}
+            key={`${route.destination}-${index}`}
             className="flex flex-col md:flex-row items-center gap-2 mt-2 p-2 border rounded-md bg-gray-50"
           >
             {/* 목적지 */}
             <select
               className="border p-2 rounded w-full md:w-1/3"
-              value={route.destination}
+              value={route.destination || ''}
               onChange={(e) => {
                 const newRoutes = [...routes];
                 newRoutes[index].destination = e.target.value;
                 setRoutes(newRoutes);
               }}
             >
-              <option value="">목적지 선택</option>
-              <option value="Umeda">우메다（梅田）</option>
-              <option value="Namba">난바（難波）</option>
-              <option value="Tennoji">덴노지（天王寺）</option>
-              <option value="Kyobashi">쿄바시（京橋）</option>
-              <option value="Hommachi">혼마치（本町）</option>
+              <option disabled value="">목적지 선택</option>
+              {[
+                  { value: "Umeda", label: "우메다（梅田）" },
+                  { value: "Namba", label: "난바（難波）" },
+                  { value: "Tennoji", label: "덴노지（天王寺）" },
+                  { value: "Kyobashi", label: "쿄바시（京橋）" },
+                  { value: "Hommachi", label: "혼마치（本町）" },
+                ].map(({ value, label }) => {
+                  const isDisabled = routes.some(
+                    (r, i) =>
+                      i !== index &&
+                      r.destination &&
+                      r.destination.trim() === value
+                  );
+                  return (
+                    <option key={value} value={value} disabled={isDisabled}>
+                      {label}
+                    </option>
+                  );
+                })}
+
+
             </select>
+
+
 
             {/* 이동수단 */}
             <select
@@ -230,9 +247,8 @@ const AiMode = () => {
                 setRoutes(newRoutes);
               }}
             >
-              <option value="">이동수단</option>
-              <option value="walk">도보</option>
-              <option value="subway">지하철</option>
+              <option disabled value="">이동수단</option>
+              <option value="subway">전철</option>
               <option value="bike">자전거</option>
             </select>
 
@@ -246,26 +262,24 @@ const AiMode = () => {
                 setRoutes(newRoutes);
               }}
             >
-              <option value="">거리</option>
-              <option value="5">5분</option>
+              <option disabled value="">거리</option>
               <option value="10">10분</option>
               <option value="15">15분</option>
               <option value="20">20분</option>
-              <option value="25">25분</option>
             </select>
 
             {/* 삭제 버튼 (맨 오른쪽 정렬) */}
-            {routes.length > 1 && (
-              <button
-                onClick={() => {
-                  const newRoutes = routes.filter((_, i) => i !== index);
-                  setRoutes(newRoutes);
-                }}
-                className="ml-auto md:ml-1 mt-1 md:mt-0 px-3 py-2 text-xs bg-red-500 text-white rounded hover:bg-red-600"
-              >
-                삭제
-              </button>
-            )}
+
+            <button
+              onClick={() => {
+                const newRoutes = routes.filter((_, i) => i !== index);
+                setRoutes(newRoutes);
+              }}
+              className="ml-auto md:ml-1 mt-1 md:mt-0 px-3 py-2 text-xs bg-red-500 text-white rounded hover:bg-red-600"
+            >
+              삭제
+            </button>
+
           </div>
         ))}
 
@@ -273,7 +287,7 @@ const AiMode = () => {
             className="text-sm text-blue-600 underline mt-2"
             onClick={handleAddRoute}
           >
-            + 조건 추가 (최대 3개)
+            + 번화가 조건 추가 (최대 3개)
           </button>
         </div>
 
@@ -295,7 +309,7 @@ const AiMode = () => {
       <div className="hidden md:block w-px bg-gray-300" />
 
       {/* 🔵 오른쪽: 결과 리스트 영역 */}
-      <div className="md:w-3/5 w-full flex flex-col gap-4">
+      <div className="md:w-3/5 w-full flex flex-col gap-4 overflow-y-auto h-full">
         <h2 className="text-xl font-semibold">추천된 역 리스트</h2>
         {results.length === 0 ? (
           <p className="text-gray-500">추천 결과가 여기에 표시됩니다.</p>
@@ -307,7 +321,7 @@ const AiMode = () => {
               </h3>
               <p className="text-sm text-gray-600">{station.ai_summary}</p>
               <p className="text-xs text-gray-500 mt-1">
-                월세: {station.rent}만엔 · 분위기: {station.tags?.join(', ')}
+                월세: {station.rent}만엔
               </p>
               <button
                 className="text-blue-600 underline mt-1"
