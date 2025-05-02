@@ -327,7 +327,8 @@ const AiMode = () => {
 
       {/* 🔵 오른쪽: 결과 리스트 영역 */}
       <div className="md:w-3/5 w-full flex flex-col gap-4 overflow-y-auto h-full ">
-        <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center bg-white sticky top-0 z-10 pb-2 border-b border-gray-300 px-0">
+
         <h2 className="text-xl font-semibold">추천된 역 리스트</h2>
         <select
           value={sortOption}
@@ -342,66 +343,62 @@ const AiMode = () => {
       </div>
 
         {results.length === 0 ? (
-  <p className="text-gray-500">추천 결과가 여기에 표시됩니다.</p>
-) : (
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-  {getSortedResults().map((station, index) => {
-    const isExpanded = expandedIndex === index;
-    return (
-      <div
-        key={index}
-        className={`cursor-pointer border rounded-xl p-4 shadow bg-white transition-all duration-300 hover:shadow-md ${
-          isExpanded ? 'row-span-2' : ''
-        }`}
-      >
-        {/* 역 이름 */}
-        <h3 className="font-bold text-lg text-gray-800 mb-2">
-          {station.korean}{' '}
-          <span className="text-gray-500 text-sm align-middle">{station.station}</span>
-        </h3>
+        <p className="text-gray-500">추천 결과가 여기에 표시됩니다.</p>
+        ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {getSortedResults().map((station, index) => {
+            const isExpanded = expandedIndex === index;
+            return (
+              <div
+                key={index}
+                className={`cursor-pointer border rounded-xl p-4 shadow bg-white transition-all duration-300 hover:shadow-md ${
+                  isExpanded ? 'row-span-2' : ''
+                }`}
+              >
+                {/* 역 이름 */}
+                <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  {station.korean}{' '}
+                  <span className="text-gray-500 text-sm align-middle">{station.station}</span>
+                </h3>
 
-        {/* 사진 자리 */}
-        {station.photo ? (
-            <img
-              src={`data:image/jpeg;base64,${station.photo}`}
-              alt={`${station.korean} 사진`}
-              className="w-full h-40 object-cover rounded mb-3"
-            />
-          ) : (
-            <div className="w-full h-40 bg-gray-100 flex items-center justify-center text-gray-400 rounded mb-3">
-              사진 없음
-            </div>
-          )}
-
-
+                {/* 사진 자리 */}
+                {station.photo ? (
+                    <img
+                      src={`data:image/jpeg;base64,${station.photo}`}
+                      alt={`${station.korean} 사진`}
+                      className="w-full h-40 object-cover rounded mb-3"
+                    />
+                  ) : (
+                    <div className="w-full h-40 bg-gray-100 flex items-center justify-center text-gray-400 rounded mb-3">
+                      사진 없음
+                    </div>
+                  )}
 
 
-        {/* ✅ 월세 강조 */}
-        <div className="flex items-center text-base text-yellow-700 font-semibold mb-2">
-          💰 월세: <span className="ml-1 text-lg">{station.rent?.toLocaleString()}만엔</span>
+
+
+                {/* ✅ 월세 강조 */}
+                <div className="flex items-center text-base text-yellow-700 font-semibold mb-2">
+                  💰 월세: <span className="ml-1 text-lg">{station.rent?.toLocaleString()}만엔</span>
+                </div>
+
+                {/* ✅ 번화가 조건 (교통) 강조 */}
+                {Object.entries(station.routes).map(([hub, info]) => (
+                  <div key={hub} className="flex items-center gap-2">
+                    <span>{info.mode === 'bike' ? '🚲' : '🚃'}</span>
+                    <span className="font-medium whitespace-nowrap text-gray-800">
+                      {HUB_LABEL_MAP[hub] || hub}
+                    </span>
+                    <span className="text-gray-600">까지 {info.duration}분</span>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
         </div>
 
-        {/* ✅ 번화가 조건 (교통) 강조 */}
-        {Object.entries(station.routes).map(([hub, info]) => (
-          <div key={hub} className="flex items-center gap-2">
-            <span>{info.mode === 'bike' ? '🚲' : '🚃'}</span>
-            <span className="font-medium whitespace-nowrap text-gray-800">
-              {HUB_LABEL_MAP[hub] || hub}
-            </span>
-            <span className="text-gray-600">까지 {info.duration}분</span>
-          </div>
-        ))}
-      </div>
-    );
-  })}
-</div>
 
-
-)}
-
-
-
-
+        )}
       </div>
     </div>
   );
