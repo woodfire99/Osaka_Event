@@ -36,7 +36,8 @@ ChartJS.register(
 );
 
 
-const OsakaMap = () => {
+const OsakaMap = ({ selectedFromAi, stationListFromAi }) => {
+  const backendHost = process.env.REACT_APP_API_BASE;
   const svgContainerRef = useRef(null);
   const [eventList, setEventList] = useState([]);
   const [facilitiesList, setFacilitiesList] = useState([]);     // 주변 시설 리스트 저장
@@ -184,6 +185,7 @@ const OsakaMap = () => {
   
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
         setServerResponse(data);  // 서버에서 받은 역 기본 정보 저장
   
         // 🔥 추가: send-idx 끝난 후 facilities 요청
@@ -226,6 +228,107 @@ const OsakaMap = () => {
     }
   };
   
+  // 처리 코드(AImode -> Mapmode) - 카드
+  useEffect(() => {
+    if (selectedFromAi) {
+      setMatchedTexts([]);  // ✅ 기존 검색 리스트 제거
+  
+      fetch('http://localhost:8000/api/search-stations/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ keyword: selectedFromAi })
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.length > 0) {
+            handleStationFocus(data[0]);  // 자동 클릭
+          } else {
+            console.warn('해당 이름으로 검색된 역이 없습니다:', selectedFromAi);
+          }
+        })
+        .catch((err) => {
+          console.error('AI역 검색 실패:', err);
+        });
+    }
+  }, [selectedFromAi]);
+  
+ // 처리 코드(AImode -> Mapmode) - 리스트
+ useEffect(() => {
+  console.log("ww");
+  if (stationListFromAi && stationListFromAi.length > 0) {
+    setMatchedTexts(stationListFromAi); // 바로 리스트에 뿌리기
+  }
+}, [stationListFromAi]);
+
+
+ // 처리 ZOOM SVG
+  const handleStationFocus = (station) => {
+    setSelectedStation(station);
+    sendIdxToServer(station.number);
+    setZoom(1.0);
+  
+    // ✅ 노선 표시
+    const stationCodes = (station.station_code || '').split(',').map(code => code.trim());
+    const updatedLines = {
+      jr: false, metro: false, kt: false, kh: false, hs: false, hk: false, nk: false,
+    };
+  
+    stationCodes.forEach(code => {
+      if (code.startsWith('JR-')) updatedLines.jr = true;
+      else if (code.startsWith('KT-')) updatedLines.kt = true;
+      else {
+        const prefix2 = code.slice(0, 2);
+        const prefix1 = code.slice(0, 1);
+        if (prefix2 === 'KH') updatedLines.kh = true;
+        else if (prefix2 === 'NK') updatedLines.nk = true;
+        else if (prefix2 === 'HK') updatedLines.hk = true;
+        else if (prefix2 === 'HS') updatedLines.hs = true;
+        else if (['M', 'S', 'Y', 'C', 'T', 'N', 'I', 'P', 'K'].includes(prefix1)) updatedLines.metro = true;
+        else if (prefix1 === 'D') updatedLines.kt = true;
+        else if (['Q', 'F', 'O', 'A', 'R', 'G', 'H'].includes(prefix1)) updatedLines.jr = true;
+      }
+    });
+  
+    setVisibleLines(updatedLines);
+  
+    // ✅ SVG 위치 이동
+    setTimeout(() => {
+      const svgRoot = document.querySelector('svg');
+      if (!svgRoot) return;
+  
+      const targetTspan = Array.from(document.querySelectorAll('tspan')).find(t =>
+        t.textContent?.trim() === station.japanese
+      );
+      const targetText = targetTspan?.closest('text');
+  
+      if (targetText && svgContainerRef.current) {
+        const clientRect = targetText.getBoundingClientRect();
+        const containerRect = svgContainerRef.current.getBoundingClientRect();
+        const offsetX = clientRect.left - containerRect.left + svgContainerRef.current.scrollLeft;
+        const offsetY = clientRect.top - containerRect.top + svgContainerRef.current.scrollTop;
+  
+        svgContainerRef.current.scrollTo({
+          left: offsetX - 750,
+          top: offsetY - 400,
+          behavior: 'smooth',
+        });
+      }
+    }, 600);
+  
+    // ✅ 월세 정보
+    fetch('http://localhost:8000/api/rent-by-station/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ station: station.japanese })
+    })
+      .then(res => res.json())
+      .then(data => {
+        setSelectedStationRentData(data);
+      })
+      .catch(err => {
+        console.error('월세 API 요청 실패:', err);
+      });
+  };
   
 // 휠 고정
   useEffect(() => {
@@ -455,102 +558,7 @@ const OsakaMap = () => {
             {matchedTexts.map((station, idx) => (
               <div
                 key={idx}
-                onClick={() => {
-                  const clickedStation = station;  // 👈 이걸 따로 저장
-                  setSelectedStation(station);
-                  sendIdxToServer(station.number);
-                  setZoom(1.0); // 확대
-                
-                  // 🔥 1. 역 코드에서 노선 자동 표시
-                  const stationCodes = station.station_code.split(',').map(code => code.trim());
-                  const updatedLines = {
-                    jr: false,
-                    metro: false,
-                    kt: false,
-                    kh: false,
-                    hs: false,
-                    hk: false,
-                    nk: false,
-                  };
-                                  
-                  stationCodes.forEach(code => {
-                    if (code.startsWith('JR-')) {
-                      updatedLines.jr = true;
-                    } else if (code.startsWith('KT-')) {
-                      updatedLines.kt = true;
-                    } else {
-                      const prefix2 = code.slice(0, 2);
-                      const prefix1 = code.slice(0, 1);
-                  
-                      if (prefix2 === 'KH') updatedLines.kh = true;
-                      else if (prefix2 === 'NK') updatedLines.nk = true;
-                      else if (prefix2 === 'HK') updatedLines.hk = true;
-                      else if (prefix2 === 'HS') updatedLines.hs = true;
-                      else {
-                        const metroPrefixes = ['M', 'S', 'Y', 'C', 'T', 'N', 'I', 'P', 'K'];
-                        if (metroPrefixes.includes(prefix1)) {
-                          updatedLines.metro = true;
-                        } 
-                        else {
-                          // 🔧 여기서 D도 KT 계열로 분류
-                          if (prefix1 === 'D') {
-                            updatedLines.kt = true;
-                          }
-                          else {
-                            const jrPrefixes = ['Q', 'F', 'O', 'A', 'R', 'G', 'H'];
-                            if (jrPrefixes.includes(prefix1)) {
-                              updatedLines.jr = true;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  });
-                                    
-                  setVisibleLines(updatedLines);
-                  // 🔥 2. SVG 이동 (딜레이 줘야 getBBox 작동함)
-                  setTimeout(() => {
-                    const svgRoot = document.querySelector('svg');
-                    if (!svgRoot) return;
-                  
-                    const targetTspan = Array.from(document.querySelectorAll('tspan')).find(t =>
-                      t.textContent?.trim() === clickedStation.japanese  // 정확히 같은 텍스트만!
-                    );
-
-                    const targetText = targetTspan?.closest('text');      
-
-                    if (targetText && svgContainerRef.current) {
-                      const clientRect = targetText.getBoundingClientRect();
-                      const containerRect = svgContainerRef.current.getBoundingClientRect();
-                    
-                      const offsetX = clientRect.left - containerRect.left + svgContainerRef.current.scrollLeft;
-                      const offsetY = clientRect.top - containerRect.top + svgContainerRef.current.scrollTop;
-                    
-                      svgContainerRef.current.scrollTo({
-                        left: offsetX-750,
-                        top: offsetY-400,
-                        behavior: 'smooth',
-                      });
-                    }
-                    
-                  }, 600);
-                                                 
-                  // 🔥 3. 월세 데이터 → API 호출로 대체
-                  fetch('http://localhost:8000/api/rent-by-station/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ station: station.japanese })
-                  })
-                    .then(res => res.json())
-                    .then(data => {
-                      setSelectedStationRentData(data);
-                    })
-                    .catch(err => {
-                      console.error('월세 API 요청 실패:', err);
-                    });
-
-                }}
-       
+                onClick={() => handleStationFocus(station)}
                 className="cursor-pointer hover:bg-blue-100 p-1 rounded"
               >
               {station.japanese}/{station.english}/{station.korean}
@@ -722,57 +730,55 @@ const OsakaMap = () => {
               <div>
                     <h3 className="text-lg font-bold mt-6">[주변 주요시설]</h3>
                     <ul className="list-none space-y-10">
-                      {facilitiesList.slice(0, 5).map((place, idx) => (
-                        <li key={idx} className="border-b pb-6">
-                          {/* 이름 + 구글 지도 링크 */}
-                          <div className="font-bold text-lg mb-2">
-                            {idx + 1}.{" "}
-                            <a
-                              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.name)}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:underline"
-                            >
-                              {place.name}
-                            </a>
-                          </div>
+                    {facilitiesList.slice(0, 5).map((place, idx) => (
+                      <li key={idx} className="border-b pb-6">
+                        <div className="font-bold text-lg mb-2">
+                          {idx + 1}.{" "}
+                          <a
+                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('大阪 ' + place.name)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                          >
+                            {place.name}
+                          </a>
+                        </div>
 
-                    {/* 이미지 */}
-                    {place.photo_reference && (
-                      <img
-                        src={`http://localhost:8000/api/photo-proxy?photo_reference=${place.photo_reference}`}
-                        alt={`${place.name} 사진`}
-                        className="rounded-2xl shadow-md w-full max-w-md h-auto object-cover"
-                      />
-                    )}
+                        {/* 이미지 바로 표시 */}
+                        {place.photo_url ? (
+                          <img
+                            src={`${backendHost}${place.photo_url}`} 
+                            alt={`${place.name} 사진`}
+                            className="rounded-2xl shadow-md w-full max-w-md h-auto object-cover"
+                          />
+                        ) : (
+                          <div className="text-gray-400 text-sm">이미지 없음</div>
+                        )}
 
-                    {/* 평점 */}
 
-                    <div className="flex items-center mt-2">
-                      {place.rating ? (
-                        <>
-                          {/* 별 아이콘 채우기 */}
-                          {Array.from({ length: 5 }).map((_, idx) => (
-                            <svg
-                              key={idx}
-                              xmlns="http://www.w3.org/2000/svg"
-                              className={`h-5 w-5 ${idx < Math.round(place.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.18 3.64a1 1 0 00.95.69h3.826c.969 0 1.371 1.24.588 1.81l-3.1 2.252a1 1 0 00-.364 1.118l1.18 3.64c.3.921-.755 1.688-1.54 1.118l-3.1-2.252a1 1 0 00-1.175 0l-3.1 2.252c-.784.57-1.838-.197-1.539-1.118l1.18-3.64a1 1 0 00-.364-1.118l-3.1-2.252c-.783-.57-.38-1.81.588-1.81h3.826a1 1 0 00.95-.69l1.18-3.64z" />
-                            </svg>
-                          ))}
-                          {/* 평점 숫자도 작게 표시 */}
-                          <span className="text-gray-500 text-sm ml-2">({place.rating})</span>
-                        </>
-                      ) : (
-                        <span className="text-gray-400">평점 정보 없음</span>
-                      )}
-                    </div>
-
-                  </li>
-                ))}
+                        {/* 평점 표시 */}
+                        <div className="flex items-center mt-2">
+                          {place.rating ? (
+                            <>
+                              {Array.from({ length: 5 }).map((_, i) => (
+                                <svg
+                                  key={i}
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className={`h-5 w-5 ${i < Math.round(place.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                >
+                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.18 3.64a1 1 0 00.95.69h3.826c.969 0 1.371 1.24.588 1.81l-3.1 2.252a1 1 0 00-.364 1.118l1.18 3.64c.3.921-.755 1.688-1.54 1.118l-3.1-2.252a1 1 0 00-1.175 0l-3.1 2.252c-.784.57-1.838-.197-1.539-1.118l1.18-3.64a1 1 0 00-.364-1.118l-3.1-2.252c-.783-.57-.38-1.81.588-1.81h3.826a1 1 0 00.95-.69l1.18-3.64z" />
+                                </svg>
+                              ))}
+                              <span className="text-gray-500 text-sm ml-2">({place.rating})</span>
+                            </>
+                          ) : (
+                            <span className="text-gray-400">평점 정보 없음</span>
+                          )}
+                        </div>
+                      </li>
+                    ))}
               </ul>
               </div>
 

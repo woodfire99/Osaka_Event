@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import StationSearchView, EventDetailListView,  RentInfoByStationView, recommend_stations, fetch_events_by_station, photo_proxy, receive_idx, fetch_facilities
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('events/', EventDetailListView.as_view(), name='event-list'),
@@ -10,4 +12,4 @@ urlpatterns = [
     path('recommend/', recommend_stations, name='recommend_stations'),
     path('rent-by-station/', RentInfoByStationView.as_view(), name='rent-by-station'),
     path('search-stations/', StationSearchView.as_view()),
-    ]
+    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

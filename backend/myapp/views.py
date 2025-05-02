@@ -32,9 +32,9 @@ from django.core.files.base import ContentFile
 from .models import NearbyFacility, BikeDuration, TransitDuration
 import requests
 import os
+from django.conf import settings
 from openai import OpenAI
 from django.views.decorators.http import require_GET
-from django.conf import settings
 import hashlib
 import base64
 
@@ -168,14 +168,75 @@ def hash_photo_filename(ref):
         return None
     return hashlib.md5(ref.encode()).hexdigest()
 
-def image_base64_from_hash(ref: str):
+def image_base64_from_hash(ref: str, folder: str = 'station_photos'):
     hashed_filename = hashlib.md5(ref.encode()).hexdigest() + ".jpg"
-    file_path = os.path.join(settings.MEDIA_ROOT, hashed_filename)
+    if folder == 'facility_photos':
+        file_path = os.path.join(settings.FACILITY_PHOTO_ROOT, hashed_filename)
+    else:
+        
+        file_path = os.path.join(settings.STATION_PHOTO_ROOT, hashed_filename)
+
     if not os.path.exists(file_path):
+        logger.info(file_path)
         return None
     with open(file_path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
 
+def get_photo_url(name: str, folder: str = 'facility_photos') -> str:
+    safe_filename = name[:30].replace(' ', '_') + ".jpg"
+    return f"/media/{folder}/{safe_filename}"
+
+def get_nearby_facilities_from_google(station):
+    api_key = os.getenv("GOOGLE_PLACES_API_KEY")
+    if not api_key:
+        logger.error("❌ GOOGLE_PLACES_API_KEY 환경변수가 없습니다")
+        return
+
+    lat, lng = station.lat, station.lng
+    location = f"{lat},{lng}"
+    radius = 500  # meters
+
+    place_type = "tourist_attraction"  # 필요에 따라 변경 가능
+
+    url = (
+        f"https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+        f"?location={location}"
+        f"&radius={radius}"
+        f"&type={place_type}"
+        f"&language=ja"
+        f"&key={api_key}"
+    )
+
+    response = requests.get(url)
+    if response.status_code != 200:
+        logger.warning(f"❌ Google Places API 요청 실패: {response.status_code}")
+        return
+
+    data = response.json()
+    results = data.get("results", [])
+
+    logger.info(f"🌍 주방 시장 {len(results)}개 검색됨")
+
+    for place in results[:10]:  # 최대 10개까지만 저장
+        name = place.get("name")
+        address = place.get("vicinity")
+        rating = place.get("rating", 0)
+        photo_ref = None
+
+        if place.get("photos"):
+            photo_ref = place["photos"][0].get("photo_reference")
+
+        if name and address:
+            # 동일 이름 시장이 이미 있으면 중복 저장 하지 않음
+            if not NearbyFacility.objects.filter(name=name, station=station).exists():
+                NearbyFacility.objects.create(
+                    name=name,
+                    address=address,
+                    rating=rating,
+                    photo_reference=photo_ref,
+                    station=station
+                )
+                logger.info(f"✅ 저장됨: {name}")
 
 @csrf_exempt
 def recommend_stations(request):
@@ -215,11 +276,13 @@ def recommend_stations(request):
         for s in candidates:
             photo_base64 = image_base64_from_hash(s.station_photo)
             results.append({
-                        'station': s.japanese,
+                        'number' : s.number,
+                        'japanese': s.japanese,
                         'english': s.english,
                         'korean': s.korean,
                         'lat': s.lat,
                         'lng': s.lng,
+                        'station_code' : s.station_code,
                         'ai_summary' : trim_ai_summary(s.ai_summary),
                         'rent': rent_lookup.get(s.japanese),
                         'routes': route_lookup.get(s.japanese, {}),
@@ -354,106 +417,76 @@ def fetch_facilities(request):
 
     try:
         body = json.loads(request.body)
-        station_name = body.get('station_name')
+    except json.JSONDecodeError:
+        return JsonResponse({'error': 'JSON 파싱 실패'}, status=400)
 
-        if not station_name:
-            return JsonResponse({'error': 'station_name 누락'}, status=400)
+    station_name = body.get('station_name')
+    if not station_name:
+        return JsonResponse({'error': 'station_name 누락'}, status=400)
 
-        try:
-            station = StationInfo.objects.get(japanese=station_name)
-        except StationInfo.DoesNotExist:
-            return JsonResponse({'error': 'Station not found'}, status=404)
+    try:
+        station = StationInfo.objects.filter(japanese=station_name).first()
+    except StationInfo.DoesNotExist:
+        return JsonResponse({'error': 'Station not found'}, status=404)
 
-        # 좌표가 없는 경우 → Google에서 좌표 가져오기
-        if station.lat is None or station.lng is None:
-            lat, lng = get_lat_lng_from_station_name(station.japanese)
-            if lat is None or lng is None:
-                return JsonResponse({'error': '위치 정보를 찾을 수 없습니다'}, status=404)
-            station.lat = lat
-            station.lng = lng
-            station.save()
+    # 위도 경도 없으면 API로 채우기
+    if not station.lat or not station.lng:
+        lat, lng = get_lat_lng_from_station_name(station.japanese)
+        if not lat or not lng:
+            return JsonResponse({'error': '위치 정보를 찾을 수 없습니다'}, status=404)
+        station.lat = lat
+        station.lng = lng
+        station.save()
 
-        lat, lng = station.lat, station.lng
+    # 🔍 시설 DB에 없으면 API 호출해서 생성
+    facilities = NearbyFacility.objects.filter(station=station).order_by('-rating')
+    logger.info(facilities)
+    if not facilities.exists():
+        logger.info("🆕 DB에 시설 없음 → Google API에서 가져옵니다")
+        get_nearby_facilities_from_google(station)  # 위도/경도 필요하므로 station은 lat/lng 있음
 
-        # 1. DB에 있는 시설 우선 반환
-        facilities = NearbyFacility.objects.filter(station=station).order_by('-rating')[:5]
-        if facilities.exists():
-            facilities_data = [
-                {
-                    'name': f.name,
-                    'address': f.address,
-                    'rating': f.rating,
-                    'photo_reference': f.photo_reference,
-                }
-                for f in facilities
-            ]
-            logger.info(f"📦 DB에서 시설 {len(facilities)}개 반환")
-            return JsonResponse({'facilities': facilities_data})
+    # 🔁 다시 불러오기
+    facilities = NearbyFacility.objects.filter(station=station).order_by('-rating')[:5]
+    facilities_data = []
 
-        # 2. Google Places API 호출
-        logger.info("🌐 DB에 없으므로 Places API 요청 시작")
-        GOOGLE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
-        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&radius=1000&type=tourist_attraction&key={GOOGLE_API_KEY}"
-        response = requests.get(url)
+    for f in facilities:
+        photo_url = None
+        if f.photo_reference:
+            safe_filename = f.name[:30].replace(' ', '_') + ".jpg"
+            file_path = os.path.join(settings.MEDIA_ROOT, 'facility_photos', safe_filename)
+            logger.info(file_path)
+            if not f.photo or not os.path.exists(file_path):
+                api_key = os.getenv('GOOGLE_PLACES_API_KEY')
+                photo_api_url = (
+                    f"https://maps.googleapis.com/maps/api/place/photo"
+                    f"?maxwidth=400"
+                    f"&photo_reference={f.photo_reference}"
+                    f"&key={api_key}"
+                )
+                response = requests.get(photo_api_url)
+                if response.status_code == 200:
+                    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                    with open(file_path, 'wb') as img_file:
+                        img_file.write(response.content)
+                    f.photo.name = f"facility_photos/{safe_filename}"
+                    f.save()
+                    logger.info(f"📷 저장됨: {f.name}")
+                else:
+                    logger.warning(f"❌ 사진 다운로드 실패: {f.name}")
 
-        if response.status_code != 200:
-            logger.warning(f"❌ Places API 실패: {response.status_code} - {response.text}")
-            return JsonResponse({'error': 'Google Places API 호출 실패'}, status=502)
+            if f.photo:
+                photo_url = f.photo.url
 
-        places = response.json().get('results', [])
-        saved_facilities = []
+        facilities_data.append({
+            'name': f.name,
+            'address': f.address,
+            'rating': f.rating,
+            'photo_reference': f.photo_reference,
+            'photo_url': photo_url,
+        })
 
-        for place in places:
-            name = place.get('name')
-            address = place.get('vicinity')
-            rating = place.get('rating', 0.0)
-            photo_ref = None
-            photo_file = None
-
-            # 중복된 photo_reference가 있으면 skip
-            if place.get('photos'):
-                photo_ref = place['photos'][0].get('photo_reference')
-                if photo_ref:
-                    if NearbyFacility.objects.filter(photo_reference=photo_ref).exists():
-                        logger.info(f"⚠️ 중복 photo_reference 스킵: {photo_ref}")
-                        continue
-
-                    # 이미지 다운로드
-                    photo_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={photo_ref}&key={GOOGLE_API_KEY}"
-                    img_response = requests.get(photo_url)
-                    if img_response.status_code == 200:
-                        filename = f"{name[:30].replace(' ', '_')}.jpg"
-                        photo_file = ContentFile(img_response.content, name=filename)
-                    else:
-                        logger.warning(f"❌ 이미지 다운로드 실패: {photo_ref} - {img_response.status_code}")
-
-            # DB에 저장
-            facility = NearbyFacility(
-                station=station,
-                name=name,
-                address=address,
-                rating=rating,
-                photo_reference=photo_ref or "",
-            )
-
-            if photo_file:
-                facility.photo.save(photo_file.name, photo_file, save=True)
-            else:
-                facility.save()
-
-            saved_facilities.append({
-                'name': name,
-                'address': address,
-                'rating': rating,
-                'photo_reference': photo_ref,
-            })
-
-        logger.info(f"✅ 새 시설 {len(saved_facilities)}개 저장 완료")
-        return JsonResponse({'facilities': saved_facilities})
-
-    except Exception as e:
-        logger.exception(f"🔥 예외 발생: {str(e)}")
-        return JsonResponse({'error': str(e)}, status=500)
+    logger.info(f"📦 시설 {len(facilities_data)}개 반환")
+    return JsonResponse({'facilities': facilities_data})
 
 # 이벤트 - 역 연동
 @csrf_exempt

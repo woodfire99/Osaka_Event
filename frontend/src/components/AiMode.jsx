@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AiMode = () => {
+const AiMode = ({ onStationSelect, onStationListSend }) => {
   // 🔧 상태 정의
   const [mood, setMood] = useState('');
   const [roomSize, setRoomSize] = useState('');
@@ -327,20 +327,30 @@ const AiMode = () => {
 
       {/* 🔵 오른쪽: 결과 리스트 영역 */}
       <div className="md:w-3/5 w-full flex flex-col gap-4 overflow-y-auto h-full ">
-      <div className="flex justify-between items-center bg-white sticky top-0 z-10 pb-2 border-b border-gray-300 px-0">
+      <div className="flex justify-between items-center bg-white sticky top-0 z-10 py-3 px-4 border-b border-gray-200 shadow-sm rounded-t-md">
+  <h2 className="text-xl font-bold text-gray-800">추천된 역 리스트</h2>
 
-        <h2 className="text-xl font-semibold">추천된 역 리스트</h2>
-        <select
-          value={sortOption}
-          onChange={(e) => setSortOption(e.target.value)}
-          className="border p-1.5 rounded text-sm"
-        >
-          <option value="default">기본 순</option>
-          <option value="rent_asc">월세 낮은 순</option>
-          <option value="rent_desc">월세 높은 순</option>
-          <option value="name">역 이름 가나다순</option>
-        </select>
-      </div>
+  <div className="flex items-center gap-3">
+    <button
+      className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 transition"
+      onClick={() => onStationListSend(results)}
+    >
+      📦 <span>리스트 전체 보내기</span>
+    </button>
+
+    <select
+      value={sortOption}
+      onChange={(e) => setSortOption(e.target.value)}
+      className="border border-gray-300 p-2 rounded-md text-sm shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+    >
+      <option value="default">기본 순</option>
+      <option value="rent_asc">월세 낮은 순</option>
+      <option value="rent_desc">월세 높은 순</option>
+      <option value="name">역 이름 가나다순</option>
+    </select>
+  </div>
+</div>
+
 
         {results.length === 0 ? (
         <p className="text-gray-500">추천 결과가 여기에 표시됩니다.</p>
@@ -351,6 +361,7 @@ const AiMode = () => {
             return (
               <div
                 key={index}
+                onClick={() => onStationSelect(station.japanese)}
                 className={`cursor-pointer border rounded-xl p-4 shadow bg-white transition-all duration-300 hover:shadow-md ${
                   isExpanded ? 'row-span-2' : ''
                 }`}
@@ -358,7 +369,7 @@ const AiMode = () => {
                 {/* 역 이름 */}
                 <h3 className="font-bold text-lg text-gray-800 mb-2">
                   {station.korean}{' '}
-                  <span className="text-gray-500 text-sm align-middle">{station.station}</span>
+                  <span className="text-gray-500 text-sm align-middle">{station.japanese}</span>
                 </h3>
 
                 {/* 사진 자리 */}

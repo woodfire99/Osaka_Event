@@ -4,6 +4,10 @@ import AiMode from './AiMode.jsx'; // ✅ OK
 
 const OsakaStationFinder = () => {
   const [viewMode, setViewMode] = useState('map');
+  const [selectedStation, setSelectedStation] = useState(null);
+  const [selectedFromAi, setSelectedFromAi] = useState(null);
+  const [stationListFromAi, setStationListFromAi] = useState([]);
+
 
   return (
 <div className="relative h-screen">
@@ -36,11 +40,26 @@ const OsakaStationFinder = () => {
   {/* 메인 콘텐츠 */}
   <div className="w-full min-h-[calc(100vh-3rem)] pt-[3rem] relative">
     {/* 항상 렌더링, 보이는 것만 토글 */}
-    <div className={viewMode === 'map' ? 'block' : 'hidden'}>
-      <OsakaMap />
+    <div className={viewMode === 'map' ? 'block' : 'hidden'}>  
+    <OsakaMap 
+    selectedStation={selectedStation} 
+    selectedFromAi={selectedFromAi} 
+    stationListFromAi={stationListFromAi}
+    />
     </div>
     <div className={viewMode === 'ai' ? 'block' : 'hidden'}>
-      <AiMode />
+    <AiMode
+      onStationSelect={(station) => {
+        console.log(station);
+        setSelectedFromAi(station);
+        setViewMode('map');
+      }}
+      onStationListSend={(list) => {
+        setStationListFromAi(list); // 리스트 저장
+        setViewMode('map');         // 맵으로 전환
+      }}
+    />
+
     </div>
   </div>
 
