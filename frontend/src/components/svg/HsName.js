@@ -1,13 +1,14 @@
 import * as React from "react";
 const SvgHsName = (props) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlSpace="preserve"
-    width={3508}
-    height={3375}
-    {...props}
+  xmlns="http://www.w3.org/2000/svg"
+  xmlSpace="preserve"
+  width={3508}
+  height={3375}
+  {...props}
   >
-    <g id="hs-name-layer"
+    <g
+      id="hs-name-layer"
       style={{
         fill: "none",
       }}
@@ -29,7 +30,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 -153.67 164.609)"
           >
             <path
               fill="#fff"
@@ -45,24 +45,7 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
-            />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1180.292}
-              y={1027.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
+              transform="matrix(1 0 0 1 -153.67 164.609)"
             />
             <text
               xmlSpace="preserve"
@@ -82,7 +65,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 -153.67 164.609)"
             >
               <tspan
                 x={1157.914}
@@ -122,6 +105,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 -153.67 164.609)"
             >
               <tspan
                 x={1181.18}
@@ -166,7 +150,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 -66.67 292.609)"
           >
             <path
               fill="#fff"
@@ -182,24 +165,7 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
-            />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1180.292}
-              y={1027.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
+              transform="matrix(1 0 0 1 -66.67 292.609)"
             />
             <text
               xmlSpace="preserve"
@@ -219,7 +185,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 -66.67 292.609)"
             >
               <tspan
                 x={1157.914}
@@ -259,6 +225,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 -66.67 292.609)"
             >
               <tspan
                 x={1181.18}
@@ -303,7 +270,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 71.33 460.609)"
           >
             <path
               fill="#fff"
@@ -319,24 +285,7 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
-            />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1180.292}
-              y={1027.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
+              transform="matrix(1 0 0 1 71.33 460.609)"
             />
             <text
               xmlSpace="preserve"
@@ -356,7 +305,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 71.33 460.609)"
             >
               <tspan
                 x={1157.914}
@@ -396,6 +345,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 71.33 460.609)"
             >
               <tspan
                 x={1181.18}
@@ -458,8 +408,8 @@ const SvgHsName = (props) => (
               }}
             />
             <rect
-              width={73.475}
-              height={37.18}
+              width={106.177}
+              height={37.907}
               x={1180.292}
               y={1027.658}
               fill="#fff"
@@ -469,7 +419,7 @@ const SvgHsName = (props) => (
               ry={4.684}
               style={{
                 display: "inline",
-                opacity: 0.75,
+                opacity: 0.5,
                 fill: "#fff",
                 fillOpacity: 1,
                 strokeWidth: 0.467711,
@@ -596,8 +546,8 @@ const SvgHsName = (props) => (
               }}
             />
             <rect
-              width={73.475}
-              height={37.18}
+              width={93.259}
+              height={40.007}
               x={1180.292}
               y={1027.658}
               fill="#fff"
@@ -607,7 +557,7 @@ const SvgHsName = (props) => (
               ry={4.684}
               style={{
                 display: "inline",
-                opacity: 0.75,
+                opacity: 0.5,
                 fill: "#fff",
                 fillOpacity: 1,
                 strokeWidth: 0.467711,
@@ -715,7 +665,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 -317.67 -70.52)"
           >
             <path
               fill="#fff"
@@ -731,24 +680,7 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
-            />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1116.292}
-              y={1079.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
+              transform="matrix(1 0 0 1 -317.67 -70.52)"
             />
             <text
               xmlSpace="preserve"
@@ -768,7 +700,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 -317.67 -70.52)"
             >
               <tspan
                 x={1157.914}
@@ -810,6 +742,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 -317.67 -70.52)"
             >
               <tspan
                 x={1179.476}
@@ -876,10 +809,10 @@ const SvgHsName = (props) => (
               }}
             />
             <rect
-              width={45.372}
-              height={36.078}
-              x={1089.017}
-              y={1044.964}
+              width={44.578}
+              height={42.114}
+              x={1180.727}
+              y={1027.373}
               fill="#fff"
               fillRule="evenodd"
               opacity={0.75}
@@ -887,7 +820,7 @@ const SvgHsName = (props) => (
               ry={4.684}
               style={{
                 display: "inline",
-                opacity: 0.75,
+                opacity: 0.5,
                 fill: "#fff",
                 fillOpacity: 1,
                 strokeWidth: 0.467711,
@@ -1144,7 +1077,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 -24.67 47.48)"
           >
             <path
               fill="#fff"
@@ -1160,24 +1092,7 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
-            />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1060.292}
-              y={1041.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
+              transform="matrix(1 0 0 1 -24.67 47.48)"
             />
             <text
               xmlSpace="preserve"
@@ -1197,7 +1112,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 -24.67 47.48)"
             >
               <tspan
                 x={1157.914}
@@ -1239,6 +1154,7 @@ const SvgHsName = (props) => (
                 strokeWidth: 0.1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 -24.67 47.48)"
             >
               <tspan
                 x={1132.276}
@@ -1316,7 +1232,7 @@ const SvgHsName = (props) => (
               ry={4.684}
               style={{
                 display: "inline",
-                opacity: 0.75,
+                opacity: 0.5,
                 fill: "#fff",
                 fillOpacity: 1,
                 strokeWidth: 0.467711,
@@ -1459,7 +1375,7 @@ const SvgHsName = (props) => (
               ry={4.684}
               style={{
                 display: "inline",
-                opacity: 0.75,
+                opacity: 0.5,
                 fill: "#fff",
                 fillOpacity: 1,
                 strokeWidth: 0.467711,

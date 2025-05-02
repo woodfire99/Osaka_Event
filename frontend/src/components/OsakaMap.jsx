@@ -1,6 +1,7 @@
 // ⬇️ 1. 라이브러리 import
 import React, { useEffect, useState, useRef} from 'react';
 import { Bar } from 'react-chartjs-2';
+import './OsakaMap.css';  
 import {
   Chart as ChartJS,
   CategoryScale,
