@@ -37,6 +37,8 @@ class StationInfo(models.Model):
     shopping_street = models.BooleanField(default=False)     # 상점가 있음
     supermarket_dense = models.BooleanField(default=False)   # 마트 밀집
     safe = models.BooleanField(default=False)                # 치안 좋음
+    station_photo = models.CharField(max_length=1000, null=True, blank=True)  # Google photo_reference
+
 
     def __str__(self):
         return self.japanese

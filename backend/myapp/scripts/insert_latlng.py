@@ -23,7 +23,7 @@ def run():
     load_dotenv()
     stations = (
         StationInfo.objects
-        .filter(japanese__in=["中津", "長原", "清水", "淡路"])
+        .filter(japanese__in=["桜島", "福島", "京橋", "日本橋"])
         .order_by("number")
     )
 

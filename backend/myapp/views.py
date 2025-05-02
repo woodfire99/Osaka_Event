@@ -12,7 +12,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import RentInfo
 from .serializers import RentInfoSerializer
-from django.http import HttpResponse
+from django.http import FileResponse, HttpResponse, HttpResponseNotFound
 from dotenv import load_dotenv
 from .models import NearbyFacility
 from rest_framework.views import APIView
@@ -33,6 +33,10 @@ from .models import NearbyFacility, BikeDuration, TransitDuration
 import requests
 import os
 from openai import OpenAI
+from django.views.decorators.http import require_GET
+from django.conf import settings
+import hashlib
+import base64
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  
@@ -44,6 +48,13 @@ HUB_MAP = {
     "Tennoji": "天王寺",
     "Kyobashi": "京橋",
     "Hommachi": "本町"
+}
+
+FEATURE_FIELD_MAP = {
+    '공원 근처': 'near_park',
+    '상점가': 'shopping_street',
+    '마트 근처': 'supermarket_dense',
+    '치안 좋음': 'safe',
 }
 
 class StationSearchView(APIView):
@@ -75,60 +86,20 @@ class RentInfoByStationView(APIView):
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-def clean_summary(summary):
-    if "[주변 주요 시설]" in summary:
-        return summary.split("[주변 주요 시설]")[0].strip()
-    return summary.strip()
+def trim_ai_summary(summary: str) -> str:
+    if not summary:
+        return ''
+    return summary.split('[주변 주요 시설]')[0].strip()
 
-
-def make_station_prompt(candidates, features, routes):
-    prompt = "당신은 역 추천 도우미입니다.\n\n"
-    prompt += "사용자가 원하는 조건은 다음과 같습니다:\n"
-    prompt += f"- 특징: {', '.join(features) if features else '선택 안됨'}\n"
-    if routes:
-        for r in routes:
-            dest = r.get("destination")
-            mode = r.get("transport")
-            time = r.get("distance")
-            if dest and mode and time:
-                prompt += f"- {dest}까지 {mode}로 {time}분 이내\n"
-    prompt += "\n아래는 후보 역과 설명입니다:\n"
-
-    for i, pair in enumerate(candidates, 1):
-        s, _ = pair
-        summary = clean_summary(s.ai_summary or "정보 없음")
-        prompt += f"{i}. {s.japanese} ({s.english}): {summary}\n"
-
-    prompt += "\n이 중 사용자 조건에 가장 잘 맞는 5개 역을 골라주세요.\n"
-    prompt += "⚠️ 단, 위의 조건(특징/거리 등)을 하나라도 만족하지 않는 역은 절대 포함하지 마세요.\n"
-    prompt += "형식: - 역명 (영문명): 한 줄 이유\n"
-    return prompt
-
-
-def parse_gpt_response(response_text, rent_lookup):
-    results = []
-    for line in response_text.split('\n'):
-        match = re.match(r"^- (.+?) \((.+?)\): (.+)$", line.strip())
-        if match:
-            japanese, english, reason = match.groups()
-            rent_price = rent_lookup.get(japanese, "비공개")
-            results.append({
-                'japanese': japanese,
-                'english': english,
-                'ai_summary': reason,
-                'rent': rent_price,
-                'tags': [],
-            })
-    return results
 
 def filter_by_routes(candidates, routes):
-    if len(routes) <= 0:
-        return candidates, {}  # 조건 없으면 그대로
+    if not routes:
+        return candidates, {}
 
     filtered = []
     route_lookup = {}
 
-    for station, rent in candidates:
+    for station in candidates:
         valid = True
         station_lookup = {}
 
@@ -139,26 +110,28 @@ def filter_by_routes(candidates, routes):
             max_min = int(route.get("distance"))
 
             if not hub_jp:
-                continue  # 허브 변환 실패 → 무시
+                continue
 
             if mode == "bike":
                 d = BikeDuration.objects.filter(station=station.japanese, hub=hub_jp).first()
             else:
                 d = TransitDuration.objects.filter(station=station.japanese, hub=hub_jp).first()
 
-            # 시간 기록용
-            station_lookup[hub_jp] = d.duration_min if d else None
+            duration = d.duration_min if d else None
+            station_lookup[hub_jp] = {
+                'mode': mode,
+                'duration': duration,
+            }
 
-            if not d or d.duration_min is None or d.duration_min > max_min:
+            if duration is None or duration > max_min:
                 valid = False
                 break
 
         if valid:
-            filtered.append((station, rent))
+            filtered.append(station)
             route_lookup[station.japanese] = station_lookup
 
     return filtered, route_lookup
-
 
 def filter_by_rent(stations, room_size, rent_limit):
     candidates = []
@@ -172,25 +145,50 @@ def filter_by_rent(stations, room_size, rent_limit):
         ).first()
 
         if rent_match:
-            candidates.append((s, rent_match))
+            candidates.append(s)  # ✅ 이제 순수 StationInfo만
             rent_lookup[s.japanese] = rent_match.rent_price
 
     return candidates, rent_lookup
+
+def filter_by_features(stations, features):
+    if not features:
+        return stations
+
+    def matches(station):
+        for f in features:
+            field = FEATURE_FIELD_MAP.get(f)
+            if field and not getattr(station, field, False):
+                return False
+        return True
+
+    return [s for s in stations if matches(s)]
+
+def hash_photo_filename(ref):
+    if not ref:
+        return None
+    return hashlib.md5(ref.encode()).hexdigest()
+
+def image_base64_from_hash(ref: str):
+    hashed_filename = hashlib.md5(ref.encode()).hexdigest() + ".jpg"
+    file_path = os.path.join(settings.MEDIA_ROOT, hashed_filename)
+    if not os.path.exists(file_path):
+        return None
+    with open(file_path, "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
+
 
 @csrf_exempt
 def recommend_stations(request):
     if request.method != 'POST':
         return JsonResponse({'error': 'POST만 지원됩니다.'}, status=405)
-
     try:
-
         data = json.loads(request.body)
         mood = data.get('mood')
         room_size = data.get('room_size')
         rent_limit = float(data.get('rent_limit'))
         features = data.get('features', [])
         routes = data.get('routes', [])
-        logger.info(routes)
+        logger.info(features)
         
         # 1. mood filter
         stations = StationInfo.objects.filter(mood__contains=[mood])
@@ -201,10 +199,10 @@ def recommend_stations(request):
         # 3. route filter
         candidates, route_lookup = filter_by_routes(candidates, routes)
         logger.info(len(candidates))
+        # 4. features filter
+        candidates = filter_by_features(candidates, features)
+        logger.info(len(candidates))
 
-
-        # 10개로 줄이기
-        candidates = candidates[:10]
 
         if not candidates:
             return JsonResponse({
@@ -212,22 +210,27 @@ def recommend_stations(request):
                 'route_time': route_lookup,
                 'message': '조건에 맞는 역이 없습니다.'
             })
+        
+        results = []
+        for s in candidates:
+            photo_base64 = image_base64_from_hash(s.station_photo)
+            results.append({
+                        'station': s.japanese,
+                        'english': s.english,
+                        'korean': s.korean,
+                        'lat': s.lat,
+                        'lng': s.lng,
+                        'ai_summary' : trim_ai_summary(s.ai_summary),
+                        'rent': rent_lookup.get(s.japanese),
+                        'routes': route_lookup.get(s.japanese, {}),
+                        'photo': photo_base64,
+                    })
+               
+        return JsonResponse({
+            'results': results,
+            'message': None,
+        })
 
-        # prompt = make_station_prompt(candidates, features, routes)
-
-        # response = client.chat.completions.create(
-        #     model="gpt-3.5-turbo",
-        #     messages=[
-        #         {"role": "system", "content": "역 추천 전문가입니다."},
-        #         {"role": "user", "content": prompt},
-        #     ],
-        #     temperature=0.3,
-        # )
-
-        # content = response.choices[0].message.content.strip()
-        # parsed = parse_gpt_response(content, rent_lookup)
-
-        return JsonResponse()
 
     except Exception as e:
         logger.exception(f"GPT 추천 실패: {e}")
@@ -481,5 +484,3 @@ def fetch_events_by_station(request):
 class EventDetailListView(ListAPIView):
     queryset = EventDetail.objects.all().order_by('-saved_at')
     serializer_class = EventDetailSerializer
-
-

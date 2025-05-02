@@ -51,9 +51,13 @@ def run():
     load_dotenv()
     GOOGLE_API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
 
-    stations = StationInfo.objects.exclude(lat__isnull=True).exclude(lng__isnull=True)
+    stations = (
+        StationInfo.objects
+        .filter(japanese__in=["桜島", "福島", "京橋", "日本橋"])
+        .order_by("number")
+    )
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    output_path = os.path.join(BASE_DIR, "data", "bike_google_duration.csv")
+    output_path = os.path.join(BASE_DIR, "data", "bike_google_duration_add.csv")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     results = []

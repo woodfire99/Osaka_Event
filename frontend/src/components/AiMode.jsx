@@ -8,22 +8,29 @@ const AiMode = () => {
   const [selectedFeatures, setSelectedFeatures] = useState([]);
   const [routes, setRoutes] = useState([]); 
   const [results, setResults] = useState([]);
-
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [sortOption, setSortOption] = useState('default');
+  const HUB_LABEL_MAP = {
+    '難波': '난바(難波)',
+    '梅田': '우메다(梅田)',
+    '天王寺': '덴노지(天王寺)',
+    '京橋': '쿄바시(京橋)',
+    '本町': '혼마치(本町)',
+  };
+  
   // 📌 방 크기별 최소 월세 상한 (단위: 만엔)
   const rentMinByRoomSize = {
-    '1R': 4,
-    '1K': 5,
-    '1LDK': 7,
+    '1R': 3,
+    '1K': 4,
+    '1LDK': 6,
   };
 
   // 🏷️ 선택 가능한 특징
   const FEATURES = [
     '공원 근처',
     '상점가',
-    '마트 밀집',
-    '보안 좋음',
-    '조용함',
-    '학교 근처',
+    '마트 근처',
+    '치안 좋음',
   ];
 
   // ✅ 필수 입력 유효성 검사
@@ -83,15 +90,25 @@ const AiMode = () => {
     }
   };
   
-  // 🔍 지도에서 보기 기능 (더미)
-  const zoomToMap = (station) => {
-    alert(`${station.japanese} 역을 지도에서 보여줍니다`);
+  const getSortedResults = () => {
+    const sorted = [...results]; // 원본 배열 복사
+    switch (sortOption) {
+      case 'rent_asc':
+        return sorted.sort((a, b) => (a.rent ?? Infinity) - (b.rent ?? Infinity));
+      case 'rent_desc':
+        return sorted.sort((a, b) => (b.rent ?? 0) - (a.rent ?? 0));
+      case 'name':
+        return sorted.sort((a, b) => a.korean.localeCompare(b.korean));
+      default:
+        return sorted;
+    }
   };
-
+  
   return (
-    <div className="flex flex-col md:flex-row w-full h-full gap-6 p-6">
+<div className="flex flex-col md:flex-row w-full h-[calc(100vh-3rem)] gap-6 p-6">
       {/* 🔴 왼쪽: 조건 입력 영역 */}
-      <div className="md:w-2/5 w-full flex flex-col gap-4">
+      <div className="md:w-2/5 w-full flex flex-col gap-4 sticky top-[3rem] self-start">
+
         <h2 className="text-xl font-semibold">조건을 입력하세요</h2>
         <div className="space-y-4">
           <p className="text-sm text-red-600">※ 아래 항목은 모두 필수입니다</p>
@@ -306,32 +323,85 @@ const AiMode = () => {
       </div>
 
       {/* ⚪ 세로 구분선 */}
-      <div className="hidden md:block w-px bg-gray-300" />
+      <div className="hidden md:block w-px bg-gray-300 h-auto" />
 
       {/* 🔵 오른쪽: 결과 리스트 영역 */}
-      <div className="md:w-3/5 w-full flex flex-col gap-4 overflow-y-auto h-full">
+      <div className="md:w-3/5 w-full flex flex-col gap-4 overflow-y-auto h-full ">
+        <div className="flex justify-between items-center">
         <h2 className="text-xl font-semibold">추천된 역 리스트</h2>
+        <select
+          value={sortOption}
+          onChange={(e) => setSortOption(e.target.value)}
+          className="border p-1.5 rounded text-sm"
+        >
+          <option value="default">기본 순</option>
+          <option value="rent_asc">월세 낮은 순</option>
+          <option value="rent_desc">월세 높은 순</option>
+          <option value="name">역 이름 가나다순</option>
+        </select>
+      </div>
+
         {results.length === 0 ? (
-          <p className="text-gray-500">추천 결과가 여기에 표시됩니다.</p>
-        ) : (
-          results.map((station, index) => (
-            <div key={index} className="border rounded p-4 shadow bg-white">
-              <h3 className="font-bold">
-                {station.japanese} ({station.english})
-              </h3>
-              <p className="text-sm text-gray-600">{station.ai_summary}</p>
-              <p className="text-xs text-gray-500 mt-1">
-                월세: {station.rent}만엔
-              </p>
-              <button
-                className="text-blue-600 underline mt-1"
-                onClick={() => zoomToMap(station)}
-              >
-                지도에서 보기
-              </button>
+  <p className="text-gray-500">추천 결과가 여기에 표시됩니다.</p>
+) : (
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  {getSortedResults().map((station, index) => {
+    const isExpanded = expandedIndex === index;
+    return (
+      <div
+        key={index}
+        className={`cursor-pointer border rounded-xl p-4 shadow bg-white transition-all duration-300 hover:shadow-md ${
+          isExpanded ? 'row-span-2' : ''
+        }`}
+      >
+        {/* 역 이름 */}
+        <h3 className="font-bold text-lg text-gray-800 mb-2">
+          {station.korean}{' '}
+          <span className="text-gray-500 text-sm align-middle">{station.station}</span>
+        </h3>
+
+        {/* 사진 자리 */}
+        {station.photo ? (
+            <img
+              src={`data:image/jpeg;base64,${station.photo}`}
+              alt={`${station.korean} 사진`}
+              className="w-full h-40 object-cover rounded mb-3"
+            />
+          ) : (
+            <div className="w-full h-40 bg-gray-100 flex items-center justify-center text-gray-400 rounded mb-3">
+              사진 없음
             </div>
-          ))
-        )}
+          )}
+
+
+
+
+        {/* ✅ 월세 강조 */}
+        <div className="flex items-center text-base text-yellow-700 font-semibold mb-2">
+          💰 월세: <span className="ml-1 text-lg">{station.rent?.toLocaleString()}만엔</span>
+        </div>
+
+        {/* ✅ 번화가 조건 (교통) 강조 */}
+        {Object.entries(station.routes).map(([hub, info]) => (
+          <div key={hub} className="flex items-center gap-2">
+            <span>{info.mode === 'bike' ? '🚲' : '🚃'}</span>
+            <span className="font-medium whitespace-nowrap text-gray-800">
+              {HUB_LABEL_MAP[hub] || hub}
+            </span>
+            <span className="text-gray-600">까지 {info.duration}분</span>
+          </div>
+        ))}
+      </div>
+    );
+  })}
+</div>
+
+
+)}
+
+
+
+
       </div>
     </div>
   );

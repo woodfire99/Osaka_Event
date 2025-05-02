@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import OsakaMap from './OsakaMap';
-import AiMode from './AiMode';
+import AiMode from './AiMode.jsx'; // ✅ OK
 
 const OsakaStationFinder = () => {
   const [viewMode, setViewMode] = useState('map');
@@ -8,7 +8,7 @@ const OsakaStationFinder = () => {
   return (
 <div className="relative h-screen">
   {/* 상단 바 - 로고 + 버튼 */}
-  <div className="absolute top-0 left-0 w-full flex justify-between items-center p-2 z-50 bg-white shadow-sm">
+  <div className="fixed top-0 left-0 w-full flex justify-between items-center p-2 z-50 bg-white shadow-sm h-[3rem]">
     {/* ⬅️ 왼쪽: 로고/제목 */}
     <div className="text-xl font-bold px-3">🏙️Osaka Navi</div>
 
@@ -34,9 +34,16 @@ const OsakaStationFinder = () => {
   </div>
 
   {/* 메인 콘텐츠 */}
-  <div className="w-full h-full pt-[2.8rem]">
-    {viewMode === 'map' ? <OsakaMap /> : <AiMode />}
+  <div className="w-full min-h-[calc(100vh-3rem)] pt-[3rem] relative">
+    {/* 항상 렌더링, 보이는 것만 토글 */}
+    <div className={viewMode === 'map' ? 'block' : 'hidden'}>
+      <OsakaMap />
+    </div>
+    <div className={viewMode === 'ai' ? 'block' : 'hidden'}>
+      <AiMode />
+    </div>
   </div>
+
 </div>
 
 
