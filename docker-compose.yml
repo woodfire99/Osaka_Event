@@ -24,7 +24,7 @@ services:
       - backend
 
 
-  # frontend:
+  # frontend: 
   #   build: ./frontend
   #   container_name: react-frontend
   #   ports:

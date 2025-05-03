@@ -1,0 +1,100 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: django-backend
+    env_file:
+      - ./backend/.env 
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend  # 🔥 frontend 폴더가 context!
+      dockerfile: nginx/Dockerfile
+    container_name: react-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+
+  # frontend:
+  #   build: ./frontend
+  #   container_name: react-frontend
+  #   ports:
+  #     - "3000:3000"
+  #   stdin_open: true
+  #   tty: true
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: osaka_db
+      POSTGRES_USER: osaka_user
+      POSTGRES_PASSWORD: osaka_pw
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  scraper:
+    build:
+      context: ./api/url
+    volumes:
+      - ./api/url:/scraper
+    working_dir: /api
+    depends_on:
+      - db
+    profiles:
+      - manual
+
+  detail_scraper:
+    build:
+      context: ./api/detail
+      dockerfile: Dockerfile
+    volumes:
+      - ./api/detail:/scraper
+    working_dir: /api
+    depends_on:
+      - db
+    profiles:
+      - manual
+
+  update-event:
+    build: 
+      context: ./api/update_event
+    env_file:
+      - .env
+    volumes:
+      - ./api/update_event:/app
+    depends_on:
+      - db
+    profiles:
+      - manual
+
+  station_scraper:
+    environment:
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+    build:
+      context: ./api/station
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./api/station:/app
+    profiles:
+      - manual
+
+  
+
+
+volumes:
+  pgdata:
