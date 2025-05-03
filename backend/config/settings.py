@@ -150,4 +150,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",      # 개발용 React 앱 주소
+    "http://3.25.191.93",       # EC2의 퍼블릭 IP 
+    "https://yourdomain.com"     # 도메인 연결 시
+]
+

@@ -1,10 +1,11 @@
-# 기존 파일이 있다고 가정하고 build용 Dockerfile
 FROM node:18
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+
+# react-scripts 누락 방지용 한 줄 추가
+RUN npm install && npm install react-scripts
 
 COPY . .
 

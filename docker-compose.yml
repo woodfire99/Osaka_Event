@@ -14,14 +14,23 @@ services:
       - db
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend  # 🔥 frontend 폴더가 context!
+      dockerfile: nginx/Dockerfile
     container_name: react-frontend
-    volumes:
-      - ./frontend:/app
     ports:
-      - "3000:3000"
-    stdin_open: true
-    tty: true
+      - "3000:80"
+    depends_on:
+      - backend
+
+
+  # frontend:
+  #   build: ./frontend
+  #   container_name: react-frontend
+  #   ports:
+  #     - "3000:3000"
+  #   stdin_open: true
+  #   tty: true
 
   db:
     image: postgres:15
@@ -43,6 +52,8 @@ services:
     working_dir: /api
     depends_on:
       - db
+    profiles:
+      - manual
 
   detail_scraper:
     build:
@@ -53,6 +64,8 @@ services:
     working_dir: /api
     depends_on:
       - db
+    profiles:
+      - manual
 
   update-event:
     build: 
@@ -63,6 +76,8 @@ services:
       - ./api/update_event:/app
     depends_on:
       - db
+    profiles:
+      - manual
 
   station_scraper:
     environment:
@@ -75,6 +90,8 @@ services:
       - db
     volumes:
       - ./api/station:/app
+    profiles:
+      - manual
 
   
 
