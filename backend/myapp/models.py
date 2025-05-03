@@ -62,7 +62,7 @@ class NearbyFacility(models.Model):
     address = models.CharField(max_length=1000, blank=True)  # 주소 (없을 수도 있어서 blank=True)
     rating = models.FloatField(null=True, blank=True)       # 평점 (0~5점, 없을 수도 있음)
     place_id = models.CharField(max_length=255, blank=True) # 구글 Place ID (필요하면 활용)
-    photo_reference = models.CharField(max_length=1000, blank=True) # 사진 가져올 때 필요한 photo_reference
+    photo_reference = models.CharField(max_length=1000, blank=True, null=True) # 사진 가져올 때 필요한 photo_reference
     created_at = models.DateTimeField(auto_now_add=True)    # 최초 저장시간
     updated_at = models.DateTimeField(auto_now=True)        # 업데이트 시간
     photo = models.ImageField(upload_to='facility_photos/', null=True, blank=True)

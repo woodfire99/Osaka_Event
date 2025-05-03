@@ -215,7 +215,7 @@ def get_nearby_facilities_from_google(station):
     data = response.json()
     results = data.get("results", [])
 
-    logger.info(f"🌍 주방 시장 {len(results)}개 검색됨")
+    logger.info(f"🌍 주변 시장 {len(results)}개 검색됨")
 
     for place in results[:10]:  # 최대 10개까지만 저장
         name = place.get("name")
