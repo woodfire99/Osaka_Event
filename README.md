@@ -22,7 +22,8 @@ Osaka_Event는 오사카 지역의 지하철역 기반 생활 정보와 지역 �
 
 ## 🏗️ 구조 설명
 
-![프레젠테이션1](https://github.com/user-attachments/assets/58e8de4d-614f-4d20-9ae6-3032e8b828a5)
+![구조도_1](https://github.com/user-attachments/assets/86482f44-62e7-4951-bd75-9092cde13385)
+
 <br/>
 
 ### 🗺️ Map Mode
