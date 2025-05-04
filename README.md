@@ -55,10 +55,10 @@
   SVG와 Inkscape를 사용해 오사카 지하철 노선도를 직접 제작하였습니다.
 
 - **월세 시세 표시**  
-  [SUUMO](https://suumo.jp/)에서 수동 크롤링한 임대 데이터를 기반으로 시세를 시각화합니다.
+  [SUUMO](https://suumo.jp/)에서 수동 수집한 임대 데이터를 기반으로 시세를 시각화합니다.
 
 - **이벤트 정보 시각화**  
-  [Japan Travel](https://www.japan.travel/) 웹사이트에서 웹 크롤링을 통해 현재 진행 중인 지역 이벤트를 수집합니다.
+  [Japan Travel](https://www.japan.travel/) 웹사이트에서 웹 스크래핑을 통해 현재 진행 중인 지역 이벤트를 수집합니다.
 
 - **주변 분위기 요약**  
   OpenAI의 ChatGPT API를 사용해 각 역의 분위기를 자동 요약하고 데이터베이스에 저장합니다.
@@ -77,7 +77,7 @@
   사용자가 입력한 예산 조건에 따라 SUUMO 기반 임대 시세 데이터를 필터링합니다.
 
 - **상권 조건 필터링**  
-  [Yahoo Japan](https://transit.yahoo.co.jp/search/result?from=難波&to=梅田) 등 외부 웹사이트 데이터를 수집하여 상권 밀집도 지표를 정제하고 자체 DB화하였습니다.
+  [Yahoo Japan](https://transit.yahoo.co.jp/search/result?from=難波&to=梅田)(예시 사이트) 번화가로부터 각 역의 최소 시간을 DB화
 
 
 (웹 수집은 시간 지연을 두었으며, 프로젝트를 위한 데이터셋 수집에만 사용 하였습니다.)
