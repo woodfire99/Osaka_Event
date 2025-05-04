@@ -79,6 +79,9 @@
 - **상권 조건 필터링**  
   [Yahoo Japan](https://transit.yahoo.co.jp/search/result?from=難波&to=梅田) 등 외부 웹사이트 데이터를 수집하여 상권 밀집도 지표를 정제하고 자체 DB화하였습니다.
 
+
+(웹 수집은 시간 지연을 두었으며, 프로젝트를 위한 데이터셋 수집에만 사용 하였습니다.)
+
 ---
 
 ## 배포 환경 (AWS + Ubuntu)
