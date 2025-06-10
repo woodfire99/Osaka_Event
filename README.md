@@ -1,5 +1,5 @@
 # Osaka_Event 
-프로젝트 진행일자(Project Period) : 2025/04/22 ~ 2025/05/04  
+프로젝트 진행일자(Project Period) : 2025/04 ~ 2025/05 
 인원(Team Size) : 1人
 
 <br/>
