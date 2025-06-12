@@ -13,24 +13,24 @@ services:
     depends_on:
       - db
 
-  frontend:
-    build:
-      context: ./frontend  # 🔥 frontend 폴더가 context!
-      dockerfile: nginx/Dockerfile
-    container_name: react-frontend
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-
-
-  # frontend: 
-  #   build: ./frontend
+  # frontend:
+  #   build:
+  #     context: ./frontend  # 🔥 frontend 폴더가 context!
+  #     dockerfile: nginx/Dockerfile
   #   container_name: react-frontend
   #   ports:
-  #     - "3000:3000"
-  #   stdin_open: true
-  #   tty: true
+  #     - "3000:80"
+  #   depends_on:
+  #     - backend
+
+
+  frontend: 
+    build: ./frontend
+    container_name: react-frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
 
   db:
     image: postgres:15

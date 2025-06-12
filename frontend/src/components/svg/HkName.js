@@ -435,24 +435,7 @@ const SvgHkName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={83.761}
-              height={40.249}
-              x={2028.579}
-              y={990.462}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3810.703}
@@ -952,24 +935,7 @@ const SvgHkName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={97.126}
-              height={36.62}
-              x={1850.807}
-              y={1363.734}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1854.128}
@@ -1829,24 +1795,7 @@ const SvgHkName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={118.11}
-              height={39.66}
-              x={1690.169}
-              y={1363.789}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1811.397}

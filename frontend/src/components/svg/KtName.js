@@ -46,24 +46,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -184,24 +167,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -322,24 +288,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -460,24 +409,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -598,24 +530,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -737,24 +652,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -881,24 +779,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -1019,24 +900,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -1407,24 +1271,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1175.508}
-              y={1067.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1177.18}
@@ -1545,24 +1392,7 @@ const SvgKtName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={172.12}
-              height={35.911}
-              x={1137.078}
-              y={1080.396}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1137.18}

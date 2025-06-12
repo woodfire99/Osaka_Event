@@ -153,6 +153,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",      # 개발용 React 앱 주소
     "http://3.25.191.93",       # EC2의 퍼블릭 IP 
-    "https://yourdomain.com"     # 도메인 연결 시
+    "https://yourdomain.com",
+    "http://localhost:3001",     # 도메인 연결 시
 ]
 

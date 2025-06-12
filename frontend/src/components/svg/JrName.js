@@ -47,24 +47,7 @@ const SvgJrName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={210.31}
-              height={78.188}
-              x={1354.951}
-              y={-1827.559}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1354.024}
@@ -427,24 +410,7 @@ const SvgJrName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1180.292}
-              y={1035.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -845,24 +811,7 @@ const SvgJrName = (props) => (
                 {"H44"}
               </tspan>
             </text>
-            <rect
-              width={92.762}
-              height={39.109}
-              x={1179.98}
-              y={1035.002}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1179.18}
@@ -981,24 +930,7 @@ const SvgJrName = (props) => (
                 {"H43"}
               </tspan>
             </text>
-            <rect
-              width={144.559}
-              height={39.66}
-              x={1179.445}
-              y={1036.848}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={0}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1179.18}
@@ -1117,24 +1049,7 @@ const SvgJrName = (props) => (
                 {"H42"}
               </tspan>
             </text>
-            <rect
-              width={164.397}
-              height={39.109}
-              x={1178.946}
-              y={1036.056}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1179.18}
@@ -1491,24 +1406,7 @@ const SvgJrName = (props) => (
                 {"H45"}
               </tspan>
             </text>
-            <rect
-              width={128.579}
-              height={39.66}
-              x={1006.908}
-              y={1037.648}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1135.7}
@@ -1996,24 +1894,7 @@ const SvgJrName = (props) => (
                 {"F03"}
               </tspan>
             </text>
-            <rect
-              width={109.867}
-              height={37.911}
-              x={1179.672}
-              y={1036.617}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -2376,24 +2257,7 @@ const SvgJrName = (props) => (
                 {"F06"}
               </tspan>
             </text>
-            <rect
-              width={61.941}
-              height={40.249}
-              x={1179.336}
-              y={1035.479}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={0}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -2756,24 +2620,7 @@ const SvgJrName = (props) => (
                 {"A45"}
               </tspan>
             </text>
-            <rect
-              width={154.986}
-              height={41.028}
-              x={1180.631}
-              y={1045.031}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -3211,24 +3058,7 @@ const SvgJrName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={117.781}
-              height={38.505}
-              x={1180.431}
-              y={1035.532}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -3385,24 +3215,7 @@ const SvgJrName = (props) => (
                 {"Q17"}
               </tspan>
             </text>
-            <rect
-              width={86.488}
-              height={37.132}
-              x={1180.618}
-              y={1042.405}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -3965,24 +3778,7 @@ const SvgJrName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={127.912}
-              height={42.012}
-              x={1180.122}
-              y={1033.198}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -4101,24 +3897,7 @@ const SvgJrName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1179.508}
-              y={1035.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}

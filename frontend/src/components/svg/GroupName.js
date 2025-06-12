@@ -21,24 +21,7 @@ const SvgGroupName = (props) => (
         }}
       >
         <g>
-          <rect
-            width={161.937}
-            height={39.175}
-            x={2787.28}
-            y={736.544}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={0}
-            ry={2.194}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.218753,
-            }}
-          />
+
           <path
             fill="#fff"
             stroke="#000"
@@ -290,24 +273,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2228.595 -3112.399)"
             />
-            <rect
-              width={171.227}
-              height={81.03}
-              x={3707.001}
-              y={-3154.034}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3705.633}
@@ -414,24 +380,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={202.051}
-              height={82.894}
-              x={3114.259}
-              y={-3288.513}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3111.349}
@@ -590,24 +539,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 1936.595 -1024.399)"
             />
-            <rect
-              width={213.849}
-              height={84.071}
-              x={3487.502}
-              y={-886.058}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3486.605}
@@ -931,24 +863,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 1038.767 -2390.946)"
             />
-            <rect
-              width={76.163}
-              height={74.306}
-              x={2461.055}
-              y={-2363.166}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={2538.777}
@@ -1038,17 +953,7 @@ const SvgGroupName = (props) => (
             }}
             transform="matrix(.46707 0 0 .46836 265.983 2913.93)"
           >
-            <rect
-              width={250}
-              height={200}
-              x={2570.462}
-              y={-2249.6}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={10}
-              ry={20}
-            />
+
             <path
               fill="#fff"
               stroke="#000"
@@ -1649,23 +1554,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={96.619}
-              height={36.742}
-              x={1703.691}
-              y={2331.566}
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3444.451}
@@ -1809,24 +1698,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.99999 -.00524 -.03605 .99935 2.574 .008)"
             />
-            <rect
-              width={196.003}
-              height={77.501}
-              x={3437.047}
-              y={-2793.881}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3532.084}
@@ -2126,24 +1998,7 @@ const SvgGroupName = (props) => (
             }}
             transform="matrix(.46707 0 0 .46836 217.749 2436.857)"
           >
-            <rect
-              width={224.657}
-              height={78.466}
-              x={3575.621}
-              y={-1342.982}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3574.675}
@@ -2336,17 +2191,7 @@ const SvgGroupName = (props) => (
                 {"M22"}
               </tspan>
             </text>
-            <rect
-              width={250}
-              height={100}
-              x={3689}
-              y={-1541.6}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={10}
-              ry={10}
-            />
+
             <text
               xmlSpace="preserve"
               x={3695.605}
@@ -2396,24 +2241,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2135.766 -1479.012)"
             />
-            <rect
-              width={338.949}
-              height={72.642}
-              x={3730.207}
-              y={-1483.371}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3729.648}
@@ -2758,24 +2586,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2135.766 -1479.012)"
             />
-            <rect
-              width={342.447}
-              height={85.247}
-              x={3728.032}
-              y={-1507.171}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3959.605}
@@ -2886,24 +2697,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2373.595 -3867.399)"
             />
-            <rect
-              width={420.164}
-              height={85.737}
-              x={3975.364}
-              y={-3868.6}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3972.92}
@@ -3130,24 +2924,7 @@ const SvgGroupName = (props) => (
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <rect
-              width={216.799}
-              height={84.071}
-              x={4547.77}
-              y={-2770.265}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={4547.622}
@@ -3311,24 +3088,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2135.688 -1478.786)"
             />
-            <rect
-              width={259.696}
-              height={79.298}
-              x={3626.586}
-              y={-1324.208}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3708.605}
@@ -3429,28 +3189,7 @@ const SvgGroupName = (props) => (
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <rect
-              width={120.562}
-              height={95.216}
-              x={2675.643}
-              y={-2008.656}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.084}
-              ry={2.72}
-              style={{
-                fill: "#fff",
-                display: "inline",
-                opacity: 0.75,
-                textAlign: "center",
-                writingMode: "lr-tb",
-                textAnchor: "middle",
-                fillOpacity: 1,
-                strokeWidth: 0.238051,
-              }}
-              transform="translate(.671 3.125)"
-            />
+
             <path
               fill="#fff"
               stroke="#000"
@@ -3573,17 +3312,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2197.595 -2760.75)"
             />
-            <rect
-              width={370}
-              height={100}
-              x={3692}
-              y={-2826}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={14.8}
-              ry={10}
-            />
+
             <text
               xmlSpace="preserve"
               x={3707.099}
@@ -3706,24 +3435,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 3487.438 -3149.446)"
             />
-            <rect
-              width={146.602}
-              height={84.071}
-              x={5097.56}
-              y={-3103.982}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={0}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={5103.449}
@@ -4152,20 +3864,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 1607.12 -2511.493)"
             />
-            <rect
-              width={263.322}
-              height={100}
-              x={2847.114}
-              y={-2473.925}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={10.533}
-              ry={10}
-              style={{
-                strokeWidth: 1.4343,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3113.032}
@@ -4388,24 +4087,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={232.726}
-              height={87.6}
-              x={3452.8}
-              y={-1564.331}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1777.718}
@@ -5485,6 +5167,7 @@ const SvgGroupName = (props) => (
               </tspan>
             </text>
           </g>
+          <g>
           <path
             fill="#fff"
             stroke="#000"
@@ -5608,6 +5291,7 @@ const SvgGroupName = (props) => (
               {"F09"}
             </tspan>
           </text>
+          </g>         
           <g
             style={{
               display: "inline",
@@ -5800,24 +5484,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={187.894}
-              height={84.071}
-              x={2325.497}
-              y={-2717.917}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={2323.237}
@@ -5977,24 +5644,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2046.09 -3127.399)"
             />
-            <rect
-              width={225.498}
-              height={83.384}
-              x={3525.75}
-              y={-2978.598}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3528.1}
@@ -6108,24 +5758,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.99999 -.00524 -.03605 .99935 0 0)"
             />
-            <rect
-              width={163.118}
-              height={80.541}
-              x={4493.26}
-              y={-3377.456}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={0}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={4564.384}
@@ -6380,27 +6013,7 @@ const SvgGroupName = (props) => (
               }}
               transform="rotate(-.051)"
             />
-            <rect
-              width={135.964}
-              height={88.633}
-              x={3910.91}
-              y={-1432.407}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={1.019}
-              ry={1.027}
-              style={{
-                textAlign: "center",
-                writingMode: "lr-tb",
-                textAnchor: "middle",
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.102313,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3912.673}
@@ -6850,24 +6463,7 @@ const SvgGroupName = (props) => (
               }}
               transform="matrix(.99693 .07826 -.11935 .99285 -.67 -3.124)"
             />
-            <rect
-              width={126.217}
-              height={76.801}
-              x={3472.852}
-              y={-2243.774}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3596.781}
@@ -7398,24 +6994,7 @@ const SvgGroupName = (props) => (
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <rect
-              width={195.185}
-              height={70.963}
-              x={4510.822}
-              y={-2154.825}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <path
               fill="#fff"
               stroke="#000"
@@ -7582,24 +7161,7 @@ const SvgGroupName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={69.075}
-              height={38.116}
-              x={1173.508}
-              y={1007.211}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1175.18}

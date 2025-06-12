@@ -407,24 +407,7 @@ const SvgHsName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={106.177}
-              height={37.907}
-              x={1180.292}
-              y={1027.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.5,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -545,24 +528,7 @@ const SvgHsName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={93.259}
-              height={40.007}
-              x={1180.292}
-              y={1027.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.5,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -808,24 +774,7 @@ const SvgHsName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={44.578}
-              height={42.114}
-              x={1180.727}
-              y={1027.373}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.5,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -951,24 +900,7 @@ const SvgHsName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={84.386}
-              height={36.791}
-              x={1049.851}
-              y={1046.437}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -1220,24 +1152,7 @@ const SvgHsName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={95.517}
-              height={41.589}
-              x={1038.292}
-              y={1038.005}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.5,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -1363,24 +1278,7 @@ const SvgHsName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={120.622}
-              height={38.739}
-              x={1178.292}
-              y={1057.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.5,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}

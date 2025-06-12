@@ -46,24 +46,7 @@ const SvgNkName = (props) => (
                 strokeDasharray: "none",
               }}
             />
-            <rect
-              width={73.475}
-              height={37.18}
-              x={1180.292}
-              y={1035.658}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1157.914}

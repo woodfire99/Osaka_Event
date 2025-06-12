@@ -397,7 +397,6 @@ const OsakaMap = ({ selectedFromAi, stationListFromAi }) => {
     groups.forEach((group) => {
       const tspans = group.querySelectorAll('text tspan');
       let hasVisibleStationCode = false;
-  
       tspans.forEach((tspan) => {
         const text = tspan.textContent?.trim();
         if (!text || !isStationCode(text)) return;
@@ -413,7 +412,7 @@ const OsakaMap = ({ selectedFromAi, stationListFromAi }) => {
           kh: prefix2 === 'KH',
           hs: prefix2 === 'HS',
           nk: prefix2 === 'NK',
-          jr: ['A', 'Q', 'O', 'G', 'R', 'F', 'H'].includes(prefix1)&& !['HS'].includes(prefix2)&&
+          jr: ['Q', 'O', 'G', 'R', 'F', 'H'].includes(prefix1)&& !['HS'].includes(prefix2)&&
           !isKTinDataLine,
           metro: ['M', 'T', 'N', 'K', 'C', 'S', 'I', 'Y', 'P'].includes(prefix1) && !['KH', 'HS', 'NK'].includes(prefix2),
           kt: (['A', 'F'].includes(prefix1)&&isKTinDataLine) || prefix1 === 'D',

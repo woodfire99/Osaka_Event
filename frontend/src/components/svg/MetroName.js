@@ -33,24 +33,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57033 0 0 .57039 1880.963 -3451.399)"
           />
-          <rect
-            width={237.445}
-            height={80.541}
-            x={3143.754}
-            y={-3400.888}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={4.671}
-            ry={4.684}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.467711,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={3381.973}
@@ -350,24 +333,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57033 0 0 .57039 1723.689 -561.54)"
           />
-          <rect
-            width={146.601}
-            height={80.541}
-            x={3331.77}
-            y={-513.627}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={4.671}
-            ry={4.684}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.467711,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={3334.698}
@@ -847,24 +813,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57033 0 0 .57039 2164.673 -3712.399)"
           />
-          <rect
-            width={225.498}
-            height={75.148}
-            x={3620.532}
-            y={-3748.771}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={2.181}
-            ry={2.194}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.218753,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={3620.628}
@@ -1019,24 +968,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57033 0 0 .57039 2470.673 -1849.399)"
           />
-          <rect
-            width={481.33}
-            height={83.441}
-            x={4079.216}
-            y={-1804.74}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={4.671}
-            ry={4.684}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.467711,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={4084.683}
@@ -1156,24 +1088,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57033 0 0 .57039 2648.673 -914.399)"
           />
-          <rect
-            width={216.041}
-            height={76.785}
-            x={4246.192}
-            y={-808.361}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={4.671}
-            ry={4.684}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.467711,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={4247.836}
@@ -1895,24 +1810,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57033 0 0 .57039 1954.129 -3561.94)"
           />
-          <rect
-            width={126.545}
-            height={75.835}
-            x={3325.581}
-            y={-3512.986}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={4.671}
-            ry={4.684}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.467711,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={3446.858}
@@ -2434,24 +2332,7 @@ const SvgMetroName = (props) => (
             }}
             transform="matrix(.57039 0 0 .57044 -57.459 -1674.544)"
           />
-          <rect
-            width={156.039}
-            height={80.541}
-            x={1466.675}
-            y={-1535.529}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={4.671}
-            ry={4.684}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.467711,
-            }}
-          />
+
           <text
             xmlSpace="preserve"
             x={1466.691}
@@ -2941,24 +2822,7 @@ const SvgMetroName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2194.595 -1700.399)"
             />
-            <rect
-              width={157.918}
-              height={78.466}
-              x={3782.181}
-              y={-1727.276}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3777.913}
@@ -3018,24 +2882,7 @@ const SvgMetroName = (props) => (
               }}
               transform="matrix(.57033 0 0 .57039 2362.595 -3622.399)"
             />
-            <rect
-              width={172.407}
-              height={83.384}
-              x={3971.432}
-              y={-3555.733}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={2.181}
-              ry={2.194}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.218753,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={3971.605}
@@ -3463,17 +3310,7 @@ const SvgMetroName = (props) => (
             </tspan>
           </text>
           <g transform="matrix(.46707 0 0 .46836 265.983 2920.487)">
-            <rect
-              width={250}
-              height={100}
-              x={3974}
-              y={-2398.6}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={10}
-              ry={10}
-            />
+
             <path
               fill="#fff"
               stroke="#000"
@@ -4315,24 +4152,7 @@ const SvgMetroName = (props) => (
                 {"P14"}
               </tspan>
             </text>
-            <rect
-              width={329.469}
-              height={87.601}
-              x={1555.204}
-              y={-307.739}
-              fill="#fff"
-              fillRule="evenodd"
-              opacity={0.75}
-              rx={4.671}
-              ry={4.684}
-              style={{
-                display: "inline",
-                opacity: 0.75,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeWidth: 0.467711,
-              }}
-            />
+
             <text
               xmlSpace="preserve"
               x={1558.182}
