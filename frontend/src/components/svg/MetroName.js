@@ -19,67 +19,129 @@ const SvgMetroName = (props) => (
           fill: "none",
         }}
       >
-        <g transform="matrix(.46707 0 0 .46836 265.048 2913.93)">
-          <path
-            fill="#fff"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={10}
-            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-            style={{
-              textAlign: "end",
-              strokeDasharray: "none",
-            }}
-            transform="matrix(.57033 0 0 .57039 1880.963 -3451.399)"
-          />
-
-          <text
-            xmlSpace="preserve"
+        <path
+          fill="#fff"
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={10}
+          d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+          style={{
+            textAlign: "end",
+            strokeDasharray: "none",
+          }}
+          transform="matrix(.26638 0 0 .26714 1143.58 1297.448)"
+        />
+        <text
+          xmlSpace="preserve"
+          x={3381.973}
+          y={-3369.95}
+          fill="#000"
+          fontFamily="Osaka"
+          fontSize={36}
+          style={{
+            textAlign: "end",
+            writingMode: "lr-tb",
+            textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={3381.973}
             y={-3369.95}
-            fill="#000"
-            fontFamily="Osaka"
-            fontSize={36}
             style={{
-              textAlign: "end",
-              writingMode: "lr-tb",
-              textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan x={3381.973} y={-3369.95}>
-              {"\u897F\u6885\u7530"}
-            </tspan>
-            <tspan x={3381.973} y={-3324.95}>
-              {"Nishi-Umeda"}
-            </tspan>
-          </text>
-          <text
-            xmlSpace="preserve"
+            {"\u897F\u6885\u7530"}
+          </tspan>
+          <tspan
+            x={3381.973}
+            y={-3324.95}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
+            {"Nishi-Umeda"}
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          x={3435.424}
+          y={-3351.989}
+          fill="#00f"
+          fontFamily="'bitstream vera sans mono'"
+          fontSize={32}
+          style={{
+            textAlign: "center",
+            writingMode: "lr-tb",
+            textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={3435.424}
             y={-3351.989}
-            fill="#00f"
             fontFamily="'bitstream vera sans mono'"
-            fontSize={32}
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan
-              x={3435.424}
-              y={-3351.989}
-              style={{
-                textAlign: "center",
-                writingMode: "lr-tb",
-                textAnchor: "middle",
-              }}
-            >
-              {"Y11"}
-            </tspan>
-          </text>
-        </g>
+            {"Y11"}
+          </tspan>
+        </text>
         <path
           fill="#fff"
           stroke="#000"
@@ -104,13 +166,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3444.43} y={-2965.75}>
+          <tspan
+            x={3444.43}
+            y={-2965.75}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u80A5\u5F8C\u6A4B"}
           </tspan>
-          <tspan x={3444.43} y={-2920.75}>
+          <tspan
+            x={3444.43}
+            y={-2920.75}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Higobashi"}
           </tspan>
         </text>
@@ -125,16 +236,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3458.541}
             y={-3027.974}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Y12"}
@@ -164,13 +289,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3431.692} y={-2571.95}>
+          <tspan
+            x={3431.692}
+            y={-2571.95}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u56DB\u30C4\u6A4B"}
           </tspan>
-          <tspan x={3431.692} y={-2526.95}>
+          <tspan
+            x={3431.692}
+            y={-2526.95}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Yotsubashi"}
           </tspan>
         </text>
@@ -185,16 +359,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3476.338}
             y={-2481.763}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Y14"}
@@ -224,13 +412,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3416.879} y={-1280.95}>
+          <tspan
+            x={3416.879}
+            y={-1280.95}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u82B1\u5712\u753A"}
           </tspan>
-          <tspan x={3416.879} y={-1235.95}>
+          <tspan
+            x={3416.879}
+            y={-1235.95}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Hanazonocho"}
           </tspan>
         </text>
@@ -245,16 +482,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3471.526}
             y={-1257.763}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Y17"}
@@ -284,13 +535,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3326.292} y={-866.497}>
+          <tspan
+            x={3326.292}
+            y={-866.497}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u5CB8\u91CC"}
           </tspan>
-          <tspan x={3326.292} y={-821.497}>
+          <tspan
+            x={3326.292}
+            y={-821.497}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Kishinosato"}
           </tspan>
         </text>
@@ -305,81 +605,157 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3388.938}
             y={-846.31}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Y18"}
           </tspan>
         </text>
-        <g transform="matrix(.46707 0 0 .46836 265.048 2913.93)">
-          <path
-            fill="#fff"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={10}
-            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-            style={{
-              strokeDasharray: "none",
-            }}
-            transform="matrix(.57033 0 0 .57039 1723.689 -561.54)"
-          />
-
-          <text
-            xmlSpace="preserve"
+        <path
+          fill="#fff"
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={10}
+          d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+          style={{
+            strokeDasharray: "none",
+          }}
+          transform="matrix(.26638 0 0 .26714 1070.124 2650.93)"
+        />
+        <text
+          xmlSpace="preserve"
+          x={3334.698}
+          y={-481.81}
+          fill="#000"
+          fontFamily="Osaka"
+          fontSize={36}
+          style={{
+            textAlign: "start",
+            writingMode: "lr-tb",
+            textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={3334.698}
             y={-481.81}
-            fill="#000"
-            fontFamily="Osaka"
-            fontSize={36}
             style={{
-              textAlign: "start",
-              writingMode: "lr-tb",
-              textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan x={3334.698} y={-481.81}>
-              {"\u7389\u51FA"}
-            </tspan>
-            <tspan x={3334.698} y={-436.81}>
-              {"Tamade"}
-            </tspan>
-          </text>
-          <text
-            xmlSpace="preserve"
+            {"\u7389\u51FA"}
+          </tspan>
+          <tspan
+            x={3334.698}
+            y={-436.81}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
+            {"Tamade"}
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          x={3280.345}
+          y={-461.903}
+          fill="#00f"
+          fontFamily="'bitstream vera sans mono'"
+          fontSize={32}
+          style={{
+            textAlign: "center",
+            writingMode: "lr-tb",
+            textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={3280.345}
             y={-461.903}
-            fill="#00f"
             fontFamily="'bitstream vera sans mono'"
-            fontSize={32}
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan
-              x={3280.345}
-              y={-461.903}
-              style={{
-                textAlign: "center",
-                writingMode: "lr-tb",
-                textAnchor: "middle",
-              }}
-            >
-              {"Y19"}
-            </tspan>
-          </text>
-        </g>
+            {"Y19"}
+          </tspan>
+        </text>
         <path
           fill="#fff"
           stroke="#000"
@@ -403,13 +779,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={2972.464} y={-255.669}>
+          <tspan
+            x={2972.464}
+            y={-255.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u5317\u52A0\u8CC0\u5C4B"}
           </tspan>
-          <tspan x={2972.464} y={-210.669}>
+          <tspan
+            x={2972.464}
+            y={-210.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Kitakagaya"}
           </tspan>
         </text>
@@ -424,16 +849,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={2939.11}
             y={-309.763}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Y20"}
@@ -462,13 +901,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={6134.529} y={-5299.989}>
+          <tspan
+            x={6134.529}
+            y={-5299.989}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u5927\u65E5"}
           </tspan>
-          <tspan x={6134.529} y={-5254.989}>
+          <tspan
+            x={6134.529}
+            y={-5254.989}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Dainichi"}
           </tspan>
         </text>
@@ -483,16 +971,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={6085.837}
             y={-5283.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T11"}
@@ -521,13 +1023,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5677.86} y={-4876.669}>
+          <tspan
+            x={5677.86}
+            y={-4876.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u5B88\u53E3"}
           </tspan>
-          <tspan x={5677.86} y={-4831.669}>
+          <tspan
+            x={5677.86}
+            y={-4831.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Moriguchi"}
           </tspan>
         </text>
@@ -542,16 +1093,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5631.837}
             y={-4854.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T12"}
@@ -580,13 +1145,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5098.683} y={-4383.669}>
+          <tspan
+            x={5098.683}
+            y={-4383.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u5343\u6797\u5927\u5BAE"}
           </tspan>
-          <tspan x={5098.683} y={-4338.669}>
+          <tspan
+            x={5098.683}
+            y={-4338.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Senbayashi-Omiya"}
           </tspan>
         </text>
@@ -601,16 +1215,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5161.837}
             y={-4359.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T14"}
@@ -639,13 +1267,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4907.683} y={-3967.669}>
+          <tspan
+            x={4907.683}
+            y={-3967.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u95A2\u76EE\u9AD8\u6BBF"}
           </tspan>
-          <tspan x={4907.683} y={-3922.669}>
+          <tspan
+            x={4907.683}
+            y={-3922.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Sekime-Takadono"}
           </tspan>
         </text>
@@ -660,16 +1337,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4969.837}
             y={-3947.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T15"}
@@ -698,13 +1389,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4775.683} y={-3826.669}>
+          <tspan
+            x={4775.683}
+            y={-3826.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u91CE\u6C5F\u5185\u4EE3"}
           </tspan>
-          <tspan x={4775.683} y={-3781.669}>
+          <tspan
+            x={4775.683}
+            y={-3781.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Noe-Uchindai"}
           </tspan>
         </text>
@@ -719,16 +1459,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4813.837}
             y={-3731.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T16"}
@@ -757,13 +1511,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4445.683} y={-3632.669}>
+          <tspan
+            x={4445.683}
+            y={-3632.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u90FD\u5CF6"}
           </tspan>
-          <tspan x={4445.683} y={-3587.669}>
+          <tspan
+            x={4445.683}
+            y={-3587.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Miyakojima"}
           </tspan>
         </text>
@@ -778,16 +1581,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4442.837}
             y={-3704.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T17"}
@@ -799,7 +1616,6 @@ const SvgMetroName = (props) => (
             opacity: 1,
             fill: "none",
           }}
-          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <path
             fill="#fff"
@@ -811,9 +1627,8 @@ const SvgMetroName = (props) => (
             style={{
               strokeDasharray: "none",
             }}
-            transform="matrix(.57033 0 0 .57039 2164.673 -3712.399)"
+            transform="matrix(.26638 0 0 .26714 1276.092 1175.207)"
           />
-
           <text
             xmlSpace="preserve"
             x={3620.628}
@@ -825,7 +1640,21 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={3731.247}
@@ -833,6 +1662,19 @@ const SvgMetroName = (props) => (
               style={{
                 textAlign: "center",
                 textAnchor: "middle",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"\u4E2D\u5D0E\u753A"}
@@ -843,6 +1685,19 @@ const SvgMetroName = (props) => (
               style={{
                 textAlign: "center",
                 textAnchor: "middle",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"Nakazakicho"}
@@ -859,15 +1714,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={3719.603}
               y={-3612.763}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"T19"}
@@ -901,12 +1771,25 @@ const SvgMetroName = (props) => (
             fontFamily="Osaka"
             fontSize={36}
             style={{
+              fontStyle: "normal",
+              fontVariant: "normal",
+              fontWeight: 400,
+              fontStretch: "normal",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
               whiteSpace: "pre",
               inlineSize: 238.938,
               display: "inline",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeWidth: 3.20712,
+              strokeDasharray: "none",
+              strokeOpacity: 0.811765,
+              paintOrder: "stroke fill markers",
             }}
             transform="matrix(.46707 0 0 .46836 271.048 2931.93)"
           >
@@ -931,16 +1814,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={3626.603}
               y={-3382.763}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"T20"}
@@ -953,7 +1850,6 @@ const SvgMetroName = (props) => (
             opacity: 1,
             fill: "none",
           }}
-          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <path
             fill="#fff"
@@ -966,9 +1862,8 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               strokeDasharray: "none",
             }}
-            transform="matrix(.57033 0 0 .57039 2470.673 -1849.399)"
+            transform="matrix(.26638 0 0 .26714 1419.014 2047.753)"
           />
-
           <text
             xmlSpace="preserve"
             x={4084.683}
@@ -980,12 +1875,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={4084.683} y={-1772.669}>
+            <tspan
+              x={4084.683}
+              y={-1772.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u56DB\u5929\u738B\u5BFA\u524D\u5915\u967D\u4E18"}
             </tspan>
-            <tspan x={4084.683} y={-1727.669}>
+            <tspan
+              x={4084.683}
+              y={-1727.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Shitennoji-mae Yuhigaoka"}
             </tspan>
           </text>
@@ -1000,15 +1945,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={4025.603}
               y={-1749.763}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"T26"}
@@ -1039,13 +1999,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3903.683} y={-1195.669}>
+          <tspan
+            x={3903.683}
+            y={-1195.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u963F\u500D\u91CE"}
           </tspan>
-          <tspan x={3903.683} y={-1150.669}>
+          <tspan
+            x={3903.683}
+            y={-1150.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Abeno"}
           </tspan>
         </text>
@@ -1060,81 +2069,157 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3959.837}
             y={-1172.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T28"}
           </tspan>
         </text>
-        <g transform="matrix(.46707 0 0 .46836 265.048 2913.93)">
-          <path
-            fill="#fff"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={10}
-            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-            style={{
-              strokeDasharray: "none",
-            }}
-            transform="matrix(.57033 0 0 .57039 2648.673 -914.399)"
-          />
-
-          <text
-            xmlSpace="preserve"
+        <path
+          fill="#fff"
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={10}
+          d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+          style={{
+            strokeDasharray: "none",
+          }}
+          transform="matrix(.26638 0 0 .26714 1502.151 2485.666)"
+        />
+        <text
+          xmlSpace="preserve"
+          x={4247.836}
+          y={-779.075}
+          fill="#000"
+          fontFamily="Osaka"
+          fontSize={36}
+          style={{
+            textAlign: "start",
+            writingMode: "lr-tb",
+            textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={4247.836}
             y={-779.075}
-            fill="#000"
-            fontFamily="Osaka"
-            fontSize={36}
             style={{
-              textAlign: "start",
-              writingMode: "lr-tb",
-              textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan x={4247.836} y={-779.075}>
-              {"\u6587\u306E\u91CC"}
-            </tspan>
-            <tspan x={4247.836} y={-734.075}>
-              {"Huminosato"}
-            </tspan>
-          </text>
-          <text
-            xmlSpace="preserve"
+            {"\u6587\u306E\u91CC"}
+          </tspan>
+          <tspan
+            x={4247.836}
+            y={-734.075}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
+            {"Huminosato"}
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          x={4204.837}
+          y={-814.989}
+          fill="#7f007f"
+          fontFamily="'bitstream vera sans mono'"
+          fontSize={32}
+          style={{
+            textAlign: "center",
+            writingMode: "lr-tb",
+            textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={4204.837}
             y={-814.989}
-            fill="#7f007f"
             fontFamily="'bitstream vera sans mono'"
-            fontSize={32}
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan
-              x={4204.837}
-              y={-814.989}
-              style={{
-                textAlign: "center",
-                writingMode: "lr-tb",
-                textAnchor: "middle",
-              }}
-            >
-              {"T29"}
-            </tspan>
-          </text>
-        </g>
+            {"T29"}
+          </tspan>
+        </text>
         <path
           fill="#fff"
           stroke="#000"
@@ -1158,13 +2243,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4423.683} y={-638.669}>
+          <tspan
+            x={4423.683}
+            y={-638.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u7530\u8FBA"}
           </tspan>
-          <tspan x={4423.683} y={-593.669}>
+          <tspan
+            x={4423.683}
+            y={-593.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Tanabe"}
           </tspan>
         </text>
@@ -1179,16 +2313,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4363.837}
             y={-612.99}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T30"}
@@ -1217,13 +2365,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4632.683} y={-444.669}>
+          <tspan
+            x={4632.683}
+            y={-444.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u99D2\u5DDD\u4E2D\u91CE"}
           </tspan>
-          <tspan x={4632.683} y={-399.669}>
+          <tspan
+            x={4632.683}
+            y={-399.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Komagawa-Nakano"}
           </tspan>
         </text>
@@ -1238,16 +2435,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4632.837}
             y={-330.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T31"}
@@ -1276,13 +2487,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5172.683} y={-349.669}>
+          <tspan
+            x={5172.683}
+            y={-349.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u5E73\u91CE"}
           </tspan>
-          <tspan x={5172.683} y={-304.669}>
+          <tspan
+            x={5172.683}
+            y={-304.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Hirano"}
           </tspan>
         </text>
@@ -1297,16 +2557,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5111.837}
             y={-325.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T32"}
@@ -1336,13 +2610,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5180.683} y={219.331}>
+          <tspan
+            x={5180.683}
+            y={219.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u559C\u9023\u74DC\u7834"}
           </tspan>
-          <tspan x={5180.683} y={264.331}>
+          <tspan
+            x={5180.683}
+            y={264.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Kire-Uriwari"}
           </tspan>
         </text>
@@ -1357,16 +2680,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5218.837}
             y={161.011}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T33"}
@@ -1395,13 +2732,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5750.683} y={72.331}>
+          <tspan
+            x={5750.683}
+            y={72.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u51FA\u6238"}
           </tspan>
-          <tspan x={5750.683} y={117.331}>
+          <tspan
+            x={5750.683}
+            y={117.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Deto"}
           </tspan>
         </text>
@@ -1416,16 +2802,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5716.837}
             y={173.011}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T34"}
@@ -1454,13 +2854,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5980.605} y={372.331}>
+          <tspan
+            x={5980.605}
+            y={372.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u9577\u539F"}
           </tspan>
-          <tspan x={5980.605} y={417.331}>
+          <tspan
+            x={5980.605}
+            y={417.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Nagahara"}
           </tspan>
         </text>
@@ -1475,16 +2924,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5920.759}
             y={394.011}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T35"}
@@ -1513,13 +2976,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={6266.605} y={602.331}>
+          <tspan
+            x={6266.605}
+            y={602.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u516B\u5C3E\u5357"}
           </tspan>
-          <tspan x={6266.605} y={647.331}>
+          <tspan
+            x={6266.605}
+            y={647.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Yaominami"}
           </tspan>
         </text>
@@ -1534,16 +3046,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={6203.759}
             y={624.011}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T36"}
@@ -1572,13 +3098,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3422.151} y={-5639.669}>
+          <tspan
+            x={3422.151}
+            y={-5639.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u6C5F\u5742"}
           </tspan>
-          <tspan x={3422.151} y={-5594.669}>
+          <tspan
+            x={3422.151}
+            y={-5594.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Esaka"}
           </tspan>
         </text>
@@ -1593,16 +3168,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3482.098}
             y={-5615.979}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M11"}
@@ -1631,13 +3220,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3465.151} y={-4959.669}>
+          <tspan
+            x={3465.151}
+            y={-4959.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u6771\u4E09\u56FD"}
           </tspan>
-          <tspan x={3465.151} y={-4914.669}>
+          <tspan
+            x={3465.151}
+            y={-4914.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Higashimikuni"}
           </tspan>
         </text>
@@ -1652,16 +3290,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3527.187}
             y={-4936.763}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M12"}
@@ -1690,13 +3342,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3470.151} y={-4372.669}>
+          <tspan
+            x={3470.151}
+            y={-4372.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u897F\u4E2D\u5CF6\u5357\u65B9"}
           </tspan>
-          <tspan x={3470.151} y={-4327.669}>
+          <tspan
+            x={3470.151}
+            y={-4327.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Nishinakajima-Minamigata"}
           </tspan>
         </text>
@@ -1711,16 +3412,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3529.66}
             y={-4349.974}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M14"}
@@ -1749,13 +3464,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={3575.151} y={-3848.669}>
+          <tspan
+            x={3575.151}
+            y={-3848.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u4E2D\u6D25"}
           </tspan>
-          <tspan x={3575.151} y={-3803.669}>
+          <tspan
+            x={3575.151}
+            y={-3803.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Nakatsu"}
           </tspan>
         </text>
@@ -1770,16 +3534,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3508.035}
             y={-3830.2}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M15"}
@@ -1791,7 +3569,6 @@ const SvgMetroName = (props) => (
             opacity: 1,
             fill: "none",
           }}
-          transform="matrix(.46707 0 0 .46836 263.048 2917.93)"
         >
           <path
             fill="#fff"
@@ -1808,9 +3585,8 @@ const SvgMetroName = (props) => (
               fillOpacity: 1,
               strokeDasharray: "none",
             }}
-            transform="matrix(.57033 0 0 .57039 1954.129 -3561.94)"
+            transform="matrix(.26638 0 0 .26714 1175.754 1249.675)"
           />
-
           <text
             xmlSpace="preserve"
             x={3446.858}
@@ -1826,8 +3602,19 @@ const SvgMetroName = (props) => (
               opacity: 1,
               fill: "#000",
               fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
-            transform="translate(4.282 -8.54)"
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={3446.858}
@@ -1835,6 +3622,17 @@ const SvgMetroName = (props) => (
               style={{
                 fill: "#000",
                 fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"\u6885\u7530"}
@@ -1845,6 +3643,17 @@ const SvgMetroName = (props) => (
               style={{
                 fill: "#000",
                 fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"Umeda"}
@@ -1866,18 +3675,33 @@ const SvgMetroName = (props) => (
               fill: "none",
               strokeWidth: 1.00062,
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
+            transform="matrix(.46707 0 0 .46836 263.048 2917.93)"
           >
             <tspan
               x={3508.343}
               y={-3464.081}
               fill="red"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeWidth: 1.00062,
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"M16"}
@@ -1907,13 +3731,62 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4056.651} y={-787.669}>
+          <tspan
+            x={4056.651}
+            y={-787.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u662D\u548C\u753A"}
           </tspan>
-          <tspan x={4056.651} y={-742.669}>
+          <tspan
+            x={4056.651}
+            y={-742.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Showacho"}
           </tspan>
         </text>
@@ -1928,16 +3801,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4110.994}
             y={-769.763}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M24"}
@@ -1966,6 +3853,19 @@ const SvgMetroName = (props) => (
             textAlign: "end",
             writingMode: "lr-tb",
             textAnchor: "end",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
@@ -1975,6 +3875,19 @@ const SvgMetroName = (props) => (
             style={{
               textAlign: "end",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"\u897F\u7530\u8FBA"}
@@ -1985,6 +3898,19 @@ const SvgMetroName = (props) => (
             style={{
               textAlign: "end",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Nishitanabe"}
@@ -2001,16 +3927,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={4054.182}
             y={-318.763}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M25"}
@@ -2067,16 +4007,44 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              fill: "red",
+              fillOpacity: 1,
+              stroke: "none",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={4013.791}
               y={108.237}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                fill: "red",
+                fillOpacity: 1,
+                stroke: "none",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"M26"}
@@ -2106,13 +4074,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={4043.761} y={527.331}>
+          <tspan
+            x={4043.761}
+            y={527.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u3042\u3073\u3053"}
           </tspan>
-          <tspan x={4043.761} y={572.331}>
+          <tspan
+            x={4043.761}
+            y={572.331}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Abiko"}
           </tspan>
         </text>
@@ -2127,16 +4144,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={3978.681}
             y={546.237}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M27"}
@@ -2165,13 +4196,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={6515.355} y={-2473.669}>
+          <tspan
+            x={6515.355}
+            y={-2473.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u9577\u7530"}
           </tspan>
-          <tspan x={6515.355} y={-2428.669}>
+          <tspan
+            x={6515.355}
+            y={-2428.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Nagata"}
           </tspan>
         </text>
@@ -2186,16 +4266,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={6482.946}
             y={-2533.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"C23"}
@@ -2224,13 +4318,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={5375.292} y={-2657.669}>
+          <tspan
+            x={5375.292}
+            y={-2657.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u6DF1\u6C5F\u6A4B"}
           </tspan>
-          <tspan x={5375.292} y={-2612.669}>
+          <tspan
+            x={5375.292}
+            y={-2612.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Hukaebashi"}
           </tspan>
         </text>
@@ -2245,16 +4388,30 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={5413.884}
             y={-2544.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"C21"}
@@ -2283,13 +4440,62 @@ const SvgMetroName = (props) => (
             textAlign: "start",
             writingMode: "lr-tb",
             textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
-          <tspan x={2004.043} y={-1854.669}>
+          <tspan
+            x={2004.043}
+            y={-1854.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"\u671D\u6F6E\u6A4B"}
           </tspan>
-          <tspan x={2004.043} y={-1809.669}>
+          <tspan
+            x={2004.043}
+            y={-1809.669}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
             {"Asashiobashi"}
           </tspan>
         </text>
@@ -2304,81 +4510,157 @@ const SvgMetroName = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
         >
           <tspan
             x={1943.638}
             y={-1836.994}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"C12"}
           </tspan>
         </text>
-        <g transform="matrix(.46707 0 0 .46836 265.048 2913.93)">
-          <path
-            fill="#fff"
-            stroke="#000"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={10}
-            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-            style={{
-              strokeDasharray: "none",
-            }}
-            transform="matrix(.57039 0 0 .57044 -57.459 -1674.544)"
-          />
-
-          <text
-            xmlSpace="preserve"
+        <path
+          fill="#fff"
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={10}
+          d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+          style={{
+            strokeDasharray: "none",
+          }}
+          transform="matrix(.2664 0 0 .26717 238.211 2129.648)"
+        />
+        <text
+          xmlSpace="preserve"
+          x={1466.691}
+          y={-1503.801}
+          fill="#000"
+          fontFamily="Osaka"
+          fontSize={36}
+          style={{
+            textAlign: "start",
+            writingMode: "lr-tb",
+            textAnchor: "start",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "#ccc",
+            strokeOpacity: 0.81176472,
+            strokeWidth: 3.20711576,
+            strokeDasharray: "none",
+            paintOrder: "stroke fill markers",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={1466.691}
             y={-1503.801}
-            fill="#000"
-            fontFamily="Osaka"
-            fontSize={36}
             style={{
-              textAlign: "start",
-              writingMode: "lr-tb",
-              textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan x={1466.691} y={-1503.801}>
-              {"\u5927\u962A\u6E2F"}
-            </tspan>
-            <tspan x={1466.691} y={-1458.801}>
-              {"Osakako"}
-            </tspan>
-          </text>
-          <text
-            xmlSpace="preserve"
+            {"\u5927\u962A\u6E2F"}
+          </tspan>
+          <tspan
+            x={1466.691}
+            y={-1458.801}
+            style={{
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+          >
+            {"Osakako"}
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          x={1497.615}
+          y={-1574.899}
+          fill="green"
+          fontFamily="'bitstream vera sans mono'"
+          fontSize={32}
+          style={{
+            textAlign: "center",
+            writingMode: "lr-tb",
+            textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
+          }}
+          transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+        >
+          <tspan
             x={1497.615}
             y={-1574.899}
-            fill="green"
             fontFamily="'bitstream vera sans mono'"
-            fontSize={32}
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
-            <tspan
-              x={1497.615}
-              y={-1574.899}
-              style={{
-                textAlign: "center",
-                writingMode: "lr-tb",
-                textAnchor: "middle",
-              }}
-            >
-              {"C11"}
-            </tspan>
-          </text>
-        </g>
+            {"C11"}
+          </tspan>
+        </text>
         <path
           fill="#fff"
           stroke="#000"
@@ -2444,15 +4726,17 @@ const SvgMetroName = (props) => (
             fontStretch: "normal",
             fontSize: "2.92629px",
             lineHeight: 1.25,
-            fontFamily: "Osaka",
-            InkscapeFontSpecification: "Osaka",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
             display: "inline",
             opacity: 1,
             fill: "#000",
             fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.0173795,
+            stroke: "#ccc",
+            strokeWidth: 0.26069243,
             strokeDasharray: "none",
+            strokeOpacity: 0.81176472,
+            paintOrder: "stroke fill markers",
           }}
           transform="matrix(5.7539 0 0 5.7539 -173.467 -1611.1)"
         >
@@ -2465,11 +4749,15 @@ const SvgMetroName = (props) => (
               fontWeight: 400,
               fontStretch: "normal",
               lineHeight: 1.25,
-              fontFamily: "Osaka",
-              InkscapeFontSpecification: "Osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
-              strokeWidth: 0.0173795,
+              strokeWidth: 0.26069243,
               strokeDasharray: "none",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              paintOrder: "stroke fill markers",
             }}
           >
             {"\u5922\u6D32\u99C5"}
@@ -2483,11 +4771,15 @@ const SvgMetroName = (props) => (
               fontWeight: 400,
               fontStretch: "normal",
               lineHeight: 1.25,
-              fontFamily: "Osaka",
-              InkscapeFontSpecification: "Osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
-              strokeWidth: 0.0173795,
+              strokeWidth: 0.26069243,
               strokeDasharray: "none",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              paintOrder: "stroke fill markers",
             }}
           >
             {"Yumeshima Station"}
@@ -2524,13 +4816,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5216.752} y={-1164.419}>
+            <tspan
+              x={5216.752}
+              y={-1164.419}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5357\u5DFD"}
             </tspan>
-            <tspan x={5216.752} y={-1128.419}>
+            <tspan
+              x={5216.752}
+              y={-1128.419}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Minami-Tatsumi"}
             </tspan>
           </text>
@@ -2545,16 +4886,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={5266.11}
               y={-1146.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"S24"}
@@ -2584,13 +4939,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5274.752} y={-1558.419}>
+            <tspan
+              x={5274.752}
+              y={-1558.419}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5317\u5DFD"}
             </tspan>
-            <tspan x={5274.752} y={-1522.419}>
+            <tspan
+              x={5274.752}
+              y={-1522.419}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Kita-Tatsumi"}
             </tspan>
           </text>
@@ -2605,16 +5009,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={5324.11}
               y={-1541.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"S23"}
@@ -2644,13 +5062,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5311.861} y={-1863.326}>
+            <tspan
+              x={5311.861}
+              y={-1863.326}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5C0F\u8DEF"}
             </tspan>
-            <tspan x={5311.861} y={-1827.326}>
+            <tspan
+              x={5311.861}
+              y={-1827.326}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Shoji"}
             </tspan>
           </text>
@@ -2665,16 +5132,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={5362.22}
               y={-1837.896}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"S22"}
@@ -2704,13 +5185,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5294.505} y={-2211.928}>
+            <tspan
+              x={5294.505}
+              y={-2211.928}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u65B0\u6DF1\u6C5F"}
             </tspan>
-            <tspan x={5294.505} y={-2175.928}>
+            <tspan
+              x={5294.505}
+              y={-2175.928}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Shin-Fukae"}
             </tspan>
           </text>
@@ -2725,16 +5255,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={5381.22}
               y={-2115.896}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"S21"}
@@ -2764,13 +5308,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={2770.286} y={-2942.95}>
+            <tspan
+              x={2770.286}
+              y={-2942.95}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u7389\u5DDD"}
             </tspan>
-            <tspan x={2770.286} y={-2897.95}>
+            <tspan
+              x={2770.286}
+              y={-2897.95}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Tamagawa"}
             </tspan>
           </text>
@@ -2785,16 +5378,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={2833.846}
               y={-2923.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"S12"}
@@ -2808,127 +5415,251 @@ const SvgMetroName = (props) => (
             fill: "none",
           }}
         >
-          <g transform="matrix(.46707 0 0 .46836 265.048 2913.93)">
-            <path
-              fill="#fff"
-              stroke="#000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={10}
-              d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-              style={{
-                textAlign: "center",
-                strokeDasharray: "none",
-              }}
-              transform="matrix(.57033 0 0 .57039 2194.595 -1700.399)"
-            />
-
-            <text
-              xmlSpace="preserve"
+          <path
+            fill="#fff"
+            stroke="#000"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={10}
+            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+            style={{
+              textAlign: "center",
+              strokeDasharray: "none",
+            }}
+            transform="matrix(.26638 0 0 .26714 1290.067 2117.538)"
+          />
+          <text
+            xmlSpace="preserve"
+            x={3777.913}
+            y={-1695.48}
+            fill="#000"
+            fontFamily="Osaka"
+            fontSize={36}
+            style={{
+              textAlign: "start",
+              writingMode: "lr-tb",
+              textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+          >
+            <tspan
               x={3777.913}
               y={-1695.48}
-              fill="#000"
-              fontFamily="Osaka"
-              fontSize={36}
               style={{
-                textAlign: "start",
-                writingMode: "lr-tb",
-                textAnchor: "start",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
-              <tspan x={3777.913} y={-1695.48}>
-                {"\u6075\u7F8E\u9808\u753A"}
-              </tspan>
-              <tspan x={3777.913} y={-1650.48}>
-                {"Ebisucho"}
-              </tspan>
-            </text>
-            <text
-              xmlSpace="preserve"
+              {"\u6075\u7F8E\u9808\u753A"}
+            </tspan>
+            <tspan
+              x={3777.913}
+              y={-1650.48}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
+              {"Ebisucho"}
+            </tspan>
+          </text>
+          <text
+            xmlSpace="preserve"
+            x={3749.447}
+            y={-1601.2}
+            fill="#7f0000"
+            fontFamily="'bitstream vera sans mono'"
+            fontSize={32}
+            style={{
+              textAlign: "center",
+              writingMode: "lr-tb",
+              textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+          >
+            <tspan
               x={3749.447}
               y={-1601.2}
-              fill="#7f0000"
               fontFamily="'bitstream vera sans mono'"
-              fontSize={32}
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
-              <tspan
-                x={3749.447}
-                y={-1601.2}
-                style={{
-                  textAlign: "center",
-                  writingMode: "lr-tb",
-                  textAnchor: "middle",
-                }}
-              >
-                {"K18"}
-              </tspan>
-            </text>
-          </g>
-          <g transform="matrix(.46707 0 0 .46836 265.048 2913.93)">
-            <path
-              fill="#fff"
-              stroke="#000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={10}
-              d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-              style={{
-                strokeDasharray: "none",
-              }}
-              transform="matrix(.57033 0 0 .57039 2362.595 -3622.399)"
-            />
-
-            <text
-              xmlSpace="preserve"
+              {"K18"}
+            </tspan>
+          </text>
+          <path
+            fill="#fff"
+            stroke="#000"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={10}
+            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+            style={{
+              strokeDasharray: "none",
+            }}
+            transform="matrix(.26638 0 0 .26714 1368.534 1217.359)"
+          />
+          <text
+            xmlSpace="preserve"
+            x={3971.605}
+            y={-3524.318}
+            fill="#000"
+            fontFamily="Osaka"
+            fontSize={36}
+            style={{
+              textAlign: "start",
+              writingMode: "lr-tb",
+              textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+          >
+            <tspan
               x={3971.605}
               y={-3524.318}
-              fill="#000"
-              fontFamily="Osaka"
-              fontSize={36}
               style={{
-                textAlign: "start",
-                writingMode: "lr-tb",
-                textAnchor: "start",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
-              <tspan x={3971.605} y={-3524.318}>
-                {"\u6247\u753A"}
-              </tspan>
-              <tspan x={3971.605} y={-3479.318}>
-                {"Ogimachi"}
-              </tspan>
-            </text>
-            <text
-              xmlSpace="preserve"
+              {"\u6247\u753A"}
+            </tspan>
+            <tspan
+              x={3971.605}
+              y={-3479.318}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
+              {"Ogimachi"}
+            </tspan>
+          </text>
+          <text
+            xmlSpace="preserve"
+            x={3917.447}
+            y={-3523.2}
+            fill="#7f0000"
+            fontFamily="'bitstream vera sans mono'"
+            fontSize={32}
+            style={{
+              textAlign: "center",
+              writingMode: "lr-tb",
+              textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+          >
+            <tspan
               x={3917.447}
               y={-3523.2}
-              fill="#7f0000"
               fontFamily="'bitstream vera sans mono'"
-              fontSize={32}
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
-              <tspan
-                x={3917.447}
-                y={-3523.2}
-                style={{
-                  textAlign: "center",
-                  writingMode: "lr-tb",
-                  textAnchor: "middle",
-                }}
-              >
-                {"K12"}
-              </tspan>
-            </text>
-          </g>
+              {"K12"}
+            </tspan>
+          </text>
         </g>
         <g
           style={{
@@ -2960,13 +5691,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={6586.449} y={-4030.716}>
+            <tspan
+              x={6586.449}
+              y={-4030.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u9580\u771F\u5357"}
             </tspan>
-            <tspan x={6586.449} y={-3985.716}>
+            <tspan
+              x={6586.449}
+              y={-3985.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Kadomaminami"}
             </tspan>
           </text>
@@ -2983,17 +5763,31 @@ const SvgMetroName = (props) => (
               writingMode: "lr-tb",
               textAnchor: "middle",
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={6527.258}
               y={-4008.021}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N27"}
@@ -3022,13 +5816,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={6162.449} y={-3713.716}>
+            <tspan
+              x={6162.449}
+              y={-3713.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u9DB4\u898B\u7DD1\u5730"}
             </tspan>
-            <tspan x={6162.449} y={-3668.716}>
+            <tspan
+              x={6162.449}
+              y={-3668.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Tsurumi-ryokuchi"}
             </tspan>
           </text>
@@ -3045,17 +5888,31 @@ const SvgMetroName = (props) => (
               writingMode: "lr-tb",
               textAnchor: "middle",
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={6127.258}
               y={-3769.021}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N26"}
@@ -3084,13 +5941,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5935.449} y={-3434.716}>
+            <tspan
+              x={5935.449}
+              y={-3434.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u6A2A\u5824"}
             </tspan>
-            <tspan x={5935.449} y={-3389.716}>
+            <tspan
+              x={5935.449}
+              y={-3389.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Yokozutsumi"}
             </tspan>
           </text>
@@ -3107,17 +6013,31 @@ const SvgMetroName = (props) => (
               writingMode: "lr-tb",
               textAnchor: "middle",
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={5899.258}
               y={-3491.021}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N25"}
@@ -3146,13 +6066,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5546.449} y={-3383.716}>
+            <tspan
+              x={5546.449}
+              y={-3383.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u4ECA\u798F\u9DB4\u898B"}
             </tspan>
-            <tspan x={5546.449} y={-3338.716}>
+            <tspan
+              x={5546.449}
+              y={-3338.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Imahuku-Tsurumi"}
             </tspan>
           </text>
@@ -3169,17 +6138,31 @@ const SvgMetroName = (props) => (
               writingMode: "lr-tb",
               textAnchor: "middle",
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={5517.258}
               y={-3442.021}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N24"}
@@ -3208,13 +6191,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={4582.37} y={-3071.669}>
+            <tspan
+              x={4582.37}
+              y={-3071.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5927\u962A\u30D3\u30B8\u30CD\u30B9\u30D1\u30FC\u30AF"}
             </tspan>
-            <tspan x={4582.37} y={-3026.669}>
+            <tspan
+              x={4582.37}
+              y={-3026.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Osaka Business Park"}
             </tspan>
           </text>
@@ -3231,17 +6263,31 @@ const SvgMetroName = (props) => (
               writingMode: "lr-tb",
               textAnchor: "middle",
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={4521.18}
               y={-3050.974}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N21"}
@@ -3270,13 +6316,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={4649.37} y={-2404.669}>
+            <tspan
+              x={4649.37}
+              y={-2404.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u7389\u9020"}
             </tspan>
-            <tspan x={4649.37} y={-2359.669}>
+            <tspan
+              x={4649.37}
+              y={-2359.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Tamatsukuri"}
             </tspan>
           </text>
@@ -3293,94 +6388,169 @@ const SvgMetroName = (props) => (
               writingMode: "lr-tb",
               textAnchor: "middle",
               strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={4592.18}
               y={-2385.974}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N19"}
             </tspan>
           </text>
-          <g transform="matrix(.46707 0 0 .46836 265.983 2920.487)">
-
-            <path
-              fill="#fff"
-              stroke="#000"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={10}
-              d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
-              style={{
-                display: "inline",
-                opacity: 1,
-                fill: "#fff",
-                fillOpacity: 1,
-                strokeDasharray: "none",
-              }}
-              transform="matrix(.57033 0 0 .57039 2370.501 -2517.399)"
-            />
-            <text
-              xmlSpace="preserve"
+          <path
+            fill="#fff"
+            stroke="#000"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={10}
+            d="M2807 153.86c0 44.46-36 80.5-80.5 80.5s-80.5-36.04-80.5-80.5 36-80.498 80.5-80.498S2807 109.4 2807 153.86"
+            style={{
+              display: "inline",
+              opacity: 1,
+              fill: "#fff",
+              fillOpacity: 1,
+              strokeDasharray: "none",
+            }}
+            transform="matrix(.26638 0 0 .26714 1373.161 1741.449)"
+          />
+          <text
+            xmlSpace="preserve"
+            x={3927.048}
+            y={-2403.989}
+            fill="#7fff00"
+            stroke="#000"
+            fontFamily="'bitstream vera sans mono'"
+            fontSize={32}
+            style={{
+              textAlign: "center",
+              writingMode: "lr-tb",
+              textAnchor: "middle",
+              display: "inline",
+              opacity: 1,
+              fill: "none",
+              strokeDasharray: "none",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
+          >
+            <tspan
               x={3927.048}
               y={-2403.989}
               fill="#7fff00"
-              stroke="#000"
               fontFamily="'bitstream vera sans mono'"
-              fontSize={32}
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
-                display: "inline",
-                opacity: 1,
-                fill: "none",
                 strokeDasharray: "none",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="translate(-2 -14)"
             >
-              <tspan
-                x={3927.048}
-                y={-2403.989}
-                fill="#7fff00"
-                style={{
-                  textAlign: "center",
-                  writingMode: "lr-tb",
-                  textAnchor: "middle",
-                  strokeDasharray: "none",
-                }}
-              >
-                {"N17"}
-              </tspan>
-            </text>
-            <text
-              xmlSpace="preserve"
+              {"N17"}
+            </tspan>
+          </text>
+          <text
+            xmlSpace="preserve"
+            x={3967.511}
+            y={-2360.45}
+            fill="#000"
+            fontFamily="Osaka"
+            fontSize={36}
+            style={{
+              textAlign: "start",
+              writingMode: "lr-tb",
+              textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
+            }}
+            transform="matrix(.46707 0 0 .46836 265.983 2920.487)"
+          >
+            <tspan
               x={3967.511}
               y={-2360.45}
-              fill="#000"
-              fontFamily="Osaka"
-              fontSize={36}
               style={{
-                textAlign: "start",
-                writingMode: "lr-tb",
-                textAnchor: "start",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
-              <tspan x={3967.511} y={-2360.45}>
-                {"\u677E\u5C4B\u753A"}
-              </tspan>
-              <tspan x={3967.511} y={-2315.45}>
-                {"Matsuyamachi"}
-              </tspan>
-            </text>
-          </g>
+              {"\u677E\u5C4B\u753A"}
+            </tspan>
+            <tspan
+              x={3967.511}
+              y={-2315.45}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
+              {"Matsuyamachi"}
+            </tspan>
+          </text>
           <g
             style={{
               display: "inline",
@@ -3413,16 +6583,30 @@ const SvgMetroName = (props) => (
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
             >
               <tspan
                 x={3321.336}
                 y={-2395.974}
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
                   textAnchor: "middle",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"N14"}
@@ -3439,13 +6623,62 @@ const SvgMetroName = (props) => (
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
             >
-              <tspan x={3323.75} y={-2316.357}>
+              <tspan
+                x={3323.75}
+                y={-2316.357}
+                style={{
+                  fill: "#000",
+                  fillOpacity: 1,
+                  stroke: "#ccc",
+                  strokeOpacity: 0.81176472,
+                  strokeWidth: 3.20711576,
+                  strokeDasharray: "none",
+                  paintOrder: "stroke fill markers",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
+                }}
+              >
                 {"\u897F\u5927\u6A4B"}
               </tspan>
-              <tspan x={3323.75} y={-2271.357}>
+              <tspan
+                x={3323.75}
+                y={-2271.357}
+                style={{
+                  fill: "#000",
+                  fillOpacity: 1,
+                  stroke: "#ccc",
+                  strokeOpacity: 0.81176472,
+                  strokeWidth: 3.20711576,
+                  strokeDasharray: "none",
+                  paintOrder: "stroke fill markers",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
+                }}
+              >
                 {"Nishiohashi"}
               </tspan>
             </text>
@@ -3487,6 +6720,12 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3494,10 +6733,18 @@ const SvgMetroName = (props) => (
               x={5069.961}
               y={-3850.036}
               stroke="#7f7f7f"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"I17"}
@@ -3518,10 +6765,17 @@ const SvgMetroName = (props) => (
               opacity: 1,
               fill: "#000",
               fillOpacity: 1,
-              stroke: "none",
-              strokeWidth: 1.00062,
+              stroke: "#ccc",
+              strokeWidth: 3.20711576,
               strokeDasharray: "none",
-              strokeOpacity: 1,
+              strokeOpacity: 0.81176472,
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3531,10 +6785,17 @@ const SvgMetroName = (props) => (
               style={{
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "none",
-                strokeWidth: 1.00062,
+                stroke: "#ccc",
+                strokeWidth: 3.20711576,
                 strokeDasharray: "none",
-                strokeOpacity: 1,
+                strokeOpacity: 0.81176472,
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"\u95A2\u76EE\u6210\u80B2"}
@@ -3545,10 +6806,17 @@ const SvgMetroName = (props) => (
               style={{
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "none",
-                strokeWidth: 1.00062,
+                stroke: "#ccc",
+                strokeWidth: 3.20711576,
                 strokeDasharray: "none",
-                strokeOpacity: 1,
+                strokeOpacity: 0.81176472,
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"Sekime-Seiiku"}
@@ -3583,6 +6851,12 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3590,10 +6864,18 @@ const SvgMetroName = (props) => (
               x={5408.915}
               y={-3947.036}
               stroke="#7f7f7f"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"I16"}
@@ -3614,10 +6896,17 @@ const SvgMetroName = (props) => (
               opacity: 1,
               fill: "#000",
               fillOpacity: 1,
-              stroke: "none",
-              strokeWidth: 1.00062,
+              stroke: "#ccc",
+              strokeWidth: 3.20711576,
               strokeDasharray: "none",
-              strokeOpacity: 1,
+              strokeOpacity: 0.81176472,
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3629,10 +6918,17 @@ const SvgMetroName = (props) => (
                 textAnchor: "end",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "none",
-                strokeWidth: 1.00062,
+                stroke: "#ccc",
+                strokeWidth: 3.20711576,
                 strokeDasharray: "none",
-                strokeOpacity: 1,
+                strokeOpacity: 0.81176472,
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"\u65B0\u68EE\u53E4\u5E02"}
@@ -3645,10 +6941,17 @@ const SvgMetroName = (props) => (
                 textAnchor: "end",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "none",
-                strokeWidth: 1.00062,
+                stroke: "#ccc",
+                strokeWidth: 3.20711576,
                 strokeDasharray: "none",
-                strokeOpacity: 1,
+                strokeOpacity: 0.81176472,
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"Shimmori-Furuichi"}
@@ -3677,8 +6980,19 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
-              strokeWidth: 1.00062,
+              strokeWidth: 3.20711576,
               strokeDasharray: "none",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3686,8 +7000,19 @@ const SvgMetroName = (props) => (
               x={5449.449}
               y={-4198.716}
               style={{
-                strokeWidth: 1.00062,
+                strokeWidth: 3.20711576,
                 strokeDasharray: "none",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"\u6E05\u6C34"}
@@ -3696,8 +7021,19 @@ const SvgMetroName = (props) => (
               x={5449.449}
               y={-4153.716}
               style={{
-                strokeWidth: 1.00062,
+                strokeWidth: 3.20711576,
                 strokeDasharray: "none",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"Shimizu"}
@@ -3715,6 +7051,12 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3722,10 +7064,18 @@ const SvgMetroName = (props) => (
               x={5507.915}
               y={-4173.036}
               stroke="#7f7f7f"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"I15"}
@@ -3754,13 +7104,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={4960.32} y={-5057.307}>
+            <tspan
+              x={4960.32}
+              y={-5057.307}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u3060\u3044\u3069\u3046\u8C4A\u91CC"}
             </tspan>
-            <tspan x={4960.32} y={-5012.307}>
+            <tspan
+              x={4960.32}
+              y={-5012.307}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Daido-Toyosato"}
             </tspan>
           </text>
@@ -3776,6 +7175,12 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3783,10 +7188,18 @@ const SvgMetroName = (props) => (
               x={5012.703}
               y={-5043.2}
               stroke="#7f7f7f"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"I13"}
@@ -3815,13 +7228,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5058.449} y={-5395.716}>
+            <tspan
+              x={5058.449}
+              y={-5395.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u745E\u5149\u56DB\u4E01\u76EE"}
             </tspan>
-            <tspan x={5058.449} y={-5350.716}>
+            <tspan
+              x={5058.449}
+              y={-5350.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Zuiko4-chome"}
             </tspan>
           </text>
@@ -3837,6 +7299,12 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3844,10 +7312,18 @@ const SvgMetroName = (props) => (
               x={4988.235}
               y={-5375.81}
               stroke="#7f7f7f"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"I12"}
@@ -3876,13 +7352,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={5021.418} y={-5704.669}>
+            <tspan
+              x={5021.418}
+              y={-5704.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u4E95\u9AD8\u91CE"}
             </tspan>
-            <tspan x={5021.418} y={-5668.669}>
+            <tspan
+              x={5021.418}
+              y={-5668.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Itakano"}
             </tspan>
           </text>
@@ -3898,6 +7423,12 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
@@ -3905,10 +7436,18 @@ const SvgMetroName = (props) => (
               x={5075.931}
               y={-5683.974}
               stroke="#7f7f7f"
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"I11"}
@@ -3945,13 +7484,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={2290.98} y={8.69}>
+            <tspan
+              x={2290.98}
+              y={8.69}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5E73\u6797"}
             </tspan>
-            <tspan x={2290.98} y={53.69}>
+            <tspan
+              x={2290.98}
+              y={53.69}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Hirabayashi"}
             </tspan>
           </text>
@@ -3966,16 +7554,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={2258.485}
               y={110.37}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"P17"}
@@ -4004,13 +7606,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={1815.27} y={37.325}>
+            <tspan
+              x={1815.27}
+              y={37.325}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5357\u6E2F\u53E3"}
             </tspan>
-            <tspan x={1815.27} y={82.325}>
+            <tspan
+              x={1815.27}
+              y={82.325}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Nankoguchi"}
             </tspan>
           </text>
@@ -4025,16 +7676,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={1839.119}
               y={-17.036}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"P16"}
@@ -4070,16 +7735,30 @@ const SvgMetroName = (props) => (
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
             >
               <tspan
                 x={1572.119}
                 y={-20.036}
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
                   textAnchor: "middle",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"P15"}
@@ -4096,13 +7775,62 @@ const SvgMetroName = (props) => (
                 textAlign: "end",
                 writingMode: "lr-tb",
                 textAnchor: "end",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
             >
-              <tspan x={1540.614} y={35.014}>
+              <tspan
+                x={1540.614}
+                y={35.014}
+                style={{
+                  fill: "#000",
+                  fillOpacity: 1,
+                  stroke: "#ccc",
+                  strokeOpacity: 0.81176472,
+                  strokeWidth: 3.20711576,
+                  strokeDasharray: "none",
+                  paintOrder: "stroke fill markers",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
+                }}
+              >
                 {"\u5357\u6E2F\u6771"}
               </tspan>
-              <tspan x={1540.614} y={80.014}>
+              <tspan
+                x={1540.614}
+                y={80.014}
+                style={{
+                  fill: "#000",
+                  fillOpacity: 1,
+                  stroke: "#ccc",
+                  strokeOpacity: 0.81176472,
+                  strokeWidth: 3.20711576,
+                  strokeDasharray: "none",
+                  paintOrder: "stroke fill markers",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
+                }}
+              >
                 {"Nankohigashi"}
               </tspan>
             </text>
@@ -4113,7 +7841,6 @@ const SvgMetroName = (props) => (
               opacity: 1,
               fill: "none",
             }}
-            transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <path
               fill="#fff"
@@ -4125,7 +7852,7 @@ const SvgMetroName = (props) => (
               style={{
                 strokeDasharray: "none",
               }}
-              transform="matrix(.57033 0 0 .57039 -60.397 -347.446)"
+              transform="matrix(.26638 0 0 .26714 236.84 2751.202)"
             />
             <text
               xmlSpace="preserve"
@@ -4138,21 +7865,35 @@ const SvgMetroName = (props) => (
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
+              transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
             >
               <tspan
                 x={1494.119}
                 y={-248.036}
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
                   textAnchor: "middle",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"P14"}
               </tspan>
             </text>
-
             <text
               xmlSpace="preserve"
               x={1558.182}
@@ -4164,12 +7905,62 @@ const SvgMetroName = (props) => (
                 textAlign: "start",
                 writingMode: "lr-tb",
                 textAnchor: "start",
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
+              transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
             >
-              <tspan x={1558.182} y={-273.802}>
+              <tspan
+                x={1558.182}
+                y={-273.802}
+                style={{
+                  fill: "#000",
+                  fillOpacity: 1,
+                  stroke: "#ccc",
+                  strokeOpacity: 0.81176472,
+                  strokeWidth: 3.20711576,
+                  strokeDasharray: "none",
+                  paintOrder: "stroke fill markers",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
+                }}
+              >
                 {"\u30D5\u30A7\u30EA\u30FC\u30BF\u30FC\u30DF\u30CA\u30EB"}
               </tspan>
-              <tspan x={1558.182} y={-228.802}>
+              <tspan
+                x={1558.182}
+                y={-228.802}
+                style={{
+                  fill: "#000",
+                  fillOpacity: 1,
+                  stroke: "#ccc",
+                  strokeOpacity: 0.81176472,
+                  strokeWidth: 3.20711576,
+                  strokeDasharray: "none",
+                  paintOrder: "stroke fill markers",
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
+                }}
+              >
                 {"Ferry Terminal"}
               </tspan>
             </text>
@@ -4197,13 +7988,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={1360.043} y={-791.669}>
+            <tspan
+              x={1360.043}
+              y={-791.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u30DD\u30FC\u30C8\u30BF\u30A6\u30F3\u6771"}
             </tspan>
-            <tspan x={1360.043} y={-746.669}>
+            <tspan
+              x={1360.043}
+              y={-746.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Port Town-higashi"}
             </tspan>
           </text>
@@ -4218,16 +8058,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={1358.548}
               y={-671.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"P13"}
@@ -4256,13 +8110,62 @@ const SvgMetroName = (props) => (
               textAlign: "end",
               writingMode: "lr-tb",
               textAnchor: "end",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={1088.043} y={-600.669}>
+            <tspan
+              x={1088.043}
+              y={-600.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u30DD\u30FC\u30C8\u30BF\u30A6\u30F3\u897F"}
             </tspan>
-            <tspan x={1088.043} y={-555.669}>
+            <tspan
+              x={1088.043}
+              y={-555.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Port Town-nishi"}
             </tspan>
           </text>
@@ -4277,16 +8180,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={1085.548}
               y={-673.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"P12"}
@@ -4315,13 +8232,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={981.614} y={-844.716}>
+            <tspan
+              x={981.614}
+              y={-844.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u4E2D\u3075\u982D"}
             </tspan>
-            <tspan x={981.614} y={-799.716}>
+            <tspan
+              x={981.614}
+              y={-799.716}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Nakafuto"}
             </tspan>
           </text>
@@ -4336,16 +8302,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={910.119}
               y={-823.036}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"P11"}
@@ -4374,13 +8354,62 @@ const SvgMetroName = (props) => (
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
+              fill: "#000",
+              fillOpacity: 1,
+              stroke: "#ccc",
+              strokeOpacity: 0.81176472,
+              strokeWidth: 3.20711576,
+              strokeDasharray: "none",
+              paintOrder: "stroke fill markers",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
-            <tspan x={852.042} y={-986.669}>
+            <tspan
+              x={852.042}
+              y={-986.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u30C8\u30EC\u30FC\u30C9\u30BB\u30F3\u30BF\u30FC\u524D"}
             </tspan>
-            <tspan x={852.042} y={-941.669}>
+            <tspan
+              x={852.042}
+              y={-941.669}
+              style={{
+                fill: "#000",
+                fillOpacity: 1,
+                stroke: "#ccc",
+                strokeOpacity: 0.81176472,
+                strokeWidth: 3.20711576,
+                strokeDasharray: "none",
+                paintOrder: "stroke fill markers",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Tread Center-mae"}
             </tspan>
           </text>
@@ -4395,16 +8424,30 @@ const SvgMetroName = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 265.048 2913.93)"
           >
             <tspan
               x={777.548}
               y={-968.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"P10"}
@@ -4413,7 +8456,6 @@ const SvgMetroName = (props) => (
         </g>
       </g>
       <path
-        id="Metro-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

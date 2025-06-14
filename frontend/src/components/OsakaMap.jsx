@@ -406,13 +406,13 @@ const OsakaMap = ({ selectedFromAi, stationListFromAi }) => {
         const textElement = tspan.closest('text');
         const dataLine = textElement?.dataset.line || '';
 
-        const isKTinDataLine = dataLine.includes('KT');
+        const isKTinDataLine = textElement?.id === 'KT';
 
         const match = {
           kh: prefix2 === 'KH',
           hs: prefix2 === 'HS',
           nk: prefix2 === 'NK',
-          jr: ['Q', 'O', 'G', 'R', 'F', 'H'].includes(prefix1)&& !['HS'].includes(prefix2)&&
+          jr: ['A', 'Q', 'O', 'G', 'R', 'F', 'H'].includes(prefix1)&& !['HS'].includes(prefix2)&&
           !isKTinDataLine,
           metro: ['M', 'T', 'N', 'K', 'C', 'S', 'I', 'Y', 'P'].includes(prefix1) && !['KH', 'HS', 'NK'].includes(prefix2),
           kt: (['A', 'F'].includes(prefix1)&&isKTinDataLine) || prefix1 === 'D',

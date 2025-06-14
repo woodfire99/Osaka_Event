@@ -29,7 +29,6 @@ const SvgNkName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 797.33 962.48)"
           >
             <path
               fill="#fff"
@@ -45,8 +44,8 @@ const SvgNkName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 797.33 962.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -64,13 +63,21 @@ const SvgNkName = (props) => (
                 stroke: "#0e7c3a",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 797.33 962.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -80,6 +87,12 @@ const SvgNkName = (props) => (
                   stroke: "#0e7c3a",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"NK01"}
@@ -96,15 +109,18 @@ const SvgNkName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 797.33 962.48)"
             >
               <tspan
                 x={1181.18}
@@ -115,11 +131,14 @@ const SvgNkName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5357\u6D77\u96E3\u6CE2"}
@@ -133,11 +152,14 @@ const SvgNkName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Nankai-namba"}
@@ -147,7 +169,6 @@ const SvgNkName = (props) => (
         </g>
       </g>
       <path
-        id="nk-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

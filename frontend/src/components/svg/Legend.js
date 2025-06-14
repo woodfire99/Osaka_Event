@@ -87,8 +87,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
@@ -104,10 +104,32 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 145.328 -215.65)"
           >
-            <tspan x={273.228} y={989.449}>
+            <tspan
+              x={273.228}
+              y={989.449}
+              style={{
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u8FD1\u9244\u7DDA"}
             </tspan>
-            <tspan x={273.228} y={1008.158}>
+            <tspan
+              x={273.228}
+              y={1008.158}
+              style={{
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Kintetsu-Line"}
             </tspan>
           </text>
@@ -122,8 +144,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
@@ -139,10 +161,32 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 145.328 -215.65)"
           >
-            <tspan x={393.57} y={745.236}>
+            <tspan
+              x={393.57}
+              y={745.236}
+              style={{
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"JR\u7DDA"}
             </tspan>
-            <tspan x={393.57} y={763.944}>
+            <tspan
+              x={393.57}
+              y={763.944}
+              style={{
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"JR Line"}
             </tspan>
           </text>
@@ -157,8 +201,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               textAnchor: "start",
@@ -174,10 +218,32 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 145.328 -215.65)"
           >
-            <tspan x={348.184} y={494.236}>
+            <tspan
+              x={348.184}
+              y={494.236}
+              style={{
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"\u5927\u962A\u30E1\u30C8\u30ED"}
             </tspan>
-            <tspan x={348.184} y={512.944}>
+            <tspan
+              x={348.184}
+              y={512.944}
+              style={{
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
+              }}
+            >
               {"Osaka Metro Line"}
             </tspan>
           </text>
@@ -315,16 +381,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3470.429 840.293)"
         >
           <tspan
             x={7579.586}
             y={-1707.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"M"}
@@ -364,16 +444,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3470.429 901.454)"
         >
           <tspan
             x={7579.586}
             y={-1707.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"T"}
@@ -413,16 +507,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3470.429 960.615)"
         >
           <tspan
             x={7579.586}
             y={-1707.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"Y"}
@@ -462,16 +570,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3470.429 1019.776)"
         >
           <tspan
             x={7579.586}
             y={-1707.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"C"}
@@ -511,16 +633,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3470.429 1078.937)"
         >
           <tspan
             x={7579.586}
             y={-1707.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"S"}
@@ -562,16 +698,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3214.426 840.292)"
         >
           <tspan
             x={7579.586}
             y={-1707.989}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"K"}
@@ -611,16 +761,30 @@ const SvgLegend = (props) => (
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
             transform="matrix(.46707 0 0 .46836 -3214.426 895.453)"
           >
             <tspan
               x={7579.586}
               y={-1707.989}
+              fontFamily="'bitstream vera sans mono'"
+              fontWeight="normal"
               style={{
                 textAlign: "center",
                 writingMode: "lr-tb",
                 textAnchor: "middle",
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"N"}
@@ -664,6 +828,12 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3205.085 513.423)"
         >
@@ -671,10 +841,18 @@ const SvgLegend = (props) => (
             x={7559.586}
             y={-765.99}
             stroke="#7f7f7f"
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"I"}
@@ -716,16 +894,30 @@ const SvgLegend = (props) => (
             textAlign: "center",
             writingMode: "lr-tb",
             textAnchor: "middle",
+            InkscapeFontSpecification: "&quot",
+            fontFamily: "&quot",
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(.46707 0 0 .46836 -3205.085 571.727)"
         >
           <tspan
             x={7559.586}
             y={-765.99}
+            fontFamily="'bitstream vera sans mono'"
+            fontWeight="normal"
             style={{
               textAlign: "center",
               writingMode: "lr-tb",
               textAnchor: "middle",
+              InkscapeFontSpecification: "&quot",
+              fontFamily: "&quot",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontStretch: "normal",
+              fontVariant: "normal",
             }}
           >
             {"P"}
@@ -752,6 +944,10 @@ const SvgLegend = (props) => (
             strokeDasharray: "none",
             strokeDashoffset: 7.5,
             strokeOpacity: 1,
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(1 0 0 1 145.328 -215.65)"
         >
@@ -763,8 +959,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -782,8 +978,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -801,8 +997,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -820,8 +1016,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -839,8 +1035,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -858,8 +1054,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -877,8 +1073,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -896,8 +1092,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -915,8 +1111,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -934,8 +1130,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -967,6 +1163,10 @@ const SvgLegend = (props) => (
             strokeDasharray: "none",
             strokeDashoffset: 7.5,
             strokeOpacity: 1,
+            fontWeight: 400,
+            fontStyle: "normal",
+            fontStretch: "normal",
+            fontVariant: "normal",
           }}
           transform="matrix(1 0 0 1 145.328 -215.65)"
         >
@@ -978,8 +1178,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -997,8 +1197,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1016,8 +1216,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1035,8 +1235,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1054,8 +1254,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1073,8 +1273,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1092,8 +1292,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1113,8 +1313,8 @@ const SvgLegend = (props) => (
               fontVariant: "normal",
               fontWeight: 400,
               fontStretch: "normal",
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               fill: "#000",
               stroke: "#000",
               strokeWidth: 0.2,
@@ -1139,8 +1339,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               whiteSpace: "pre",
@@ -1158,34 +1358,34 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 -23.267 -366.125)"
           >
-            <tspan x={162.006} y={714.553}>
+            <tspan x={162.006} y={714.862}>
               {"\u5927\u962A\u74B0\u72B6\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={733.262}>
+            <tspan x={162.006} y={733.57}>
               {"Osaka Loop Line\n"}
             </tspan>
-            <tspan x={162.006} y={751.97} />
-            <tspan x={162.006} y={771.757}>
+            <tspan x={162.006} y={752.279} />
+            <tspan x={162.006} y={770.987}>
               {"\u6771\u897F\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={790.465}>
+            <tspan x={162.006} y={789.695}>
               {"Tozai Line\n"}
             </tspan>
-            <tspan x={162.006} y={809.173} />
-            <tspan x={162.006} y={828.96}>
+            <tspan x={162.006} y={808.404} />
+            <tspan x={162.006} y={827.112}>
               {"\u962A\u548C\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={847.668}>
+            <tspan x={162.006} y={845.82}>
               {"Hanwa Line\n"}
             </tspan>
-            <tspan x={162.006} y={866.377} />
-            <tspan x={162.006} y={886.163}>
+            <tspan x={162.006} y={864.529} />
+            <tspan x={162.006} y={883.237}>
               {"\u798F\u77E5\u5C71\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={904.872}>
+            <tspan x={162.006} y={901.946}>
               {"Fukuchiyama Line\n"}
             </tspan>
-            <tspan x={162.006} y={923.58} />
+            <tspan x={162.006} y={920.654} />
           </text>
           <text
             xmlSpace="preserve"
@@ -1196,8 +1396,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               whiteSpace: "pre",
@@ -1215,31 +1415,31 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 215.828 -366.125)"
           >
-            <tspan x={162.006} y={714.553}>
+            <tspan x={162.006} y={714.862}>
               {"\u5927\u548C\u8DEF\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={733.262}>
+            <tspan x={162.006} y={733.57}>
               {"Yamatoji Line\n"}
             </tspan>
-            <tspan x={162.006} y={751.97} />
-            <tspan x={162.006} y={771.757}>
+            <tspan x={162.006} y={752.279} />
+            <tspan x={162.006} y={770.987}>
               {"\u5927\u962A\u6771\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={790.465}>
+            <tspan x={162.006} y={789.695}>
               {"Osaka Higashi Line\n"}
             </tspan>
-            <tspan x={162.006} y={809.173} />
-            <tspan x={162.006} y={828.96}>
+            <tspan x={162.006} y={808.404} />
+            <tspan x={162.006} y={827.112}>
               {"\u4EAC\u90FD\u7DDA\u3000\u795E\u6238\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={847.668}>
+            <tspan x={162.006} y={845.82}>
               {"JR Kyoto-Line and Kobe-Line\n"}
             </tspan>
-            <tspan x={162.006} y={866.377} />
-            <tspan x={162.006} y={886.163}>
+            <tspan x={162.006} y={864.529} />
+            <tspan x={162.006} y={883.237}>
               {"\u5922\u54B2\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={904.872}>
+            <tspan x={162.006} y={901.946}>
               {"Yumesaki Line "}
             </tspan>
           </text>
@@ -1289,6 +1489,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#d86060",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3470.429 1157.185)"
             >
@@ -1296,6 +1502,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1304,6 +1512,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#d86060",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"O"}
@@ -1356,6 +1570,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#ec2c8c",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3470.429 1213.33)"
             >
@@ -1363,6 +1583,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1371,6 +1593,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#ec2c8c",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"H"}
@@ -1423,6 +1651,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#f59e0b",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3470.429 1271.744)"
             >
@@ -1430,6 +1664,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1438,6 +1674,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#f59e0b",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"R"}
@@ -1490,6 +1732,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#facc15",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3470.429 1331.744)"
             >
@@ -1497,6 +1745,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1505,6 +1755,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#facc15",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"G"}
@@ -1557,6 +1813,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#00a86b",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3214.427 1157.184)"
             >
@@ -1564,6 +1826,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1572,6 +1836,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#00a86b",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"Q"}
@@ -1624,6 +1894,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#2f6f97",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3214.427 1213.33)"
             >
@@ -1631,6 +1907,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1639,6 +1917,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#2f6f97",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F"}
@@ -1691,6 +1975,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#0076c0",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3214.427 1271.743)"
             >
@@ -1698,6 +1988,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1706,6 +1998,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#0076c0",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"A"}
@@ -1758,6 +2056,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#121b4c",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3214.427 1331.743)"
             >
@@ -1765,6 +2069,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1773,6 +2079,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#121b4c",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"P"}
@@ -1795,8 +2107,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               whiteSpace: "pre",
@@ -1814,39 +2126,39 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 -25.042 -118.837)"
           >
-            <tspan x={162.006} y={714.553}>
+            <tspan x={162.006} y={714.862}>
               {"\u9AD8\u91CE\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={733.262}>
+            <tspan x={162.006} y={733.57}>
               {"Koya Line\n"}
             </tspan>
-            <tspan x={162.006} y={751.97} />
-            <tspan x={162.006} y={771.757}>
+            <tspan x={162.006} y={752.279} />
+            <tspan x={162.006} y={770.987}>
               {"\u4EAC\u962A\u672C\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={790.465}>
+            <tspan x={162.006} y={789.695}>
               {"Keihan Main Line\n"}
             </tspan>
-            <tspan x={162.006} y={809.173} />
-            <tspan x={162.006} y={828.96}>
+            <tspan x={162.006} y={808.404} />
+            <tspan x={162.006} y={827.112}>
               {"\u5927\u962A\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={847.668}>
+            <tspan x={162.006} y={845.82}>
               {"Osaka Line\n"}
             </tspan>
-            <tspan x={162.006} y={866.377} />
-            <tspan x={162.006} y={886.163}>
+            <tspan x={162.006} y={864.529} />
+            <tspan x={162.006} y={883.237}>
               {"\u5948\u826F\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={904.872}>
+            <tspan x={162.006} y={901.946}>
               {"Nara Line\n"}
             </tspan>
-            <tspan x={162.006} y={923.58} />
-            <tspan x={162.006} y={942.288} />
-            <tspan x={162.006} y={960.997} />
-            <tspan x={162.006} y={979.705} />
-            <tspan x={162.006} y={998.413} />
-            <tspan x={162.006} y={1017.122} />
+            <tspan x={162.006} y={920.654} />
+            <tspan x={162.006} y={939.362} />
+            <tspan x={162.006} y={958.071} />
+            <tspan x={162.006} y={976.779} />
+            <tspan x={162.006} y={995.487} />
+            <tspan x={162.006} y={1014.196} />
           </text>
           <text
             xmlSpace="preserve"
@@ -1857,8 +2169,8 @@ const SvgLegend = (props) => (
               fontStretch: "normal",
               fontSize: "14.9667px",
               lineHeight: 1.25,
-              fontFamily: "osaka",
-              InkscapeFontSpecification: "osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               textAlign: "start",
               writingMode: "lr-tb",
               whiteSpace: "pre",
@@ -1876,27 +2188,27 @@ const SvgLegend = (props) => (
             }}
             transform="matrix(1 0 0 1 214.053 -118.837)"
           >
-            <tspan x={162.006} y={714.553}>
+            <tspan x={162.006} y={714.862}>
               {"\u962A\u795E\u672C\u7DDA \u306A\u3093\u3070\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={733.262}>
+            <tspan x={162.006} y={733.57}>
               {"Hanshin Main Line and Namba Line\n"}
             </tspan>
-            <tspan x={162.006} y={751.97} />
-            <tspan x={162.006} y={771.757}>
+            <tspan x={162.006} y={752.279} />
+            <tspan x={162.006} y={770.987}>
               {"\u962A\u6025\u4EAC\u90FD\u7DDA\u30FB\u5343\u91CC\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={790.465}>
+            <tspan x={162.006} y={789.695}>
               {"Hankyu Kyoto-Line and Senri-Line\n"}
             </tspan>
-            <tspan x={162.006} y={809.173} />
-            <tspan x={162.006} y={828.96}>
+            <tspan x={162.006} y={808.404} />
+            <tspan x={162.006} y={827.112}>
               {"\u5357\u5927\u962A\u7DDA\n"}
             </tspan>
-            <tspan x={162.006} y={847.668}>
+            <tspan x={162.006} y={845.82}>
               {"Minami-Osaka Line\n"}
             </tspan>
-            <tspan x={162.006} y={866.377} />
+            <tspan x={162.006} y={864.529} />
           </text>
           <g
             style={{
@@ -1944,6 +2256,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#0e7c3a",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3472.204 1404.472)"
             >
@@ -1951,6 +2269,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1959,6 +2279,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#0e7c3a",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"NK"}
@@ -2011,6 +2337,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#00008b",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3472.204 1460.618)"
             >
@@ -2018,6 +2350,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -2026,6 +2360,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#00008b",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"KH"}
@@ -2078,6 +2418,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#0072bc",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3472.204 1519.031)"
             >
@@ -2085,6 +2431,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -2093,6 +2441,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#0072bc",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"D"}
@@ -2145,6 +2499,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#d1003f",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3472.204 1579.031)"
             >
@@ -2152,6 +2512,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -2160,6 +2522,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#d1003f",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"A"}
@@ -2212,6 +2580,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#0d8737",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3216.202 1519.03)"
             >
@@ -2219,6 +2593,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -2227,6 +2603,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#0d8737",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F"}
@@ -2279,6 +2661,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#a3a300",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3216.202 1404.472)"
             >
@@ -2286,6 +2674,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -2294,6 +2684,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#a3a300",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS"}
@@ -2346,6 +2742,12 @@ const SvgLegend = (props) => (
                 fillOpacity: 1,
                 stroke: "#b72036",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.46707 0 0 .46836 -3216.202 1460.618)"
             >
@@ -2353,6 +2755,8 @@ const SvgLegend = (props) => (
                 x={7579.586}
                 y={-1707.989}
                 fill="red"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -2361,6 +2765,12 @@ const SvgLegend = (props) => (
                   fillOpacity: 1,
                   stroke: "#b72036",
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HK"}
@@ -2370,7 +2780,6 @@ const SvgLegend = (props) => (
         </g>
       </g>
       <path
-        id="legend-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

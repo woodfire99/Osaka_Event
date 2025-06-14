@@ -78,6 +78,12 @@ const SvgKhName = (props) => (
                 strokeWidth: 1.00062,
                 strokeDasharray: "none",
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
             >
               {"KH11"}
@@ -94,15 +100,17 @@ const SvgKhName = (props) => (
               fontStretch: "normal",
               fontSize: "36.0001px",
               lineHeight: 1.25,
-              fontFamily: "Osaka",
-              InkscapeFontSpecification: "Osaka",
+              fontFamily: "&quot",
+              InkscapeFontSpecification: "&quot",
               display: "inline",
               opacity: 1,
               fill: "#000",
               fillOpacity: 1,
-              stroke: "#000",
-              strokeWidth: 0.213808,
+              stroke: "#ccc",
+              strokeWidth: 3.20711578,
               strokeDasharray: "none",
+              strokeOpacity: 1,
+              paintOrder: "stroke fill markers",
             }}
             transform="matrix(.46771 0 0 .46771 1011.308 2417.105)"
           >
@@ -115,11 +123,14 @@ const SvgKhName = (props) => (
                 fontWeight: 400,
                 fontStretch: "normal",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 fill: "#000",
-                strokeWidth: 0.213808,
+                strokeWidth: 3.20711578,
                 strokeDasharray: "none",
+                stroke: "#ccc",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
             >
               {"\u5B88\u53E3\u5E02"}
@@ -133,11 +144,14 @@ const SvgKhName = (props) => (
                 fontWeight: 400,
                 fontStretch: "normal",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 fill: "#000",
-                strokeWidth: 0.213808,
+                strokeWidth: 3.20711578,
                 strokeDasharray: "none",
+                stroke: "#ccc",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
             >
               {"Moriguchisi"}
@@ -146,7 +160,6 @@ const SvgKhName = (props) => (
         </g>
       </g>
       <path
-        id="kh-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

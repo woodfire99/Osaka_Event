@@ -29,7 +29,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1270.33 2286.48)"
           >
             <path
               fill="#fff"
@@ -45,8 +44,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1270.33 2286.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -63,10 +62,13 @@ const SvgKtName = (props) => (
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1270.33 2286.48)"
             >
               <tspan
                 x={1181.18}
@@ -80,8 +82,11 @@ const SvgKtName = (props) => (
                   fontFamily: "Osaka",
                   InkscapeFontSpecification: "Osaka",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u6CB3\u5185\u5929\u7F8E"}
@@ -98,8 +103,11 @@ const SvgKtName = (props) => (
                   fontFamily: "Osaka",
                   InkscapeFontSpecification: "Osaka",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Kawachiawami"}
@@ -124,7 +132,7 @@ const SvgKtName = (props) => (
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1270.33 2286.48)"
             >
               <tspan
                 x={1157.914}
@@ -150,7 +158,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1258.33 1992.48)"
           >
             <path
               fill="#fff"
@@ -166,8 +173,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1258.33 1992.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -179,15 +186,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1258.33 1992.48)"
             >
               <tspan
                 x={1181.18}
@@ -198,11 +208,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u77E2\u7530"}
@@ -216,11 +229,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Yata"}
@@ -244,13 +260,21 @@ const SvgKtName = (props) => (
                 stroke: "#0d8737",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1258.33 1992.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -260,6 +284,12 @@ const SvgKtName = (props) => (
                   stroke: "#0d8737",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F06"}
@@ -271,7 +301,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1272.33 1836.48)"
           >
             <path
               fill="#fff"
@@ -287,8 +316,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1272.33 1836.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -300,15 +329,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1272.33 1836.48)"
             >
               <tspan
                 x={1181.18}
@@ -319,11 +351,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u91DD\u4E2D\u91CE"}
@@ -337,11 +372,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Harinakano"}
@@ -365,13 +403,21 @@ const SvgKtName = (props) => (
                 stroke: "#0d8737",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1272.33 1836.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -381,6 +427,12 @@ const SvgKtName = (props) => (
                   stroke: "#0d8737",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F05"}
@@ -392,7 +444,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1252.33 1595.48)"
           >
             <path
               fill="#fff"
@@ -408,8 +459,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1252.33 1595.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -421,15 +472,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1252.33 1595.48)"
             >
               <tspan
                 x={1181.18}
@@ -440,11 +494,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u4ECA\u5DDD"}
@@ -458,11 +515,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Imagawa"}
@@ -486,13 +546,21 @@ const SvgKtName = (props) => (
                 stroke: "#0d8737",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1252.33 1595.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -502,6 +570,12 @@ const SvgKtName = (props) => (
                   stroke: "#0d8737",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F04"}
@@ -513,7 +587,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1201.33 1457.48)"
           >
             <path
               fill="#fff"
@@ -529,8 +602,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1201.33 1457.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -542,15 +615,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1201.33 1457.48)"
             >
               <tspan
                 x={1181.18}
@@ -561,11 +637,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5317\u7530\u8FBA"}
@@ -579,11 +658,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Kitatanabe"}
@@ -607,13 +689,21 @@ const SvgKtName = (props) => (
                 stroke: "#0d8737",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1201.33 1457.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -623,6 +713,12 @@ const SvgKtName = (props) => (
                   stroke: "#0d8737",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F03"}
@@ -635,7 +731,6 @@ const SvgKtName = (props) => (
               opacity: 1,
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1150.33 1350.48)"
           >
             <path
               fill="#fff"
@@ -651,8 +746,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1150.33 1350.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -664,15 +759,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1150.33 1350.48)"
             >
               <tspan
                 x={1181.18}
@@ -683,11 +781,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u6CB3\u5800\u53E3"}
@@ -701,11 +802,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Koboreguchi"}
@@ -729,13 +833,21 @@ const SvgKtName = (props) => (
                 stroke: "#0d8737",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1150.33 1350.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -745,6 +857,12 @@ const SvgKtName = (props) => (
                   stroke: "#0d8737",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"F02"}
@@ -762,7 +880,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1933.33 1228.48)"
           >
             <path
               fill="#fff"
@@ -778,8 +895,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1933.33 1228.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -791,15 +908,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1933.33 1228.48)"
             >
               <tspan
                 x={1181.18}
@@ -810,11 +930,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u9577\u702C"}
@@ -828,11 +951,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Nagase"}
@@ -856,13 +982,21 @@ const SvgKtName = (props) => (
                 stroke: "#0072bc",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1933.33 1228.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -872,6 +1006,12 @@ const SvgKtName = (props) => (
                   stroke: "#0072bc",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"D08"}
@@ -883,7 +1023,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 2015.903 1445.767)"
           >
             <path
               fill="#fff"
@@ -899,8 +1038,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 2015.903 1445.767)"
             />
-
             <text
               xmlSpace="preserve"
               x={1181.18}
@@ -912,15 +1051,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 2015.903 1445.767)"
             >
               <tspan
                 x={1181.18}
@@ -931,11 +1073,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5F25\u5200"}
@@ -949,11 +1094,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Mito"}
@@ -977,13 +1125,21 @@ const SvgKtName = (props) => (
                 stroke: "#0072bc",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 2015.903 1445.767)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -993,6 +1149,12 @@ const SvgKtName = (props) => (
                   stroke: "#0072bc",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"D09"}
@@ -1040,14 +1202,16 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 2117.33 901.48)"
             >
@@ -1060,11 +1224,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u516B\u6238\u30CE\u91CC"}
@@ -1078,11 +1245,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Yaenosato"}
@@ -1106,6 +1276,12 @@ const SvgKtName = (props) => (
                 stroke: "#d1003f",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 2117.33 901.48)"
             >
@@ -1113,6 +1289,8 @@ const SvgKtName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1122,6 +1300,12 @@ const SvgKtName = (props) => (
                   stroke: "#d1003f",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"A09"}
@@ -1161,14 +1345,16 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 1988.33 903.48)"
             >
@@ -1181,11 +1367,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u6CB3\u5185\u5C0F\u962A"}
@@ -1199,11 +1388,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Kawachikosaka"}
@@ -1227,6 +1419,12 @@ const SvgKtName = (props) => (
                 stroke: "#d1003f",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 1988.33 903.48)"
             >
@@ -1234,6 +1432,8 @@ const SvgKtName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1243,6 +1443,12 @@ const SvgKtName = (props) => (
                   stroke: "#d1003f",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"A08"}
@@ -1254,7 +1460,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1500.33 911.48)"
           >
             <path
               fill="#fff"
@@ -1270,8 +1475,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1500.33 911.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1177.18}
@@ -1283,15 +1488,18 @@ const SvgKtName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1500.33 911.48)"
             >
               <tspan
                 x={1177.18}
@@ -1302,11 +1510,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u4ECA\u91CC"}
@@ -1320,11 +1531,14 @@ const SvgKtName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Imazato"}
@@ -1348,13 +1562,21 @@ const SvgKtName = (props) => (
                 stroke: "#d1003f",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1500.33 911.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1364,6 +1586,12 @@ const SvgKtName = (props) => (
                   stroke: "#d1003f",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"A05"}
@@ -1375,7 +1603,6 @@ const SvgKtName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 1090.33 905.48)"
           >
             <path
               fill="#fff"
@@ -1391,8 +1618,8 @@ const SvgKtName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 1090.33 905.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1137.18}
@@ -1409,10 +1636,13 @@ const SvgKtName = (props) => (
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 1090.33 905.48)"
             >
               <tspan
                 x={1137.18}
@@ -1426,8 +1656,11 @@ const SvgKtName = (props) => (
                   fontFamily: "Osaka",
                   InkscapeFontSpecification: "Osaka",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5927\u962A\u4E0A\u672C\u753A"}
@@ -1444,8 +1677,11 @@ const SvgKtName = (props) => (
                   fontFamily: "Osaka",
                   InkscapeFontSpecification: "Osaka",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Osaka-Uehommachi"}
@@ -1469,13 +1705,21 @@ const SvgKtName = (props) => (
                 stroke: "#d1003f",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="matrix(.99862 0 0 1.00138 0 0)"
+              transform="matrix(.99862 0 0 1.00138 1090.33 905.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1485,6 +1729,12 @@ const SvgKtName = (props) => (
                   stroke: "#d1003f",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"A03"}
@@ -1494,7 +1744,6 @@ const SvgKtName = (props) => (
         </g>
       </g>
       <path
-        id="kt-name-layer"
         d="M-99.328 185.65h3508v3375h-3508z"
         style={{
           fill: "none",

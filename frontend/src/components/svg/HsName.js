@@ -1,14 +1,13 @@
 import * as React from "react";
 const SvgHsName = (props) => (
   <svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlSpace="preserve"
-  width={3508}
-  height={3375}
-  {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+    width={3508}
+    height={3375}
+    {...props}
   >
-    <g
-      id="hs-name-layer"
+    <g id="hs-name-layer"
       style={{
         fill: "none",
       }}
@@ -64,6 +63,12 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 -153.67 164.609)"
             >
@@ -71,6 +76,8 @@ const SvgHsName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -80,6 +87,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS49"}
@@ -96,14 +109,16 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 -153.67 164.609)"
             >
@@ -116,11 +131,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u51FA\u6765\u5CF6"}
@@ -134,11 +152,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Dekijima"}
@@ -184,6 +205,12 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 -66.67 292.609)"
             >
@@ -191,6 +218,8 @@ const SvgHsName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -200,6 +229,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS48"}
@@ -216,14 +251,16 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 -66.67 292.609)"
             >
@@ -236,11 +273,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u798F"}
@@ -254,11 +294,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Huku"}
@@ -304,6 +347,12 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 71.33 460.609)"
             >
@@ -311,6 +360,8 @@ const SvgHsName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -320,6 +371,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS47"}
@@ -336,14 +393,16 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 71.33 460.609)"
             >
@@ -356,11 +415,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u4F1D\u6CD5"}
@@ -374,11 +436,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Denpo"}
@@ -390,7 +455,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 123.33 535.609)"
           >
             <path
               fill="#fff"
@@ -406,8 +470,8 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 123.33 535.609)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -425,13 +489,21 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 123.33 535.609)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -441,6 +513,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS46"}
@@ -457,15 +535,18 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 123.33 535.609)"
             >
               <tspan
                 x={1181.18}
@@ -476,11 +557,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5343\u9CE5\u6A4B"}
@@ -494,11 +578,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Chidoribashi"}
@@ -511,7 +598,6 @@ const SvgHsName = (props) => (
               opacity: 1,
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 -452.67 -103.52)"
           >
             <path
               fill="#fff"
@@ -527,8 +613,8 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 -452.67 -103.52)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -546,13 +632,21 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 -452.67 -103.52)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -562,6 +656,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS09"}
@@ -578,15 +678,18 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 -452.67 -103.52)"
             >
               <tspan
                 x={1181.18}
@@ -597,11 +700,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5C3C\u5D0E"}
@@ -615,11 +721,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Amagasaki"}
@@ -665,6 +774,12 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 -317.67 -70.52)"
             >
@@ -672,6 +787,8 @@ const SvgHsName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -681,6 +798,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS08"}
@@ -697,16 +820,18 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 textAlign: "start",
                 textAnchor: "start",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 -317.67 -70.52)"
             >
@@ -719,13 +844,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "start",
                   textAnchor: "start",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5927\u7269"}
@@ -739,13 +867,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "start",
                   textAnchor: "start",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Daimotsu"}
@@ -757,7 +888,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 -83.67 -49.52)"
           >
             <path
               fill="#fff"
@@ -773,8 +903,8 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 -83.67 -49.52)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -792,13 +922,21 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 -83.67 -49.52)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -808,6 +946,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS07"}
@@ -824,17 +968,20 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 textAlign: "start",
                 textAnchor: "start",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 -83.67 -49.52)"
             >
               <tspan
                 x={1179.649}
@@ -845,13 +992,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "start",
                   textAnchor: "start",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u676D\u702C"}
@@ -865,13 +1015,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "start",
                   textAnchor: "start",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Kuise"}
@@ -883,7 +1036,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 149.33 218.48)"
           >
             <path
               fill="#fff"
@@ -899,8 +1051,8 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 149.33 218.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -918,13 +1070,21 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 149.33 218.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -934,6 +1094,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS05"}
@@ -950,17 +1116,20 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 textAlign: "end",
                 textAnchor: "end",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 149.33 218.48)"
             >
               <tspan
                 x={1132.151}
@@ -971,13 +1140,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "end",
                   textAnchor: "end",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u59EB\u5CF6"}
@@ -991,13 +1163,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "end",
                   textAnchor: "end",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Himegima"}
@@ -1043,6 +1218,12 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
               transform="matrix(.99862 0 0 1.00138 -24.67 47.48)"
             >
@@ -1050,6 +1231,8 @@ const SvgHsName = (props) => (
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1059,6 +1242,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS06"}
@@ -1075,16 +1264,18 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 textAlign: "end",
                 textAnchor: "end",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
               transform="matrix(1 0 0 1 -24.67 47.48)"
             >
@@ -1097,13 +1288,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "end",
                   textAnchor: "end",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5343\u8239"}
@@ -1117,13 +1311,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "end",
                   textAnchor: "end",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Chibune"}
@@ -1135,7 +1332,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 249.33 354.48)"
           >
             <path
               fill="#fff"
@@ -1151,8 +1347,8 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 249.33 354.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -1170,13 +1366,21 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 249.33 354.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1186,6 +1390,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS04"}
@@ -1202,17 +1412,20 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 textAlign: "end",
                 textAnchor: "end",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 249.33 354.48)"
             >
               <tspan
                 x={1132.634}
@@ -1223,13 +1436,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "end",
                   textAnchor: "end",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u6DC0\u5DDD"}
@@ -1243,13 +1459,16 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   textAlign: "end",
                   textAnchor: "end",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Yodoggawa"}
@@ -1261,7 +1480,6 @@ const SvgHsName = (props) => (
               display: "inline",
               fill: "none",
             }}
-            transform="matrix(1 0 0 1 759.33 290.48)"
           >
             <path
               fill="#fff"
@@ -1277,8 +1495,8 @@ const SvgHsName = (props) => (
                 fillOpacity: 1,
                 strokeDasharray: "none",
               }}
+              transform="matrix(1 0 0 1 759.33 290.48)"
             />
-
             <text
               xmlSpace="preserve"
               x={1157.914}
@@ -1296,13 +1514,21 @@ const SvgHsName = (props) => (
                 stroke: "#a3a300",
                 strokeWidth: 0.46771,
                 strokeOpacity: 1,
+                InkscapeFontSpecification: "&quot",
+                fontFamily: "&quot",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontStretch: "normal",
+                fontVariant: "normal",
               }}
-              transform="scale(.99862 1.00138)"
+              transform="matrix(.99862 0 0 1.00138 759.33 290.48)"
             >
               <tspan
                 x={1157.914}
                 y={1060.495}
                 fill="#f0f"
+                fontFamily="'bitstream vera sans mono'"
+                fontWeight="normal"
                 style={{
                   textAlign: "center",
                   writingMode: "lr-tb",
@@ -1312,6 +1538,12 @@ const SvgHsName = (props) => (
                   stroke: "#a3a300",
                   strokeWidth: 0.46771,
                   strokeOpacity: 1,
+                  InkscapeFontSpecification: "&quot",
+                  fontFamily: "&quot",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  fontVariant: "normal",
                 }}
               >
                 {"HS01"}
@@ -1328,15 +1560,18 @@ const SvgHsName = (props) => (
                 fontStretch: "normal",
                 fontSize: "16.8376px",
                 lineHeight: 1.25,
-                fontFamily: "Osaka",
-                InkscapeFontSpecification: "Osaka",
+                fontFamily: "&quot",
+                InkscapeFontSpecification: "&quot",
                 display: "inline",
                 fill: "#000",
                 fillOpacity: 1,
-                stroke: "#000",
-                strokeWidth: 0.1,
+                stroke: "#ccc",
+                strokeWidth: 1.50000001,
                 strokeDasharray: "none",
+                strokeOpacity: 1,
+                paintOrder: "stroke fill markers",
               }}
+              transform="matrix(1 0 0 1 759.33 290.48)"
             >
               <tspan
                 x={1179.18}
@@ -1347,11 +1582,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"\u5927\u962A\u6885\u7530"}
@@ -1365,11 +1603,14 @@ const SvgHsName = (props) => (
                   fontWeight: 400,
                   fontStretch: "normal",
                   lineHeight: 1.25,
-                  fontFamily: "Osaka",
-                  InkscapeFontSpecification: "Osaka",
+                  fontFamily: "&quot",
+                  InkscapeFontSpecification: "&quot",
                   fill: "#000",
-                  strokeWidth: 0.1,
+                  strokeWidth: 1.50000001,
                   strokeDasharray: "none",
+                  stroke: "#ccc",
+                  strokeOpacity: 1,
+                  paintOrder: "stroke fill markers",
                 }}
               >
                 {"Osaka-Umeda"}
