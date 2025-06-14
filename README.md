@@ -4,6 +4,8 @@
 
 <br/>
 
+
+
 ## 프로젝트 소개
 
 **Osaka_Event**는 오사카 지역의 지하철역 기반 생활 정보와 지역 이벤트를 시각적으로 탐색할 수 있는 웹 애플리케이션입니다.  
@@ -117,4 +119,16 @@ Users can choose between two interactive modes to find suitable residential)
 (Configured the connection between backend and frontend using Nginx as a reverse proxy)  
   
 - EC2 퍼블릭 IP를 이용한 직접 접속 및 테스트 완료  
-(Verified deployment and functionality via direct access using the EC2 public IP address)  
+(Verified deployment and functionality via direct access using the EC2 public IP address)
+
+## Update
+ver 1.01 - 2025/06/13
+
+![버전1_01](https://github.com/user-attachments/assets/8253cba5-b2ae-4b08-b5c6-e9472510c13c)
+
+맵 색상 변경 + 오류 해결(JR노선 클릭시 킨테츠 A노선도 나오던 오류) 
+
+후에 폰트 및 글씨 안보이는 문제 해결하려고함  
+(Updated the map color scheme and resolved a bug where the Kintetsu A line was mistakenly shown when selecting the JR line. Planning to work on font rendering and text visibility issues next.)  
+
+
