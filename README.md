@@ -131,4 +131,20 @@ ver 1.01 - 2025/06/13
 후에 폰트 및 글씨 안보이는 문제 해결하려고함  
 (Updated the map color scheme and resolved a bug where the Kintetsu A line was mistakenly shown when selecting the JR line. Planning to work on font rendering and text visibility issues next.)  
 
+<br/>
+
+ver 1.02 - 2025/06/14
+
+![image](https://github.com/user-attachments/assets/c86d5423-42f1-486f-a79f-768a63adf881)
+
+텍스트 가독성 향상 (Improved text visibility)
+
+검정 채움 + 연회색 외곽선 적용 (Black fill + light gray stroke)
+
+paint-order: stroke fill 설정 (Set paint-order: stroke fill)
+
+노선 구분용 <text id="KT"> 사용 (Used <text id="KT"> for line ID)
+
+폰트: Noto Sans + JP 사용 (Used Noto Sans + Noto Sans JP)
+
 
