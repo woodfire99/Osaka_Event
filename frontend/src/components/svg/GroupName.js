@@ -21,24 +21,7 @@ const SvgGroupName = (props) => (
         }}
       >
         <g>
-          <rect
-            width={161.937}
-            height={39.175}
-            x={2787.28}
-            y={736.544}
-            fill="#fff"
-            fillRule="evenodd"
-            opacity={0.75}
-            rx={0}
-            ry={2.194}
-            style={{
-              display: "inline",
-              opacity: 0.75,
-              fill: "#fff",
-              fillOpacity: 1,
-              strokeWidth: 0.218753,
-            }}
-          />
+
           <path
             fill="#fff"
             stroke="#000"
