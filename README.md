@@ -20,11 +20,13 @@ Users can choose between two interactive modes to find suitable residential)
 
 <br/><br/>
 
-## 시연 영상
+## 🎥 Demo Videos
 
-| Map Mode(ver 1.0.0) | AI Mode(ver 1.0.0) |
-|----------|---------|
-| [![Map Mode](https://github.com/user-attachments/assets/bfa4250e-5e7d-41ca-96c2-6590ca7d8920)](https://www.youtube.com/watch?v=G9FsQ2JF76w)<br>[영상 보러가기](https://www.youtube.com/watch?v=G9FsQ2JF76w) | [![AI Mode](https://github.com/user-attachments/assets/e0174ba9-b1f4-4ed0-bd89-42d353452cb7)](https://youtu.be/-IkcyRilcVI)<br>[영상 보러가기](https://youtu.be/-IkcyRilcVI) |
+| Map Mode (ver 1.0.0) | AI Mode (ver 1.0.0) | Latest Version (ver 1.0.2) |
+|----------------------|---------------------|-----------------------------|
+| [![Map Mode](https://github.com/user-attachments/assets/bfa4250e-5e7d-41ca-96c2-6590ca7d8920)](https://www.youtube.com/watch?v=G9FsQ2JF76w)<br>[Watch Video](https://www.youtube.com/watch?v=G9FsQ2JF76w) | [![AI Mode](https://github.com/user-attachments/assets/e0174ba9-b1f4-4ed0-bd89-42d353452cb7)](https://youtu.be/-IkcyRilcVI)<br>[Watch Video](https://youtu.be/-IkcyRilcVI) | [![Latest Demo](https://github.com/user-attachments/assets/27259e53-890f-488c-96a2-b7ed44a6c21e)](https://www.youtube.com/watch?v=z13A-1_5IvE)<br>[Watch Video](https://www.youtube.com/watch?v=z13A-1_5IvE) |
+
+
 
 <br/><br/>
 
