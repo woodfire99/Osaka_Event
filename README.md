@@ -22,7 +22,7 @@ Users can choose between two interactive modes to find suitable residential)
 
 ## 시연 영상
 
-| Map Mode | AI Mode |
+| Map Mode(ver 1.0.0) | AI Mode(ver 1.0.0) |
 |----------|---------|
 | [![Map Mode](https://github.com/user-attachments/assets/bfa4250e-5e7d-41ca-96c2-6590ca7d8920)](https://www.youtube.com/watch?v=G9FsQ2JF76w)<br>[영상 보러가기](https://www.youtube.com/watch?v=G9FsQ2JF76w) | [![AI Mode](https://github.com/user-attachments/assets/e0174ba9-b1f4-4ed0-bd89-42d353452cb7)](https://youtu.be/-IkcyRilcVI)<br>[영상 보러가기](https://youtu.be/-IkcyRilcVI) |
 
